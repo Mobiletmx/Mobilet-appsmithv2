@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "68b0fc8d2b07626075282edf_d44bd6a2-8909-4a2f-9f4b-6664fccfd80e",
+  "id": "Dashboard SimiCorp_JSObject1",
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Dashboard SimiCorp",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "expected_revenue",
+        "value": "[5000000000]"
+      }
+    ]
+  }
+}

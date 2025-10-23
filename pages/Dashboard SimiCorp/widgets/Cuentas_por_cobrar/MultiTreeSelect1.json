@@ -1,0 +1,55 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowClear": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": [
+    "GREEN"
+  ],
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "expandAll": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "minon3idbq",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelText": "MESES",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 27,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 0,
+  "mode": "SHOW_ALL",
+  "needsErrorInfo": false,
+  "options": "[\n  {\n    \"label\": \"2024\",\n    \"value\": \"2024\",\n    \"children\": [\n      {\n        \"label\": \"JUNIO\",\n        \"value\": \"JUNIO24\"\n      },\n      {\n        \"label\": \"JULIO\",\n        \"value\": \"JULIO24\"\n      },\n      {\n        \"label\": \"AGOSTOO\",\n        \"value\": \"AGOSTO24\"\n      },\n      {\n        \"label\": \"SEPTIEMBRE\",\n        \"value\": \"SEPTIEMBRE24\"\n      }\n    ]\n  },\n\t{\n    \"label\": \"2025\",\n    \"value\": \"2025\",\n    \"children\": [\n      {\n        \"label\": \"JUNIO\",\n        \"value\": \"JUNIO25\"\n      },\n      {\n        \"label\": \"JULIO\",\n        \"value\": \"JULIO25\"\n      },\n      {\n        \"label\": \"AGOSTOO\",\n        \"value\": \"AGOSTO\"\n      },\n      {\n        \"label\": \"SEPTIEMBRE\",\n        \"value\": \"SEPTIEMBRE\"\n      }\n    ]\n  }\n]",
+  "parentColumnSpace": 15.78515625,
+  "parentId": "fal1yqeplv",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option(s)",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 51,
+  "topRow": 0,
+  "type": "MULTI_SELECT_TREE_WIDGET",
+  "version": 1,
+  "widgetId": "u7a08ngmdb",
+  "widgetName": "MultiTreeSelect1"
+}

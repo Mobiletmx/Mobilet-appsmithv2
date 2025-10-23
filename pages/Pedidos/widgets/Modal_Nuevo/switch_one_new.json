@@ -1,0 +1,53 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 24,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{ (() => {\n  const clientes = GetClientes.data || [];\n  const idSeleccionado = select_one_new.selectedOptionValue;\n  if (!idSeleccionado) return false; // switch apagado si no hay selección\n  const cliente = clientes.find(c => String(c.id_cliente) === idSeleccionado);\n  return cliente ? Boolean(cliente.lista_negra) : false;\n})() }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "75t8ae6qe7",
+  "label": "Lista negra:",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 39,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 59,
+  "mobileTopRow": 35,
+  "needsErrorInfo": false,
+  "originalBottomRow": 20,
+  "originalTopRow": 16,
+  "parentColumnSpace": 12.6875,
+  "parentId": "wkz26wna0c",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 11,
+  "topRow": 20,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "tn7ceogb2g",
+  "widgetName": "switch_one_new"
+}

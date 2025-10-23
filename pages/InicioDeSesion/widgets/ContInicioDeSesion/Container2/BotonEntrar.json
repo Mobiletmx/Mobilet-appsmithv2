@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 19,
+  "boxShadow": "none",
+  "buttonColor": "#3b82f6",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "l9pckispc7",
+  "leftColumn": 24,
+  "minWidth": 120,
+  "mobileBottomRow": 27,
+  "mobileLeftColumn": 37,
+  "mobileRightColumn": 53,
+  "mobileTopRow": 23,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  // 1) Limpia sesión previa\n  storeValue('access_token', '');\n  storeValue('refresh_token', '');\n  storeValue('access_token_exp', 0);\n  storeValue('last_activity', 0);\n\n  // 2) Ejecuta login\n  verify_password.run(\n    () => {\n      // 3) Guarda tokens y expiración\n      storeValue('access_token', verify_password.data.access_token);\n      storeValue('refresh_token', verify_password.data.refresh_token);\n      storeValue('access_token_exp', Math.floor(Date.now()/1000) + verify_password.data.expires_in);\n\n      // 4) Variables globales (centralización)\n      //    ⚠️ Reemplaza los valores entre comillas por los de tu proyecto\n      storeValue('SUPABASE_URL', 'https://akxrdqvijwgrwttasmuk.supabase.co');\n      storeValue('SUPABASE_ANON_KEY', '<TU_ANON_KEY_AQUI>');\n\n      // 5) Marca actividad inicial (para timeout por inactividad)\n      AuthUtils.ping();\n\n      // 6) Navega a la página protegida\n      showAlert('Inicio de sesión exitoso', 'success');\n      navigateTo('Home');\n    },\n    (e) => {\n      showAlert('Credenciales inválidas: ' + (e?.message || ''), 'error');\n    }\n  )\n}}",
+  "originalBottomRow": 38,
+  "originalTopRow": 34,
+  "parentColumnSpace": 7.1171875,
+  "parentId": "cl7pfllvfq",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 41,
+  "text": "Entrar",
+  "topRow": 15,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "9nbm0irwqw",
+  "widgetName": "BotonEntrar"
+}

@@ -1,0 +1,6 @@
+{
+  "p_tipo": "{{ (SelectTipoBano.selectedOptionValue || SelectTipoBano.selectedOptionLabel || 'normal').toString().toLowerCase().includes('flush') ? 'flush' : 'normal' }}",
+  "p_qr_size": 512,
+  "p_bucket": "qr-codes",
+  "p_qr_base": "https://qr.mobilet.mx/"
+}

@@ -1,0 +1,56 @@
+{
+"_items": {{
+(Lines.getAll() || []).map((line, idx) => {
+const norm = (v) =>
+v === undefined || v === null
+? null
+: typeof v === "string"
+? v.trim()
+: v;
+const num = (v) => {
+const n = Number(v);
+return Number.isFinite(n) ? n : null;
+};
+
+  // Cálculos por línea  
+  const montoSinIva = num(line.monto_sin_iva_new ?? line.monto_sin_iva ?? line.precio_unitario);  
+  const montoIva    = montoSinIva !== null ? +(montoSinIva * 0.16).toFixed(2) : null;  
+  const montoTotal  = montoSinIva !== null && montoIva !== null ? +(montoSinIva + montoIva).toFixed(2) : null;  
+
+  return {  
+    id_item_pedido: null,                           // auto en RPC  
+    id_usuario: norm(id_usuario.text),  
+    fecha_pedido: null,  
+    id_cliente: norm(id_cliente_new.text),  
+
+    id_ubicacion: norm(line.id_ubicacion_new),  
+    item_consecutivo: null,                         // auto en RPC  
+    categoria_bano: null,  
+    costo_por_item: montoSinIva,                    // por_línea  
+    fecha_inicio: norm(line.fecha_inicio_new),  
+    fecha_fin: null,  
+
+    monto_sin_iva: montoSinIva,                     // por_línea  
+    monto_iva: montoIva,                            // calculado 16%  
+    monto_total_con_iva: montoTotal,                // sin_iva + iva  
+
+    estatus_pago: null,  
+    id_pedido: null,                                // auto en RPC  
+    fecha_cierre_pedido: null,  
+    estatus_pedido: null,  
+    comodinp_a: null,  
+    comodinp_b: null,  
+    comodinp_c: null,  
+    comodinp_d: null,  
+    comodinp_e: id_item_pedido_new.join(","),  
+
+    id_bano: norm(line.id_bano_new),  
+    id_ruta: norm(line.id_ruta_new),  
+    nombre_ubicacion: norm(line.nombre_ubicacion_new),  
+    geolocalizacion_ubicacion: norm(line.geolocalizacion_ubicacion_new),  
+    estatus_factura: null		
+  };  
+})  
+
+}}
+}

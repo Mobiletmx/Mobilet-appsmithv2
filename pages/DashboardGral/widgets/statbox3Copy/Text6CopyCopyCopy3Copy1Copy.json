@@ -1,0 +1,42 @@
+{
+  "animateLoading": true,
+  "borderColor": "#ffc13d",
+  "borderRadius": "0px",
+  "borderWidth": "2",
+  "bottomRow": 12,
+  "boxShadow": "none",
+  "displayName": "Text",
+  "dynamicBindingPathList": [],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "System Default",
+  "fontSize": "1.0m/",
+  "fontStyle": "",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.97c59b52.svg",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "deco66gubs",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 27,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "NONE",
+  "parentId": "wckpophu03",
+  "renderMode": "CANVAS",
+  "rightColumn": 34,
+  "text": "Tránsito    Salida\n\n2",
+  "textAlign": "CENTER",
+  "textColor": "#27272a",
+  "topRow": 1,
+  "truncateButtonColor": "#FFC13D",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "9ewcbemvj2",
+  "widgetName": "Text6CopyCopyCopy3Copy1Copy"
+}

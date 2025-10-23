@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 47,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "right",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 40,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n  // Utilidad: valor vacío\n  const isEmpty = v =>\n    v === undefined || v === null || (typeof v === \"string\" && v.trim() === \"\");\n\n  // 1) Requeridos (ajusta etiquetas si lo deseas)\n  const requeridos = [\n    [\"Nombre del cliente\",   nombre_cliente?.selectedOptionValue],\n    [\"Nombre ubicación\",     nombre_ubicacion?.selectedOptionValue],\n    [\"ID baño\",              id_bano?.selectedOptionValue],\n    [\"Categoría baño\",       categoria_bano?.selectedOptionValue],\n    [\"Fecha inicio\",         fecha_inicio?.selectedDate],\n    [\"Fecha de recolección\", fecha_fin?.selectedDate],\n    [\"Precio sin IVA\",       monto_sin_iva?.text],\n  ];\n  const falta = requeridos.find(([label, v]) => isEmpty(v));\n  if (falta) {\n    showAlert(`Falta capturar: ${falta[0]}`, \"warning\");\n    return;\n  }\n\n  // 2) Números válidos\n  const sinIva = Number(monto_sin_iva?.text);\n  if (Number.isNaN(sinIva) || sinIva < 0) {\n    showAlert(\"El monto SIN IVA debe ser un número mayor o igual a 0.\", \"warning\");\n    return;\n  }\n\n  // 3) Consistencia de IDs provenientes de los selects\n  if (isEmpty(id_cliente?.text)) {\n    showAlert(\"No se pudo determinar el ID del cliente. Revisa la selección.\", \"warning\");\n    return;\n  }\n  if (isEmpty(id_ubicacion?.text)) {\n    showAlert(\"No se pudo determinar el ID de la ubicación. Revisa la selección.\", \"warning\");\n    return;\n  }\n\n  // 4) Todo bien → abrimos el modal de confirmación\n  resetWidget(\"Confirmar_cambios\", true);\n  showModal(\"Confirmar_cambios\");\n})()\n}}\n",
+  "originalBottomRow": 47,
+  "originalTopRow": 43,
+  "parentId": "t6m6k5xey8",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 50,
+  "text": "Guardar",
+  "topRow": 43,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "f99hm3bt9n",
+  "widgetName": "Boton_guardar"
+}

@@ -1,0 +1,81 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 14,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \n(() => {\n  const selItem = id_item_pedido.selectedOptionValue;\n  if (!selItem) return \"\";\n  const rows = Array.isArray(GetPedidos.data) ? GetPedidos.data : (GetPedidos.data?.results || []);\n  const row = rows.find(r => String(r.id_item_pedido) === String(selItem));\n  return row?.id_bano ?? \"\";\n})()\n))(id_bano.options, id_bano.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": "{{ Boolean(id_item_pedido.selectedOptionValue) }}\n",
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "ktxslnhytr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "ID Baño",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 32,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 21,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{ WorkOT.setItem(id_item_pedido.selectedOptionValue) }}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 6.9375,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 46,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n(() => {\n  const selItem = id_item_pedido.selectedOptionValue;\n  const pedidos = Array.isArray(GetPedidos.data) ? GetPedidos.data : (GetPedidos.data?.results || []);\n  const invent = Array.isArray(GetInventario.data) ? GetInventario.data : (GetInventario.data?.results || []);\n\n  if (selItem) {\n    const row = pedidos.find(r => String(r.id_item_pedido) === String(selItem));\n    if (!row?.id_bano) return [];\n    return [{ label: String(row.id_bano), value: String(row.id_bano) }];\n  }\n\n  // si NO hay id_item_pedido → mostrar todos los baños \"Disponible en almacen\"\n  return invent\n    .filter(b => String(b.estatus_bano || \"\").trim().toLowerCase() === \"disponible en almacen\")\n    .map(b => ({ label: String(b.id_bano), value: String(b.id_bano) }));\n})()\n}}\n",
+  "topRow": 7,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "zzpem4dmub",
+  "widgetName": "id_bano"
+}

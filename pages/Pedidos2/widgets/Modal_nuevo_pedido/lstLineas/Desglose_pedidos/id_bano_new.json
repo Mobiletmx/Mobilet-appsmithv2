@@ -1,0 +1,74 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "ktxslnhytr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "ID Baño",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 28,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 44,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 15,
+  "mobileTopRow": 37,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{ Lines.update(currentItem.idx, { id_bano_new: id_bano_new.selectedOptionValue }) }}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 33,
+  "originalTopRow": 26,
+  "parentColumnSpace": 12.6875,
+  "parentId": "lzmersxrju",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 40,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n(() => {\n  const inv = GetInventario.data || [];\n\n  // Solo los baños disponibles (normalizando espacios y mayúsculas)\n  const disponibles = inv.filter(b =>\n    String(b.estatus_bano || \"\").trim().toLowerCase() === \"disponible en almacen\"\n  );\n\n  // Opciones: muestra el id_bano (puedes enriquecer el label si quieres)\n  const opts = disponibles.map(b => ({\n    label: b.id_bano,        // ej. `${b.id_bano} · ${b.marca || \"\"} ${b.modelo || \"\"}`\n    value: b.id_bano\n  }));\n\n  // ⚠️ Si estás editando un pedido y el baño actual NO está disponible,\n  // opcionalmente lo incluimos para no perder la selección:\n  const actual =\n    (appsmith.store.inventarioSel?.id_bano ||\n     appsmith.store.pedidoSel?.id_bano ||\n     appsmith.store.pedidoSel?.comodinp_a ||\n     \"\").trim();\n\n  if (actual && !opts.some(o => o.value === actual)) {\n    const found = inv.find(b => b.id_bano === actual);\n    opts.unshift({\n      label: found ? `${actual} (actual)` : `${actual} (no disponible)`,\n      value: actual\n    });\n  }\n\n  return opts;\n})()\n}}\n",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "ncc4fkpxu4",
+  "widgetName": "id_bano_new"
+}

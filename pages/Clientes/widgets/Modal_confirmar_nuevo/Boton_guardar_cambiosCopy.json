@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ nuevo_cliente_new.isSwitchedOn && !Chk_entiendo_new.isChecked }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ffwdv9n8py",
+  "leftColumn": 27,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n  // Si es \"nuevo cliente\", el check es obligatorio\n  if (nuevo_cliente_new.isSwitchedOn && !Chk_entiendo_new.isChecked) {\n    showAlert(\"Debes aceptar la confirmación para crear un nuevo cliente.\", \"warning\");\n    return;\n  }\n\n  try {\n    const creaNuevo = !!nuevo_cliente_new.isSwitchedOn;\n\n    if (creaNuevo) {\n      await InsertClientes.run();\n      showAlert(\"Cliente creado correctamente.\", \"success\");\n    } else {\n      await UpdateClientes.run();\n      showAlert(\"Cliente actualizado correctamente.\", \"success\");\n    }\n\n    // (Opcional) refrescar tabla y cerrar modales\n    await GetClientes.run();\n    resetWidget(\"Chk_entiendo_new\", true);\n    closeModal(\"Modal_confirmar_nuevo\");\n    closeModal(\"Modal_Nuevo\");\n  } catch (e) {\n    showAlert(\"Error al guardar: \" + (e?.message ?? e), \"error\");\n  }\n})();\n}}\n",
+  "originalBottomRow": 22,
+  "originalTopRow": 18,
+  "parentId": "2vrg79dqls",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 43,
+  "text": "Confirmar",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "2t1edwgrbf",
+  "widgetName": "Boton_guardar_cambiosCopy"
+}

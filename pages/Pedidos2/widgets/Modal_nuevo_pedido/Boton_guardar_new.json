@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 68,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "right",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 40,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(() => {\nconst all = Lines.getAll ? Lines.getAll() : [];\nconsole.log(\"DEBUG Lines.getAll()\", all);\n\nconst hayDup = Lines.hasDuplicateBanos && Lines.hasDuplicateBanos();\nif (hayDup) {\nconst dups = appsmith.store.__banosDuplicados || [];\nconst lista = dups\n  .map(([a, b]) => `- Líneas ${a + 1} y ${b + 1}`)\n  .join(\"\\n\");\n\nshowAlert(\n  \"❌ Error: No puedes asignar el mismo baño en múltiples líneas.\\n\" +\n  (lista ? \"Duplicados detectados:\\n\" + lista : \"\"),\n  \"error\"\n);\nreturn;\n}\n\nconst faltan = [];\nconst getValorW = (w) => {\nif (!w) return \"\";\nif (w.selectedOptionValue !== undefined && w.selectedOptionValue !== null)\nreturn String(w.selectedOptionValue).trim();\nif (w.selectedDate || w.formattedDate)\nreturn String(w.selectedDate || w.formattedDate).trim();\nif (w.text !== undefined && w.text !== null)\nreturn String(w.text).trim();\nreturn \"\";\n};\nconst norm = (v) => (v === undefined || v === null ? \"\" : String(v).trim());\n\nconst clienteWidget = nombre_cliente_new;\nif (!getValorW(clienteWidget)) faltan.push(\"Cliente\");\n\nconst lineas = all;\nfor (let i = 0; i < lineas.length; i++) {\nconst l = lineas[i] || {};\nconst idU = norm(l.id_ubicacion_new ?? l.ubicacion_id);\nconst idB = norm(l.id_bano_new ?? l.bano_id);\nconst fch = norm(l.fecha_inicio);\nconst monto = norm(l.monto_sin_iva_new ?? l.precio_unitario);\n\nif (!idU)   faltan.push(`Ubicación en línea ${i + 1}`);  \nif (!idB)   faltan.push(`Baño en línea ${i + 1}`);  \nif (!fch)   faltan.push(`Fecha inicio en línea ${i + 1}`);  \nif (!monto) faltan.push(`Monto en línea ${i + 1}`);  \n\n}\n\nif (faltan.length > 0) {\nconsole.log(\"DEBUG faltan:\", faltan);\nshowAlert(\"Faltan datos obligatorios:\\n\" + faltan.join(\"\\n\"), \"warning\");\nreturn;\n}\n\nshowModal(\"Confirmar_nuevo_pedido\");\n})()\n}}",
+  "originalBottomRow": 50,
+  "originalTopRow": 46,
+  "parentId": "2dzrv5nlh7",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 50,
+  "text": "Guardar",
+  "topRow": 64,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "55k8qie7a6",
+  "widgetName": "Boton_guardar_new"
+}

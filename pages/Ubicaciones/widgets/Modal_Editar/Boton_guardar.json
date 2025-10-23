@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 61,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "right",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 41,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n  // 1) Campos obligatorios (los del recuadro verde)\n  const req = [\n    { label: \"Nombre ubicación\",        val: nombre_ubicacion.text },\n    { label: \"Nombre contacto\",         val: nombre_contacto_ubicacion.text },\n    { label: \"Cel contacto\",            val: celular_contacto_ubicacion.text },\n    { label: \"Email contacto\",          val: email_contacto_ubicacion.text },\n    { label: \"ID ruta\",                 val: id_ruta.selectedOptionValue },\n    { label: \"Geolocalización\",         val: geolocalizacion_ubicacion.text },\n    { label: \"Dirección ubicación\",     val: direccion_ubicacion.text },\n  ];\n\n  // 2) ¿Hay faltantes?\n  const faltantes = req.filter(f => f.val === null || f.val === undefined || String(f.val).trim() === \"\");\n  if (faltantes.length) {\n    showAlert(\"Completa: \" + faltantes.map(f => f.label).join(\", \"), \"warning\");\n    return;\n  }\n\n  // 3) Arma el payload con limpieza básica\n  const payload = {\n    id_ubicacion:        id_ubicacion.text || null,  // opcional si lo tienes en el modal\n    nombre_ubicacion:    nombre_ubicacion.text.trim(),\n    nombre_contacto_ubicacion: nombre_contacto_ubicacion.text.trim(),\n    celular_contacto_ubicacion: (celular_contacto_ubicacion.text || \"\").replace(/[^0-9]/g, \"\"),\n    email_contacto_ubicacion:   (email_contacto_ubicacion.text || \"\").trim().toLowerCase(),\n    id_ruta:             String(id_ruta.selectedOptionValue).trim(),\n    geolocalizacion_ubicacion: (geolocalizacion_ubicacion.text || \"\").trim(),\n    direccion_ubicacion: (direccion_ubicacion.text || \"\").trim(),\n\n    // Campos no obligatorios pero útiles si los quieres guardar en el store:\n    colonia_ubicacion:        colonia_ubicacion?.text?.trim?.() || null,\n    codigo_postal_ubicacion:  codigo_postal_ubicacion?.text?.trim?.() || null,\n    comentario_ubicacion:     comentario_ubicacion?.text?.trim?.() || null,\n  };\n\n  // 4) Guarda para el confirm\n  await storeValue(\"ubicacion_edit_payload\", payload, true);\n\n  // 5) Abre el modal de confirmación\n  resetWidget(\"Modal_confirmar_editar\", true);\n  showModal(\"Modal_confirmar_editar\");\n})();\n}}\n",
+  "originalBottomRow": 61,
+  "originalTopRow": 57,
+  "parentId": "t6m6k5xey8",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "Guardar",
+  "topRow": 57,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "f99hm3bt9n",
+  "widgetName": "Boton_guardar"
+}

@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "68b0fc8d2b07626075282edf_82768e71-d2dc-4fb9-9e2f-2d2078847f21",
+  "id": "Ubicaciones_AuthUtils",
+  "unpublishedCollection": {
+    "name": "AuthUtils",
+    "pageId": "Ubicaciones",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "IDLE_MAX_SEC",
+        "value": "2 * 60 * 60"
+      }
+    ]
+  }
+}

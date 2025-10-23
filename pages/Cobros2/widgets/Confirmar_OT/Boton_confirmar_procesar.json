@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n  // 1) Confirmación obligatoria\n  const ok = !!Chk_entiendo.isChecked;\n  if (!ok) { \n    showAlert(\"Debes marcar «Entiendo y deseo continuar».\", \"warning\"); \n    return; \n  }\n\n  try {\n    // 2) Flags: usa primero lo guardado en store; si no existe, toma el estado del botón/switch\n    const esNuevo = (typeof appsmith.store.es_cliente_nuevo !== \"undefined\")\n      ? !!appsmith.store.es_cliente_nuevo\n      : !!es_cliente_nuevo.isSwitchedOn;\n\n    const esExistente = (typeof appsmith.store.es_cliente_existente !== \"undefined\")\n      ? !!appsmith.store.es_cliente_existente\n      : !!es_cliente_existente.isSwitchedOn;\n\n    // Garantiza que haya exactamente una opción\n    if (!esNuevo && !esExistente) {\n      showAlert(\"Selecciona si el cliente es nuevo o existente.\", \"warning\"); \n      return;\n    }\n    if (esNuevo && esExistente) {\n      showAlert(\"Solo una opción puede estar activa: nuevo o existente.\", \"warning\"); \n      return;\n    }\n\n    // 3) Cotización -> Procesado\n    await UpdateCotizacionesProcesar.run();\n\n    // 4) Cliente (según ruta)\n    let respCliente = null;\n    let idCli = null;\n\n    if (esNuevo) {\n      // Inserta cliente nuevo\n      respCliente = await InsertCobros.run();\n      idCli = respCliente?.[0]?.id_cliente || null;\n\n      if (!idCli) {\n        showAlert(\"No se pudo obtener el id_cliente del InsertClientes.\", \"error\");\n        return;\n      }\n    } else if (esExistente) {\n      // Actualiza cliente existente\n      respCliente = await UpdateCobros.run();\n      idCli =\n        respCliente?.[0]?.id_cliente ||\n        (typeof Input_id_cliente_confirmado !== \"undefined\" ? (id_cliente.text || \"\").trim() : \"\") ||\n        \"\";\n\n      if (!idCli) {\n        showAlert(\"Falta el id_cliente para actualizar/ligar la ubicación.\", \"warning\");\n        return;\n      }\n    }\n\n    // (opcional) deja el id en store por si lo usa InsertUbicaciones\n    await storeValue(\"idClienteProcesado\", idCli, true);\n\n    // 5) Ubicación (siempre insert)\n    await InsertUbicaciones.run();\n\n    // 6) Cierre y feedback\n    showAlert(\"Contacto procesado correctamente.\", \"success\");\n    resetWidget(\"Chk_entiendo\", true);\n    closeModal(\"Confirmar_Procesar\");\n    closeModal(\"Modal_Procesar\");\n\n    // Si deseas refrescar listas:\n    // await GetCotizaciones.run();\n    // await GetClientes.run();\n\n  } catch (e) {\n    console.error(e);\n    showAlert(\"Error al procesar: \" + (e?.message ?? e), \"error\");\n  }\n})()\n}}\n",
+  "originalBottomRow": 24,
+  "originalTopRow": 20,
+  "parentId": "qjumnntmde",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Confirmar",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "lrhthqleg1",
+  "widgetName": "Boton_confirmar_procesar"
+}

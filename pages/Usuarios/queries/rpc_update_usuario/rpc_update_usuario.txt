@@ -1,0 +1,6 @@
+{
+  "p_id_usuario": {{ TablaNuevoUsuario.triggeredRow.id_usuario }},  // clave segura
+  "p_nombre": {{ InpNombre.text || null }},
+  "p_celular": {{ InpTelefono.text || null }},
+  "p_id_rol": {{ SelRol.selectedOptionValue || null }}
+}

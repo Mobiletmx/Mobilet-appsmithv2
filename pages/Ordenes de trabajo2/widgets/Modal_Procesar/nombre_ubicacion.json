@@ -1,0 +1,75 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \n(() => {\n  const selItem = id_item_pedido.selectedOptionValue;\n  if (!selItem) return \"\";\n  const rows = Array.isArray(GetPedidos.data) ? GetPedidos.data : (GetPedidos.data?.results || []);\n  const row = rows.find(r => String(r.id_item_pedido) === String(selItem));\n  return row?.id_ubicacion ?? \"\";\n})()\n))(nombre_ubicacion.options, nombre_ubicacion.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "ktxslnhytr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Nombre ubicación",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 16,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 21,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{ WorkOT.setItem(id_item_pedido.selectedOptionValue) }}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 6.9375,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 46,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n(() => {\n  const selItem = id_item_pedido.selectedOptionValue;\n  const pedidos = Array.isArray(GetPedidos.data) ? GetPedidos.data : (GetPedidos.data?.results || []);\n  const ubics   = Array.isArray(GetUbicaciones.data) ? GetUbicaciones.data : (GetUbicaciones.data?.results || []);\n\n  if (selItem) {\n    const row = pedidos.find(r => String(r.id_item_pedido) === String(selItem));\n    if (!row?.id_ubicacion) return [];\n    return [{\n      label: String(row.nombre_ubicacion ?? row.id_ubicacion),\n      value: String(row.id_ubicacion)\n    }];\n  }\n\n  // sin id_item_pedido → lista todas las ubicaciones\n  return ubics.map(u => ({ label: String(u.nombre_ubicacion), value: String(u.id_ubicacion) }));\n})()\n}}\n",
+  "topRow": 15,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "s9os4lkfgf",
+  "widgetName": "nombre_ubicacion"
+}

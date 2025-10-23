@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "defaultText": "{{\n(() => {\n  const selItem = id_item_pedido.selectedOptionValue;\n  const pedidos = Array.isArray(GetPedidos.data) ? GetPedidos.data : (GetPedidos.data?.results || []);\n  const ubics   = Array.isArray(GetUbicaciones.data) ? GetUbicaciones.data : (GetUbicaciones.data?.results || []);\n  const selUbic = nombre_ubicacion.selectedOptionValue;\n\n  // Si hay item seleccionado y trae geo, úsala\n  if (selItem) {\n    const row = pedidos.find(r => String(r.id_item_pedido) === String(selItem));\n    if (row?.geolocalizacion_ubicacion) return row.geolocalizacion_ubicacion;\n  }\n\n  // Si no, mira la ubicación elegida en el select de ubicación\n  if (selUbic) {\n    const u = ubics.find(x => String(x.id_ubicacion) === String(selUbic));\n    return u?.geolocalizacion_ubicacion ?? \"\";\n  }\n\n  return \"\";\n})()\n}}\n",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "h4sporpdly",
+  "label": "Geolocalización",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 47,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 55,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 48,
+  "needsErrorInfo": false,
+  "originalBottomRow": 15,
+  "originalTopRow": 8,
+  "parentColumnSpace": 12.6875,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "showStepArrows": false,
+  "topRow": 15,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "dmh1kglzeo",
+  "widgetName": "geolocalizacion_ubicacion"
+}

@@ -1,0 +1,75 @@
+{
+  "appIsExample": false,
+  "appLayout": {
+    "type": "DESKTOP"
+  },
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "color": "#F5D1D1",
+  "evaluationVersion": 2,
+  "pages": [
+    {
+      "id": "DashboardGral",
+      "isDefault": false
+    },
+    {
+      "id": "InicioDeSesion",
+      "isDefault": true
+    },
+    {
+      "id": "Usuarios",
+      "isDefault": false
+    },
+    {
+      "id": "RolesPermisos",
+      "isDefault": false
+    },
+    {
+      "id": "Cotizaciones",
+      "isDefault": false
+    },
+    {
+      "id": "Inventario",
+      "isDefault": false
+    },
+    {
+      "id": "Clientes",
+      "isDefault": false
+    },
+    {
+      "id": "Ubicaciones",
+      "isDefault": false
+    },
+    {
+      "id": "Pedidos2",
+      "isDefault": false
+    },
+    {
+      "id": "Ordenes de trabajo2",
+      "isDefault": false
+    },
+    {
+      "id": "Cobros2",
+      "isDefault": false
+    },
+    {
+      "id": "Pagos2",
+      "isDefault": false
+    },
+    {
+      "id": "Facturación2",
+      "isDefault": false
+    },
+    {
+      "id": "Dashboard SimiCorp",
+      "isDefault": false
+    },
+    {
+      "id": "Pedidos",
+      "isDefault": false
+    }
+  ],
+  "unpublishedAppLayout": {
+    "type": "DESKTOP"
+  }
+}

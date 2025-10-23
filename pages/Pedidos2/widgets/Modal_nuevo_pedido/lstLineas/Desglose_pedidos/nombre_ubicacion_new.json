@@ -1,0 +1,90 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \n(() => {\nconst nombre = currentItem?.nombre_ubicacion_new;\nif (!nombre) return \"\";\nconst cat = GetUbicaciones.data || [];\nconst found = cat.find(x => String(x.nombre_ubicacion) === String(nombre));\nreturn found ? String(found.id_ubicacion) : \"\";\n})()\n))(nombre_ubicacion_new.options, nombre_ubicacion_new.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultOptionValue"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "optionLabel"
+    },
+    {
+      "key": "optionValue"
+    },
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownClose"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "ktxslnhytr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Nombre ubicacion",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 21,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "onDropdownClose": "",
+  "onOptionChange": "{{\n(() => {\nconst idx = currentItem?.idx;\nif (idx === undefined) return;\n\nconst value = nombre_ubicacion_new?.selectedOptionValue; // id_ubicacion\nconst label = nombre_ubicacion_new?.selectedOptionLabel; // nombre_ubicacion\n\nif (!value) {\nLines.update(idx, {\nnombre_ubicacion_new: null,\nid_ubicacion_new: null,\ngeolocalizacion_ubicacion_new: null,\nid_ruta_new: null,\n});\nreturn;\n}\n\nconst cat = GetUbicaciones.data || [];\nconst found = cat.find(x => String(x.id_ubicacion) === String(value)) || {};\n\nLines.update(idx, {\nnombre_ubicacion_new: String(label ?? found.nombre_ubicacion ?? \"\"),\nid_ubicacion_new: String(value),\ngeolocalizacion_ubicacion_new: found.geolocalizacion_ubicacion ?? null,\nid_ruta_new: found.id_ruta ?? null,\n});\n})()\n}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 24,
+  "originalTopRow": 17,
+  "parentColumnSpace": 6.9375,
+  "parentId": "lzmersxrju",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 17,
+  "serverSideFiltering": false,
+  "sourceData": "{{ (GetUbicaciones.data || []).map(u => ({ label: u.nombre_ubicacion, value: String(u.id_ubicacion) })) }}",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "uqm8ghf54n",
+  "widgetName": "nombre_ubicacion_new"
+}

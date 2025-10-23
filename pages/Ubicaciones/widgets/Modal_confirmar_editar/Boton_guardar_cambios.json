@@ -1,0 +1,56 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ffwdv9n8py",
+  "leftColumn": 27,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n  try {\n    const p = appsmith.store.ubicacion_edit_payload || {};\n    if (!p || !p.id_ubicacion) {\n      showAlert(\"No hay datos para actualizar.\", \"warning\");\n      return;\n    }\n\n    // Si tu query usa parámetros, pásalos aquí:\n    await UpdateUbicaciones.run({\n      _id_ubicacion:               p.id_ubicacion,\n      _nombre_ubicacion:           p.nombre_ubicacion,\n      _nombre_contacto_ubicacion:  p.nombre_contacto_ubicacion,\n      _telefono_contacto_ubicacion:p.celular_contacto_ubicacion,\n      _email_contacto_ubicacion:   p.email_contacto_ubicacion,\n      _id_ruta:                    p.id_ruta,\n      _geolocalizacion_ubicacion:  p.geolocalizacion_ubicacion,\n      _direccion_ubicacion:        p.direccion_ubicacion,\n      _colonia_ubicacion:          p.colonia_ubicacion,\n      _codigo_postal_ubicacion:    p.codigo_postal_ubicacion,\n      _comentario_ubicacion:       p.comentario_ubicacion\n    });\n\n    showAlert(\"Ubicación actualizada correctamente.\", \"success\");\n\n    // refresca la tabla (opcional)\n    GetUbicaciones.run();\n\n    // vuelve al modal anterior\n    closeModal(\"Modal_confirmar_editar\");\n    showModal(\"Modal_Procesar\"); // si tu modal se llama distinto, cámbialo aquí\n  } catch (e) {\n    showAlert(\"Error al actualizar: \" + (e?.message ?? e), \"error\");\n  }\n})();\n}}\n",
+  "originalBottomRow": 22,
+  "originalTopRow": 18,
+  "parentId": "7h5qu95wta",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 43,
+  "text": "Confirmar",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "pti4wamh7c",
+  "widgetName": "Boton_guardar_cambios"
+}

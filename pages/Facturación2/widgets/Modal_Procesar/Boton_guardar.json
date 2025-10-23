@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 47,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "right",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 40,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(() => {\n  const faltan = [];\n\n  // Helpers para leer valores según el tipo de widget\n  const getSel  = w => (w?.selectedOptionValue ?? \"\").toString().trim();\n  const getDate = w => (w?.selectedDate || w?.formattedDate || \"\").toString().trim();\n  const getTxt  = w => (w?.text ?? \"\").toString().trim();\n\n  // Campos a validar (los de la derecha)\n  const vNombreCliente   = getSel(nombre_cliente);        // id_cliente\n  const vNombreUbicacion = getSel(nombre_ubicacion);      // id_ubicacion\n  const vIdBano          = getSel(id_bano);               // id_bano\n  const vCategoriaBano   = getSel(categoria_bano);        // \"Obra\" | \"Evento\" | \"Oficina\"\n  const vFrecuencia      = getSel(frecuencia_de_limpieza); // \"1\" | \"3\" | \"5\"\n  const vFechaInicio     = getDate(fecha_inicio);\n  const vMontoSinIva     = getTxt(monto_sin_iva);\n\n  if (!vNombreCliente)   faltan.push(\"Nombre del cliente\");\n  if (!vNombreUbicacion) faltan.push(\"Nombre ubicación\");\n  if (!vIdBano)          faltan.push(\"ID Baño\");\n  if (!vCategoriaBano)   faltan.push(\"Categoría baño\");\n  if (!vFrecuencia)      faltan.push(\"Frecuencia limpieza\");\n  if (!vFechaInicio)     faltan.push(\"Fecha inicio\");\n  // Si fecha_fin debe ser obligatoria, descomenta:\n  // if (!vFechaFin)        faltan.push(\"Fecha fin\");\n  if (!vMontoSinIva)     faltan.push(\"Monto SIN IVA\");\n\n  if (faltan.length) {\n    showAlert(\"Faltan datos: \" + faltan.join(\", \"), \"warning\");\n    return;\n  }\n\n  // Si todo está completo, abre el confirm\n  showModal(\"Confirmar_pedido\");\n})();\n}}\n",
+  "originalBottomRow": 50,
+  "originalTopRow": 46,
+  "parentId": "t6m6k5xey8",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 50,
+  "text": "Guardar",
+  "topRow": 43,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "f99hm3bt9n",
+  "widgetName": "Boton_guardar"
+}

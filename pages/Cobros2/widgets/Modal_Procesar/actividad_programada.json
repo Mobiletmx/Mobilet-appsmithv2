@@ -1,0 +1,58 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "left",
+  "animateLoading": true,
+  "bottomRow": 20,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "options"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "options"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "fhh1cpqact",
+  "label": "Actividad programada",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 29,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 23,
+  "needsErrorInfo": false,
+  "options": "{{ [\n  { label: \"Limpieza con cliente\",   value: \"Limpieza con cliente\" },\n  { label: \"Limpieza en almacén\",   value: \"Limpieza en almacén\" },\n  { label: \"Reparación en almacén\", value: \"Reparación en almacén\" }\n] }}\n",
+  "originalBottomRow": 20,
+  "originalTopRow": 7,
+  "parentColumnSpace": 12.6875,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 16,
+  "topRow": 7,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "x8z4q23wwi",
+  "widgetName": "actividad_programada"
+}

@@ -1,0 +1,2 @@
+SELECT SUM(selling_price)
+FROM showroom_db

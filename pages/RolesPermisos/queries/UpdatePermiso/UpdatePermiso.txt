@@ -1,0 +1,7 @@
+{
+  "p_id_rol":      {{ TableRolesPermisos.triggeredRow.id_rol }},
+  "p_id_tabla":    {{ TableRolesPermisos.triggeredRow.id_tabla_rol }},
+  "p_ver":         {{ TableRolesPermisos.triggeredRow.rol_puede_ver }},
+  "p_ins":         {{ TableRolesPermisos.triggeredRow.rol_puede_insertar }},
+  "p_upd":         {{ TableRolesPermisos.triggeredRow.rol_puede_editar }}
+}

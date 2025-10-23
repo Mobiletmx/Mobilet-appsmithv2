@@ -1,0 +1,19 @@
+{
+  "_id_ubicacion": {{ id_ubicacion.text }},
+  "_nombre_ubicacion": {{ nombre_ubicacion.text || null }},
+  "_direccion_ubicacion": {{ direccion_ubicacion.text || null }},
+  "_prefijo_contacto_ubicacion": {{ prefijo_contacto_ubicacion.text || null }},
+  "_geolocalizacion_ubicacion": {{ geolocalizacion_ubicacion.text || null }},
+  "_nombre_contacto_ubicacion": {{ nombre_contacto_ubicacion.text || null }},
+  "_celular_contacto_ubicacion": {{ celular_contacto_ubicacion.text ? Number(celular_contacto_ubicacion.text) : null }},
+  "_email_contacto_ubicacion": {{ email_contacto_ubicacion.text || null }},
+  "_id_ruta": {{ id_ruta.text || null }},
+  "_comentario_ubicacion": {{ comentario_ubicacion.text || null }},
+  "_comodinubi_a": null,
+  "_comodinubi_b": null,
+  "_comodinubi_c": null,
+  "_comodinubi_d": null,
+  "_comodinubi_e": null,
+  "_colonia_ubicacion": {{ colonia_ubicacion.text || null }},
+  "_codigo_postal_ubicacion": {{ codigo_postal_ubicacion.text ? Number(codigo_postal_ubicacion.text) : null }}
+}

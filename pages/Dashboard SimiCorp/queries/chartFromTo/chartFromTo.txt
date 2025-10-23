@@ -1,0 +1,1 @@
+select date_revenue as x, showroom_revenue as y from showroom_monthly_revenue where date_revenue between {{appsmith.store.fromDate}} and {{appsmith.store.toDate}}

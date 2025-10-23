@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "68b0fc8d2b07626075282edf_ade27026-ec62-4417-8644-b56956f76e1f",
+  "id": "DashboardGral_JSObject1",
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "DashboardGral",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "expected_revenue",
+        "value": "[5000000000]"
+      }
+    ]
+  }
+}

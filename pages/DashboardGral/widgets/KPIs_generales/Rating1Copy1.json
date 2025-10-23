@@ -1,0 +1,48 @@
+{
+  "activeColor": "#5A38FD",
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 18,
+  "boxShadow": "none",
+  "defaultRate": "{{avg_feed_sales.data[0].avg}}",
+  "displayName": "Rating",
+  "dynamicBindingPathList": [
+    {
+      "key": "defaultRate"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.914eb943.svg",
+  "inactiveColor": "#D6D6D6",
+  "isAllowHalf": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isReadOnly": true,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "qfzo2caap3",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 44,
+  "maxCount": 5,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "parentColumnSpace": 6.4140625,
+  "parentId": "y87tl6h5yw",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "size": "LARGE",
+  "tooltips": [
+    "Terrible",
+    "Bad",
+    "Neutral",
+    "Good",
+    "Great"
+  ],
+  "topRow": 13,
+  "type": "RATE_WIDGET",
+  "widgetId": "38y34xmrxj",
+  "widgetName": "Rating1Copy1"
+}

@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ switch_nuevo.isSwitchedOn && !Chk_entiendo.isChecked }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ffwdv9n8py",
+  "leftColumn": 13,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\ntry {\n// Ejecuta tu actualización de pedido\nawait UpdatePedidos.run();\n\nshowAlert(\"Pedido actualizado correctamente.\", \"success\");  \n\n// Refresca tabla/listado  \nif (GetPedidos?.run) await GetPedidos.run();  \n\n// Opcional: limpiar selección temporal una vez guardado  \n// storeValue(\"cliente_edit_row\", {}, true);  \n\n// Cierra modales  \ncloseModal(\"Modal_confirmar_editar\");  \ncloseModal(\"Modal_Editar\");  \n\n} catch (e) {\nshowAlert(\"Error al guardar: \" + (e?.message ?? e), \"error\");\n}\n})()\n}}\n",
+  "originalBottomRow": 22,
+  "originalTopRow": 18,
+  "parentId": "7h5qu95wta",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 29,
+  "text": "Confirmar",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "pti4wamh7c",
+  "widgetName": "Boton_guardar_cambios"
+}

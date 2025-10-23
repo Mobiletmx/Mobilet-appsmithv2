@@ -1,0 +1,70 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 24,
+  "boxShadow": "none",
+  "defaultText": "{{\n(() => {\nconst v = appsmith.store?.pedidoSel?.monto_sin_iva;\nif (v === null || v === undefined || v === \"\") return \"\";\nconst n = Number(v);\nreturn Number.isFinite(n) ? n.toFixed(2) : \"\";\n})()\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "iconAlign": "left",
+  "inputType": "NUMBER",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "946x6de4ln",
+  "label": "Precio sin iva",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 36,
+  "maxChars": "10",
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 13,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "onTextChanged": "{{\n(() => {\n// Lee el base desde este mismo input\nconst raw = input_four?.text ?? \"\";\n// Normaliza: quita comas y espacios\nconst clean = String(raw).replace(/,/g, \"\").trim();\nconst base = Number(clean);\n\n// Si no es número válido, limpia cálculos y sal\nif (!Number.isFinite(base)) {\nif (input_five?.setValue) input_five.setValue(\"\");\nif (input_six?.setValue) input_six.setValue(\"\");\nreturn;\n}\n\n// Evita negativos (opcional: coméntalo si permites descuentos negativos)\nconst baseOk = Math.max(0, base);\n\nconst iva = +(baseOk * 0.16).toFixed(2);\nconst total = +(baseOk + iva).toFixed(2);\n\nif (input_five?.setValue) input_five.setValue(iva.toFixed(2));\nif (input_six?.setValue) input_six.setValue(total.toFixed(2));\n})()\n}}",
+  "parentColumnSpace": 17.40625,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 45,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false,
+  "topRow": 17,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "k3xad7n5ic",
+  "widgetName": "input_four"
+}

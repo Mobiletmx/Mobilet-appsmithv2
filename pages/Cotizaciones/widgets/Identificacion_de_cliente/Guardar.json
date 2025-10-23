@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(() => {\n  const id     = (Listado_clientes.selectedOptionValue  || \"\").trim();\n  const nombre = (Listado_clientes.selectedOptionLabel || \"\").trim();\n\n  if (id) {\n    storeValue(\"clienteSel\", { id_cliente: id, nombre_cliente: nombre }, true);\n    es_cliente_existente.setValue(true);\n    es_cliente_nuevo.setValue(false);\n  } else {\n    storeValue(\"clienteSel\", null, true);\n    es_cliente_existente.setValue(false);\n    es_cliente_nuevo.setValue(false);\n  }\n\n  closeModal(\"Identificacion_de_cliente\");\n  showModal(\"Modal_Procesar\");\n})()\n}}\n",
+  "parentId": "nzlzbqsm2p",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Guardar",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "efz3zrttzh",
+  "widgetName": "Guardar"
+}

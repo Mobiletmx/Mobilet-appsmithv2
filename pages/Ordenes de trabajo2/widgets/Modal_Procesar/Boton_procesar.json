@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 35,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "right",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 40,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n  const act   = actividad_programada.selectedOptionValue || \"\";\n  const item  = id_item_pedido.selectedOptionValue || null;\n  const bano  = id_bano.selectedOptionValue || null;\n  const ubic  = nombre_ubicacion.selectedOptionValue || null;\n  const fecha = fecha_programada.selectedDate || null;\n\n  // Validaciones básicas\n  if (!act) { showAlert(\"Selecciona la actividad\", \"warning\"); return; }\n  if (act === \"Limpieza cliente\" && !item) { showAlert(\"Selecciona el ID item pedido\", \"warning\"); return; }\n  if (!ubic) { showAlert(\"Selecciona la ubicación\", \"warning\"); return; }\n  if (!fecha) { showAlert(\"Selecciona la fecha programada\", \"warning\"); return; }\n\n  // Construye payload\n  const payload = {\n    actividad_programada: act,\n    id_item_pedido: item,                     // puede ser null para actividades de almacén\n    id_bano: bano,\n    id_ubicacion: ubic,\n    geolocalizacion_ubicacion: geolocalizacion_ubicacion.text || geolocalizacion_ubicacion.value || \"\",\n    id_ruta: id_ruta.text || \"\",\n    costo_reparacion: costo_reparacion.value ?? costo_reparacion.text ?? null,\n    id_usuario: appsmith.user?.email || \"\",\n    fecha_creacion_actual: new Date().toISOString(),\n    fecha_programada: fecha\n  };\n\n  // Ejecuta insert (ajusta si tu API requiere body/query params diferentes)\n  await InsertOrdenesTrabajo.run(payload);\n  showAlert(\"Orden de trabajo creada\", \"success\");\n  closeModal(\"Modal_Procesar\");\n})()\n}}\n",
+  "originalBottomRow": 36,
+  "originalTopRow": 32,
+  "parentId": "t6m6k5xey8",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 50,
+  "text": "Crear",
+  "topRow": 31,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "f99hm3bt9n",
+  "widgetName": "Boton_procesar"
+}

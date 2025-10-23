@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !Chk_entiendo.isChecked }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ffwdv9n8py",
+  "leftColumn": 27,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n// 1) Validar checkbox\nif (!Chk_entiendo?.isChecked) {\nshowAlert(\"Debes marcar la casilla: Entiendo y deseo continuar.\", \"warning\");\nreturn;\n}\n\ntry {\n// 2) Ejecutar el query\nconst res = await InsertPedidosArray.run();\nconsole.log(\"InsertPedidos OK:\", res);\n\nshowAlert(\"Pedido insertado correctamente.\", \"success\");  \ncloseModal(\"Confirmar_nuevo_pedido\");  \ncloseModal(\"Modal_nuevo_pedido\");  \n\n} catch (e) {\nconsole.error(\"InsertPedidos error:\", e);\nshowAlert(\"Ocurrió un error al insertar el pedido.\", \"error\");\n}\n})()\n}}",
+  "originalBottomRow": 22,
+  "originalTopRow": 18,
+  "parentId": "ja0vfip1x5",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 43,
+  "text": "Confirmar",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "suyv1fiisg",
+  "widgetName": "Boton_confirmar_pedido"
+}

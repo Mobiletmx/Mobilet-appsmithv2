@@ -1,0 +1,3 @@
+{
+  "refresh_token": {{ appsmith.store.refresh_token }}
+}

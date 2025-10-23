@@ -1,0 +1,21 @@
+{
+  "_id_item_pedido": null,
+  "_id_bano": null,
+  "_id_ubicacion": null,
+  "_fecha_programada": null,
+  "_fecha_ejecucion": null,
+  "_geolocalizacion_programada": null,
+  "_actividad_programada": null,
+  "_dias_transcurridos": null,
+  "_costo_reparacion": null,
+  "_geolocalizacion_confirmacion": null,
+  "_estatus_ot": "Activa",
+  "_nombre_ubicacion": null,
+  "_id_ruta": null,
+  "_comodinot_a": null,
+  "_comodinot_b": null,
+  "_comodinot_c": null,
+  "_comodinot_d": null,
+  "_comodinot_e": null
+}
+

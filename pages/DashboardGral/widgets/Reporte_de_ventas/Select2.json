@@ -1,0 +1,64 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "0.375rem",
+  "bottomRow": 8,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( `{\n    \"label\": \"February 2022 \",\n    \"value\": \"` + monthly_showroom_revenue.data[22].date_revenue + `\"\n  }`))(Select2.options, Select2.serverSideFiltering) }}",
+  "displayName": "Select",
+  "dynamicBindingPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bd99caba.svg",
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "d8u8l09gpt",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelText": "To",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 20,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onOptionChange": "{{ (storeValue('toDate',Select2.selectedOptionValue)); chartFromTo.run(); select_repair_revenue.run()}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 17.9375,
+  "parentId": "xflhu03o4k",
+  "parentRowSpace": 10,
+  "placeholderText": "Select Month",
+  "renderMode": "CANVAS",
+  "rightColumn": 39,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"label\": \"April 2020\",\n    \"value\": \"{{monthly_showroom_revenue.data[0].date_revenue}}\"\n  },\n\t  {\n    \"label\": \"May 2020\",\n    \"value\": \"{{monthly_showroom_revenue.data[1].date_revenue}}\"\n  },\n\t  {\n    \"label\": \"June 2020\",\n    \"value\": \"{{monthly_showroom_revenue.data[2].date_revenue}}\"\n  },\n\t  {\n    \"label\": \"July 2020\",\n    \"value\": \"{{monthly_showroom_revenue.data[3].date_revenue}}\"\n  },\n\t  {\n    \"label\": \"August 2020\",\n    \"value\": \"{{monthly_showroom_revenue.data[4].date_revenue}}\"\n  },\n\t  {\n    \"label\": \"September 2020\",\n    \"value\": \"{{monthly_showroom_revenue.data[5].date_revenue}}\"\n  },\n\t  {\n    \"label\": \"October 2020\",\n    \"value\": \"{{monthly_showroom_revenue.data[6].date_revenue}}\"\n  },\n\t  {\n    \"label\": \"November 2020\",\n    \"value\": \"{{monthly_showroom_revenue.data[7].date_revenue}}\"\n  },\n\t  {\n    \"label\": \"December 2020\",\n    \"value\": \"{{monthly_showroom_revenue.data[8].date_revenue}}\"\n  },\n\t  {\n    \"label\": \"January 2021 \",\n    \"value\": \"{{monthly_showroom_revenue.data[9].date_revenue}}\"\n  },\n\t\t  {\n    \"label\": \"February 2021 \",\n    \"value\": \"{{monthly_showroom_revenue.data[10].date_revenue}}\"\n  },\n\t\t  {\n    \"label\": \"March 2021 \",\n    \"value\": \"{{monthly_showroom_revenue.data[11].date_revenue}}\"\n  },\n\t\t  {\n    \"label\": \"April 2021 \",\n    \"value\": \"{{monthly_showroom_revenue.data[12].date_revenue}}\"\n  },\n\t\t  {\n    \"label\": \"May 2021 \",\n    \"value\": \"{{monthly_showroom_revenue.data[13].date_revenue}}\"\n  },\n\t\t  {\n    \"label\": \"June 2021 \",\n    \"value\": \"{{monthly_showroom_revenue.data[14].date_revenue}}\"\n  },\n\t\t  {\n    \"label\": \"July 2021 \",\n    \"value\": \"{{monthly_showroom_revenue.data[15].date_revenue}}\"\n  },\n\t\t  {\n    \"label\": \"August 2021 \",\n    \"value\": \"{{monthly_showroom_revenue.data[16].date_revenue}}\"\n  },\n\t\t  {\n    \"label\": \"September 2021 \",\n    \"value\": \"{{monthly_showroom_revenue.data[17].date_revenue}}\"\n  },\n\t\t  {\n    \"label\": \"October 2021\",\n    \"value\": \"{{monthly_showroom_revenue.data[18].date_revenue}}\"\n  },\n\t\t  {\n    \"label\": \"November 2021 \",\n    \"value\": \"{{monthly_showroom_revenue.data[19].date_revenue}}\"\n  },\n\t\t  {\n    \"label\": \"December 2021 \",\n    \"value\": \"{{monthly_showroom_revenue.data[20].date_revenue}}\"\n  },\n\t\t\t  {\n    \"label\": \"January 2022 \",\n    \"value\": \"{{monthly_showroom_revenue.data[21].date_revenue}}\"\n  },\n\t\t\t\t  {\n    \"label\": \"February 2022 \",\n    \"value\": \"{{monthly_showroom_revenue.data[22].date_revenue}}\"\n  }\n]",
+  "topRow": 4,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "ua6wq2gaxv",
+  "widgetName": "Select2"
+}

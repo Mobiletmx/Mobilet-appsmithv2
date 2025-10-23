@@ -1,0 +1,9 @@
+{
+  "p_id_bano": "B0010",
+  "p_tipo_bano": "Portátil",
+  "p_fecha_compra": "2025-01-15",
+  "p_estatus_bano": "En reparación",
+  "p_dias_activo": 120,
+  "p_contador_reparaciones": 3,
+  "p_costo_total_reparaciones": 2500
+}

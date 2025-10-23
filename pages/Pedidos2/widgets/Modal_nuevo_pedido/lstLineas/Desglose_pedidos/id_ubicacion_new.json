@@ -1,0 +1,74 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "defaultText": "{{ appsmith.store.lines?.[currentItem.idx]?.id_ubicacion || \"\" }}\n\t",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": "{{ true }}",
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "h4sporpdly",
+  "label": "ID ubicación",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 17,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 55,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 48,
+  "needsErrorInfo": false,
+  "onTextChanged": "{{\n(() => {\n  const idx = currentItem.idx;\n  const idU = (id_ubicacion_new.text || \"\").trim();\n\n  if (!idU) {\n    // Limpia la línea si borraron el ID\n    Lines.update(idx, {\n      id_ubicacion: null,\n      nombre_ubicacion: null,\n      geolocalizacion_ubicacion: null,\n      id_ruta: null,\n    });\n    // Limpia select del nombre\n    if (typeof nombre_ubicacion_new?.setSelectedOption === \"function\") {\n      nombre_ubicacion_new.setSelectedOption(null);\n    }\n    return;\n  }\n\n  const ubis = GetUbicaciones.data || [];\n  const u = ubis.find(x => String(x.id_ubicacion) === String(idU));\n\n  if (u) {\n    // ID válido -> setear TODO\n    Lines.update(idx, {\n      id_ubicacion: u.id_ubicacion,\n      nombre_ubicacion: u.nombre_ubicacion,\n      geolocalizacion_ubicacion: u.geolocalizacion_ubicacion ?? null,\n      id_ruta: u.id_ruta ?? null,\n    });\n    // sincroniza el select del nombre\n    if (typeof nombre_ubicacion_new?.setSelectedOption === \"function\") {\n      nombre_ubicacion_new.setSelectedOption({ label: u.nombre_ubicacion, value: u.id_ubicacion });\n    }\n  } else {\n    // ID no existe -> guarda el texto y limpia derivados\n    showAlert(\"ID de ubicación no encontrado.\", \"warning\");\n    Lines.update(idx, {\n      id_ubicacion: idU,\n      nombre_ubicacion: null,\n      geolocalizacion_ubicacion: null,\n      id_ruta: null,\n    });\n    if (typeof nombre_ubicacion_new?.setSelectedOption === \"function\") {\n      nombre_ubicacion_new.setSelectedOption(null);\n    }\n  }\n})()\n}}\n",
+  "parentColumnSpace": 12.6875,
+  "parentId": "lzmersxrju",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 28,
+  "showStepArrows": false,
+  "topRow": 0,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "o0ds19wr1d",
+  "widgetName": "id_ubicacion_new"
+}

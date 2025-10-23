@@ -1,0 +1,60 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{ !!appsmith.store.clienteSel?.id_cliente }}\n",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "onChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onChange"
+    }
+  ],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "75t8ae6qe7",
+  "label": "Cliente existente",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextSize": "1rem",
+  "leftColumn": 28,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 36,
+  "mobileLeftColumn": 19,
+  "mobileRightColumn": 31,
+  "mobileTopRow": 32,
+  "needsErrorInfo": false,
+  "onChange": "{{\n(() => {\n  if (es_cliente_existente.isSwitchedOn) {\n    // Exclusión\n    es_cliente_nuevo.setValue(false);\n\n    // Abrir el buscador de clientes\n    showModal(\"Identificacion_de_cliente\");\n  } else {\n    // Limpiar selección y campos\n    storeValue(\"clienteSel\", null, true);\n    id_cliente.setValue(\"\");\n    nombre_cliente.setValue(\"\");\n  }\n})()\n}}\n",
+  "originalBottomRow": 37,
+  "originalTopRow": 33,
+  "parentColumnSpace": 12.6875,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 42,
+  "topRow": 1,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "8kgw19f1lg",
+  "widgetName": "es_cliente_existente"
+}
