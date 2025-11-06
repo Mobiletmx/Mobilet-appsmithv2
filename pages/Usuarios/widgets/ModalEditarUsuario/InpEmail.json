@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 8,
   "boxShadow": "none",
   "defaultText": "{{ TablaNuevoUsuario.triggeredRow.email_usuario || '' }}",
   "dynamicBindingPathList": [

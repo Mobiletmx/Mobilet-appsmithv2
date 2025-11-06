@@ -1,0 +1,59 @@
+{
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 48,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !Chk_entiendo_confirmar.isChecked || appsmith.store.otProcessing === true }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ffwdv9n8py",
+  "leftColumn": 27,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {  \n    if (!Chk_entiendo_confirmar?.isChecked) {  \n    showAlert(\"Debes aceptar la confirmación para continuar.\", \"warning\");  \n    return;  \n  }  \n  \n  try {  \n    await UpdateCobros.run();  \n    showAlert(\"Cobro actualizado correctamente.\", \"success\");  \n    // Aquí puedes agregar refrescos o cierres de modal si quieres  \n\t\t\nif (GetCobros?.run) await GetCobros.run();  \n\n// Opcional: limpiar selección temporal una vez guardado  \n// storeValue(\"cliente_edit_row\", {}, true);  \n\n// Cierra modales  \ncloseModal(\"Modal_Confirmar\");  \ncloseModal(\"Modal_Procesar\");  \n\n\t\t\n  } catch (e) {  \n    showAlert(\"Error al actualiar el cobro: \" + (e?.message || e), \"error\");  \n  }  \n})();\n\n\n}}\n",
+  "originalBottomRow": 44,
+  "originalTopRow": 40,
+  "parentId": "kfb4w72fya",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 43,
+  "text": "Confirmar",
+  "topRow": 44,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "h84dqqlk2e",
+  "widgetName": "Boton_confirmar_procesar"
+}

@@ -1,0 +1,52 @@
+{
+  "accentColor": "#22c55e",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 11,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{ appsmith.store.cobros_edit_row?.estatus_pago  || \"\" }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onChange"
+    }
+  ],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "sfph3k8kh7",
+  "label": "Cobro ha sido pagado?",
+  "labelPosition": "Left",
+  "labelTextColor": "#1d4ed8",
+  "labelTextSize": "1.25rem",
+  "leftColumn": 38,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 14,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 28,
+  "mobileTopRow": 10,
+  "needsErrorInfo": false,
+  "onChange": "",
+  "parentColumnSpace": 18.575,
+  "parentId": "tszk7sied9",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 53,
+  "topRow": 7,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "ei91j3v4js",
+  "widgetName": "InputEstatusPago"
+}

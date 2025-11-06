@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68fa28cb2b0762607528340c_35f8ee55-5350-47c4-9186-f7224729ca31",
+  "id": "Facturación_ProcesarFactura",
+  "unpublishedCollection": {
+    "name": "ProcesarFactura",
+    "pageId": "Facturación",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

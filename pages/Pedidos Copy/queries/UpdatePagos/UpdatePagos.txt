@@ -1,0 +1,15 @@
+{
+  "_id_aplicacion_pago": "AP00001238",
+  "_id_pago": "PAG-TEST-002",
+  "_id_cliente": "C0116",
+  "_prefactura": false,
+  "_monto_total_pagado": 3500.00,
+  "_id_item_pedido": "PE00006753",
+  "_monto_a_aplicar": 2000.00,
+  "_comentarios_pagos": "Pago actualizado vía smoke test desde Appsmith",
+  "_comodinpag_a": null,
+  "_comodinpag_b": null,
+  "_comodinpag_c": null,
+  "_comodinpag_d": null,
+  "_comodinpag_e": null
+}

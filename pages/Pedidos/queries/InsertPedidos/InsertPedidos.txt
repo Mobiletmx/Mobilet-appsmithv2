@@ -4,7 +4,7 @@
   "_id_cliente":  {{ text_one_new.text || null }},
   "_id_ubicacion": {{ select_two_new.selectedOptionValue || null }},
   "_item_consecutivo": {{ null }} ,
-  "_categoria_bano": {{ select_four_new.selectedOptionValue || null }},
+  "_categoria_bano": {{ null }} ,
   "_costo_por_item": {{ input_one_new.text || null }},
   "_fecha_inicio": {{ date_one_new.selectedDate || null }},
   "_fecha_fin": {{ null }} ,

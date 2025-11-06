@@ -3,7 +3,7 @@
   "alignWidget": "LEFT",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 15,
   "defaultCheckedState": false,
   "dynamicBindingPathList": [
     {
@@ -50,7 +50,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 52,
-  "topRow": 13,
+  "topRow": 11,
   "type": "CHECKBOX_WIDGET",
   "version": 1,
   "widgetId": "250ahw8rr8",

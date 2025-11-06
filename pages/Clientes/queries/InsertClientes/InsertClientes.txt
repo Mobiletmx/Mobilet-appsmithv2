@@ -14,7 +14,7 @@
   "_prefijo_nombre_cliente": {{ prefijo_nombre_cliente_new.selectedOptionValue || null }},
   "_tipo_cliente": {{ tipo_cliente.selectedOptionValue || null }},
   "_requiere_factura": {{ requiere_factura_new.isSwitchedOn }},
-  "_estatus_cliente": {{ estatus_cliente.text || null }},
+  "_estatus_cliente": null,
   "_dia_de_corte": {{ dia_de_corte_new.selectedOptionValue ? Number(dia_de_corte_new.selectedOptionValue) : null }},
   "_forma_de_pago": {{ forma_de_pago.selectedOptionValue || null }},
   "_domicilio_fiscal": {{ domicilio_fiscal.text || null }},

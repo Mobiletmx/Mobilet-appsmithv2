@@ -1,0 +1,23 @@
+{{ 
+  {
+  _id_orden_de_trabajo: appsmith.store.otPending?.id_orden || appsmith.store.otForm?.id_orden || null,
+  _id_item_pedido:     appsmith.store.otPending?.id_item_pedido || appsmith.store.otForm?.id_item_pedido || null,
+  _id_bano:            appsmith.store.otPending?.id_bano || appsmith.store.otForm?.id_bano || null,
+  _id_ubicacion:        null,
+  _fecha_programada:   appsmith.store.otPending?.fecha_programada || appsmith.store.otForm?.fecha_programada || null,
+  _fecha_ejecucion:    null,
+  _geolocalizacion_programada:  null,
+  _actividad_programada: null,
+  _dias_transcurridos: null,
+  _costo_reparacion:   appsmith.store.otPending?.costo_reparacion || appsmith.store.otForm?.costo_reparacion || null,
+  _geolocalizacion_confirmacion: null,
+  _estatus_ot:         null,
+  _nombre_ubicacion:   null,
+  _id_ruta:            null,
+  _comodinot_a: null,
+  _comodinot_b: null,
+  _comodinot_c: null,
+  _comodinot_d: null,
+  _comodinot_e: null
+  }
+}}

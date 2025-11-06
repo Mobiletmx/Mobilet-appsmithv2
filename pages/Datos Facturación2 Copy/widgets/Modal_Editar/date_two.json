@@ -1,0 +1,68 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 24,
+  "boxShadow": "none",
+  "closeOnSelection": true,
+  "dateFormat": "DD-MM-YYYY",
+  "datePickerType": "DATE_PICKER",
+  "defaultDate": "{{\n(() => {\nconst v = appsmith.store?.cliente_edit_row?.fecha_fin;\nif (!v) return \"\";\n\n// Si ya viene como YYYY-MM-DD, úsalo tal cual\nvar mYMD = String(v).match(/^(\\d{4})-(\\d{2})-(\\d{2})$/);\nif (mYMD) {\nreturn mYMD[0];\n}\n\n// Si viene como DD/MM/YYYY o DD-MM-YYYY, conviértelo a YYYY-MM-DD\nvar mDMY = String(v).match(/^(\\d{2})/-/-$/);\nif (mDMY) {\nvar dd = mDMY[1], mm = mDMY[2], yyyy = mDMY[3];\nreturn yyyy + \"-\" + mm + \"-\" + dd;\n}\n\n// Intento final: parsear con Date y regresar YYYY-MM-DD en local\nvar d = new Date(v);\nif (!isNaN(d.getTime())) {\nvar yyyy2 = d.getFullYear();\nvar mm2 = String(d.getMonth() + 1).padStart(2, \"0\");\nvar dd2 = String(d.getDate()).padStart(2, \"0\");\nreturn yyyy2 + \"-\" + mm2 + \"-\" + dd2;\n}\n\nreturn \"\";\n})()\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "firstDayOfWeek": 0,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "bjfphkilde",
+  "label": "Fecha recoleción",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 24,
+  "maxDate": "2121-12-31T18:29:00.000Z",
+  "maxDynamicHeight": 9000,
+  "minDate": "1920-12-31T18:30:00.000Z",
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 31,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 36,
+  "mobileTopRow": 24,
+  "needsErrorInfo": false,
+  "originalBottomRow": 33,
+  "originalTopRow": 26,
+  "parentColumnSpace": 12.6875,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 35,
+  "shortcuts": false,
+  "timePrecision": "minute",
+  "topRow": 17,
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "cj9erqour7",
+  "widgetName": "date_two"
+}

@@ -1,0 +1,54 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{ appsmith.store.cobros_edit_row?.estatus_factura  || \"\" }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onChange"
+    }
+  ],
+  "isDisabled": true,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "sfph3k8kh7",
+  "label": "Cobro ha sido facturado?",
+  "labelPosition": "Left",
+  "labelStyle": "",
+  "leftColumn": 38,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 14,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 28,
+  "mobileTopRow": 10,
+  "needsErrorInfo": false,
+  "onChange": "",
+  "parentColumnSpace": 18.575,
+  "parentId": "tszk7sied9",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 54,
+  "topRow": 11,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "qbs2u721k8",
+  "widgetName": "InputEstatusFactura"
+}

@@ -36,7 +36,7 @@
   "mobileRightColumn": 39,
   "mobileTopRow": 14,
   "needsErrorInfo": false,
-  "onClick": "{{\n(async () => {\n  // 0) Reinicia el modal a sus valores por defecto\n  resetWidget(\"Modal_Nuevo\", true);\n\n  // 1) Olvida cualquier fila que se estuviera editando\n  await storeValue(\"cliente_edit_row\", null, true);\n\n  // 2) Limpia inputs de texto\n  input_one_new.setValue(\"\");\n\n  // 3) Limpia selects / menús\n   select_one_new?.setSelectedOption(null);\n  select_two_new?.setSelectedOption(null);\n  select_three_new?.setSelectedOption(null);\n  select_four_new?.setSelectedOption(null);\n \n  // 4) Switches\n  switch_one_new?.setValue(false);\n\n  // 5) ¡No tocar! id_cliente y estatus_cliente se controlan con bindings\n\n  // 6) Marca el modo \"Nuevo cliente\"\n  switch_nuevo_new?.setDisabled(false);\n  switch_nuevo_new?.setValue(true);\n\n  // 7) Abre el modal\n  showModal(\"Modal_Nuevo\");\n})();\n}}\n",
+  "onClick": "{{\n(async () => {\n  // 0) Reinicia el modal a sus valores por defecto\n  resetWidget(\"Modal_Nuevo\", true);\n\n  // 1) Olvida cualquier fila que se estuviera editando\n  await storeValue(\"cliente_edit_row\", null, true);\n\n  // 2) Limpia inputs de texto\n  input_one_new.setValue(\"\");\n\n  // 3) Limpia selects / menús\n   select_one_new?.setSelectedOption(null);\n  select_two_new?.setSelectedOption(null);\n  select_three_new?.setSelectedOption(null);\n \n\n  // 5) ¡No tocar! id_cliente y estatus_cliente se controlan con bindings\n\n  // 6) Marca el modo \"Nuevo cliente\"\n  switch_nuevo_new?.setDisabled(false);\n  switch_nuevo_new?.setValue(true);\n\n  // 7) Abre el modal\n  showModal(\"Modal_Nuevo\");\n})();\n}}\n",
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,

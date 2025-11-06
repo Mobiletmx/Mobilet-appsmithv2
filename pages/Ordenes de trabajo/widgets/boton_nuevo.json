@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 18,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "uiay4ombn0",
+  "leftColumn": 24,
+  "minWidth": 120,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 23,
+  "mobileRightColumn": 39,
+  "mobileTopRow": 14,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (() => {\n    storeValue(\"otIsEditMode\", false, true);\n    storeValue(\"otSel\", null, true);\n\n    // normalizar otForm.actividad_programada si existiera como objeto\n    const curForm = appsmith.store.otForm || {};\n    const act = curForm.actividad_programada;\n    const actVal = (act && typeof act === \"object\") ? (act.value ?? act.label) : act;\n    storeValue(\"otForm\", { ...curForm, actividad_programada: actVal || null }, true);\n\n    storeValue(\"otPending\", null, true);\n    JS_OT.clear && JS_OT.clear();\n    showModal(\"Modal_Procesar\");\n  })()\n}}",
+  "parentColumnSpace": 19.8125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 40,
+  "text": "Nueva Orden de Trabajo",
+  "topRow": 14,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "d0ig6bg596",
+  "widgetName": "boton_nuevo"
+}

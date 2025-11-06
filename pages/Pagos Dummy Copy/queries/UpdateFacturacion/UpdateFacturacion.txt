@@ -1,0 +1,18 @@
+{
+  "_id_item_factura": "F00005",
+  "_id_cliente": "C0116",
+  "_id_item_pedido": "PE00006753",
+  "_id_factura": "FAC-EDIT-002",
+  "_comodinfac_a": "Actualización smoke test",
+  "_comodinfac_b": "Edición manual de prueba",
+  "_comodinfac_c": null,
+  "_comodinfac_d": 1200.50,
+  "_comodinfac_e": null,
+  "_product_key": "78101800",
+  "_unit_key": "E48",
+  "_unit_name": "Unidad",
+  "_price": 1450.00,
+  "_tax_included": true,
+  "_taxability": "Gravado",
+  "_sku": "SKU-123"
+}

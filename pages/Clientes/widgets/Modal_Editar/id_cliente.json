@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 16,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -44,9 +44,9 @@
   "rightColumn": 9,
   "shouldTruncate": false,
   "text": "{{ nuevo_cliente.isSwitchedOn ? \"\" : (appsmith.store.cliente_edit_row?.id_cliente || \"\") }}\n",
-  "textAlign": "CENTER",
+  "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 9,
+  "topRow": 12,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

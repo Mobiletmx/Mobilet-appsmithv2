@@ -1,0 +1,78 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 32,
+  "boxShadow": "none",
+  "defaultText": "{{ appsmith.store.otIsEditMode ? (appsmith.store.otSel?.costo_reparacion || \"\") : \"\" }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTextChanged"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "iconAlign": "left",
+  "inputType": "NUMBER",
+  "isDisabled": "{{\n  !(appsmith.store.otIsEditMode === true && appsmith.store.otSel?.actividad_programada === \"Reparacion en almacen\") }}",
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "6edus8d7lo",
+  "label": "Costo reparacion",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 48,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minNum": ".01",
+  "minWidth": 450,
+  "mobileBottomRow": 30,
+  "mobileLeftColumn": 40,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 23,
+  "needsErrorInfo": false,
+  "onTextChanged": "{{ storeValue(\"otSel\", {...(appsmith.store.otSel || {}), costo_reparacion: InputCosto.text}, true) }}",
+  "originalBottomRow": 64,
+  "originalTopRow": 57,
+  "parentColumnSpace": 12.6875,
+  "parentId": "tszk7sied9",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false,
+  "topRow": 25,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "fetquy4neg",
+  "widgetName": "InputCosto"
+}

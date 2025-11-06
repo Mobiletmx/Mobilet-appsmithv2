@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 33,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3flkeu2mqz",
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "originalBottomRow": 33,
+  "originalTopRow": 5,
+  "overflow": "NONE",
+  "parentId": "kfb4w72fya",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "shouldTruncate": false,
+  "text": "{{\n  (() => {\n    const p = appsmith.store.cobros_edit_row || {};\n\n    const cobro = \np.id_cobro || \"\";\n    const idItem = p._id_item_pedido || p.id_item_pedido || \"\";\n    const idBano = p._id_bano || p.id_bano || \"\";\n    const nombreUbic = p._nombre_ubicacion || p.nombre_ubicacion || \"\";\n    const cliente = p.nombre_cliente || \"\";\n\t\tconst idOT = p._id_orden_de_trabajo || p.id_orden_de_trabajo || \"\";\n    // Intentar formatear fecha a local (si existe)\n    const costo =  p.monto_sin_iva || \"\";\n\n    return `Vas a modificar la orden de cobro con los siguientes datos:\\n\\nOrden de cobro:  ${cobro}\\nID item pedido: ${idItem}\\nCliente: ${cliente}\\nID baño: ${idBano}\\nUbicación: ${nombreUbic}\\n\\nMarca la casilla y confirma para continuar.`;\n  })()\n}}",
+  "textAlign": "CENTER",
+  "textColor": "#231F20",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "3bg87ctu4m",
+  "widgetName": "Mensaje_procesar"
+}

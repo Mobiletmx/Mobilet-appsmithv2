@@ -1,0 +1,58 @@
+{
+  "accentColor": "#22c55e",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 20,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{ \n  Boolean(\n    Informacion_tabla.triggeredRow?.estatus_pago \n    ?? Informacion_tabla.selectedRow?.estatus_pago \n    ?? appsmith.store.cobros_edit_row?.estatus_pago \n    ?? false\n  )\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "onChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onChange"
+    }
+  ],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "o4o28ysk0z",
+  "label": "Cobro pagado?",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#18181b",
+  "labelTextSize": "1.25rem",
+  "leftColumn": 2,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 26,
+  "mobileRightColumn": 38,
+  "mobileTopRow": 16,
+  "needsErrorInfo": false,
+  "onChange": "{{ (val) => {\n  try {\n    const cur = appsmith.store.cobros_edit_row || {};\n    // val ya viene booleano del Switch; forzamos !! para seguridad\n    storeValue(\"cobros_edit_row\", { ...cur, estatus_pago: !!val }, true);\n  } catch (e) {\n    storeValue(\"lastStoreError\", String(e), true);\n    console.error(\"SwitchEstatusPago.onChange error\", e);\n  }\n} }}",
+  "originalBottomRow": 15,
+  "originalTopRow": 11,
+  "parentColumnSpace": 6.9375,
+  "parentId": "zqz5mxkpqw",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 23,
+  "topRow": 16,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "wiigkp8nwr",
+  "widgetName": "SwitchEstatusPago"
+}

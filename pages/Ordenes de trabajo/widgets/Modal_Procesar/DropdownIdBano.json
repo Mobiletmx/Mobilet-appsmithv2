@@ -1,0 +1,81 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  appsmith.store.otIsEditMode ? (appsmith.store.otSel?.id_bano || \"\") : (appsmith.store.otForm?.id_bano || \"\") ))(DropdownIdBano.options, DropdownIdBano.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "defaultOptionValue"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": "{{\n  ((appsmith.store.otIsEditMode\n     ? appsmith.store.otSel?.actividad_programada\n     : (appsmith.store.otForm?.actividad_programada || RadioActividad.selectedOption)\n   ) === \"Limpieza con cliente\")\n   ||\n  (appsmith.store.otIsEditMode && appsmith.store.otSel?.actividad_programada === \"Reparacion en almacen\" && appsmith.store.otSel?.estatus_ot === \"Completada\")\n}}",
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "ktxslnhytr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "ID Baño",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 32,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 21,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{\n  (() => {\n    const val = DropdownIdBano.selectedOptionValue;\n    if (appsmith.store.otIsEditMode) {\n      storeValue(\"otSel\", {...(appsmith.store.otSel || {}), id_bano: val}, true);\n    } else {\n      storeValue(\"otForm\", {...(appsmith.store.otForm || {}), id_bano: val}, true);\n    }\n    return;\n  })()\n}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 6.9375,
+  "parentId": "tszk7sied9",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 47,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n  (() => {\n    const activity = appsmith.store.otIsEditMode\n      ? appsmith.store.otSel?.actividad_programada\n      : (appsmith.store.otForm?.actividad_programada || RadioActividad.selectedOptionValue);\n\n    const selectedItem = appsmith.store.otIsEditMode ? appsmith.store.otSel?.id_item_pedido : appsmith.store.otForm?.id_item_pedido;\n\n    if (activity === \"Limpieza con cliente\") {\n      const pedidoRow = (GetPedidos.data || []).find(p => String(p.id_item_pedido) === String(selectedItem));\n      if (!pedidoRow) return [];\n      const banoId = pedidoRow?.id_bano;\n      const banoRow = (GetInventario.data || []).find(b => String(b.id_bano) === String(banoId));\n      if (banoRow) return [{ label: banoRow.nombre_ubicacion ?? banoRow.nombre_bano ?? String(banoRow.id_bano), value: banoRow.id_bano }];\n      return [{ label: String(banoId), value: banoId }];\n    }\n\n    return (GetInventario.data || [])\n      .filter(b => String(b.estatus_bano || \"\").toLowerCase() !== \"colocado con cliente\")\n      .map(b => ({ label: b.nombre_ubicacion ?? b.nombre_bano ?? String(b.id_bano), value: b.id_bano }));\n  })()\n}}",
+  "topRow": 8,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "lgife7h6ki",
+  "widgetName": "DropdownIdBano"
+}

@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 65,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "right",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 41,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(() => {\n  const trim = (v) => String(v ?? \"\").trim();\n  const has  = (v) => trim(v).length > 0;\n\n  // --- Reglas base (siempre requeridas) ---\n  if (!has(nombre_cliente.text)) {\n    showAlert(\"Captura el nombre del cliente.\", \"warning\"); return;\n  }\n\t if (!has(celular_cliente.text)) {\n    showAlert(\"Captura el celular del cliente.\", \"warning\"); return;\n  }\n\t\t if (!\n\t\t\t\t has(email_cliente.text)) {\n    showAlert(\"Captura el email del cliente.\", \"warning\"); return;\n  }\n  if (!dia_de_corte.selectedOptionValue) {\n    showAlert(\"Selecciona el día de corte de pago.\", \"warning\"); return;\n  }\n\n  // --- Validación opcional de email (si viene, que tenga formato válido) ---\n  const email = trim(email_cliente.text);\n  if (email && !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {\n    showAlert(\"El email no tiene un formato válido.\", \"warning\"); return;\n  }\n\n  // --- Todo OK -> abrir confirmación ---\n  resetWidget(\"Modal_confirmar_editar\", true);\n  showModal(\"Modal_confirmar_editar\");\n})();\n}}\n",
+  "originalBottomRow": 39,
+  "originalTopRow": 35,
+  "parentId": "t6m6k5xey8",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "Guardar cambios",
+  "topRow": 61,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "f99hm3bt9n",
+  "widgetName": "Boton_guardar"
+}

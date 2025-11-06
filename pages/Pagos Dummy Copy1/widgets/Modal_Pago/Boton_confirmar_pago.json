@@ -1,0 +1,59 @@
+{
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 42,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n  // Disabled si no hay cambio o el checkbox no está marcado o si hay un proceso en curso\n(!Chk_confirmar_pago.isChecked)\n\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ffwdv9n8py",
+  "leftColumn": 39,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {  \n    if (!Chk_confirmar_pago?.isChecked) {  \n    showAlert(\"Debes aceptar la confirmación para continuar.\", \"warning\");  \n    return;  \n  }  \n  \n  try {  \n    await UpdateCobros.run();  \n    showAlert(\"Cobro actualizado correctamente.\", \"success\");  \n    // Aquí puedes agregar refrescos o cierres de modal si quieres  \n\t\t\nif (GetCobros?.run) await GetCobros.run();  \n\n\n\n// Cierra modales  \ncloseModal(\"Modal_Pago\");  \n\t\t\n  } catch (e) {  \n    showAlert(\"Error al actualiar el cobro: \" + (e?.message || e), \"error\");  \n  }  \n})();\n\n\n}}\n",
+  "originalBottomRow": 33,
+  "originalTopRow": 29,
+  "parentId": "zqz5mxkpqw",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 50,
+  "text": "Confirmar",
+  "topRow": 38,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ary31mprv3",
+  "widgetName": "Boton_confirmar_pago"
+}

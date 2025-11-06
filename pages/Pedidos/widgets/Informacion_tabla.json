@@ -238,6 +238,9 @@
     },
     {
       "key": "primaryColumns.direccion_ubicacion.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isDisabled"
     }
   ],
   "dynamicPropertyPathList": [
@@ -252,6 +255,9 @@
     },
     {
       "key": "isSortable"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -581,7 +587,7 @@
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": true,
-      "isDisabled": false,
+      "isDisabled": "{{(() => { const tableData = Informacion_tabla.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ('{{}}')) : '{{}}' })()}}",
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
@@ -589,7 +595,7 @@
       "label": "Editar",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{\n  (() => {\n    const row = Informacion_tabla.triggeredRow || Informacion_tabla.selectedRow;\n    if (!row) { showAlert(\"Selecciona un cliente.\", \"warning\"); return; }\n\n    storeValue(\"cliente_edit_row\", row, true);  // <- indica modo editar\n    showModal(\"Modal_Editar\");\n  })()\n}}\n",
+      "onClick": "{{\n  (() => {\n    const row = Informacion_tabla.triggeredRow || Informacion_tabla.selectedRow;\n    if (!row) { showAlert(\"Selecciona un cliente.\", \"warning\"); return; }\n\n    storeValue(\"cliente_edit_row\", row, true);  // <- indica modo editar\n\n    // Inicializa el precio *una sola vez* al abrir el modal\n    if (typeof input_four?.setValue === \"function\") {\n      input_four.setValue(String(row?.monto_sin_iva ?? \"\"));\n    }\n\n    showModal(\"Modal_Editar\");\n  })()\n}}\n",
       "originalId": "customColumn1",
       "sticky": "",
       "textSize": "0.875rem",
@@ -1385,7 +1391,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "searchKey": "",
-  "serverSidePaginationEnabled": false,
+  "serverSidePaginationEnabled": true,
   "tableData": "{{\n(() => {\n  // 1) Datos base\n  const pedidos     = GetPedidos.data     || [];\n  const clientes    = GetClientes.data    || [];\n  const ubicaciones = GetUbicaciones.data || [];\n\n  // 2) Índices por ID para buscar en O(1)\n  const cliById = _.keyBy(clientes, \"id_cliente\");\n  const ubiById = _.keyBy(ubicaciones, \"id_ubicacion\");\n\n  // 3) Devuelve cada pedido con TODOS sus campos + enriquecidos\n  return pedidos.map(row => {\n    const cli = cliById[row.id_cliente] || {};\n    const ubi = ubiById[row.id_ubicacion] || ubiById[row.ubicacion] || {};\n\n    return {\n      // ---------- TODOS los campos originales de m07_pedidos ----------\n      id_item_pedido:           row.id_item_pedido,\n      id_usuario:               row.id_usuario,\n      fecha_pedido:             row.fecha_pedido,\n      id_cliente:               row.id_cliente,\n      id_ubicacion:             row.id_ubicacion,\n      item_consecutivo:         row.item_consecutivo,\n      categoria_bano:           row.categoria_bano,\n      costo_por_item:           row.costo_por_item,\n      fecha_inicio:             row.fecha_inicio,\n      fecha_fin:                row.fecha_fin,\n      monto_sin_iva:            row.monto_sin_iva,\n      estatus_pago:             row.estatus_pago,\n      id_pedido:                row.id_pedido,\n      fecha_cierre_pedido:      row.fecha_cierre_pedido,\n      estatus_pedido:           row.estatus_pedido,\n      monto_iva:                row.monto_iva,\n      monto_total_con_iva:      row.monto_total_con_iva,\n      comodinp_a:               row.comodinp_a,\n      comodinp_b:               row.comodinp_b,\n      comodinp_c:               row.comodinp_c,\n      comodinp_d:               row.comodinp_d,\n      comodinp_e:               row.comodinp_e,\n      id_bano:               row.id_bano,\n      id_ruta:               row.id_ruta,\n      nombre_ubicacion:         row.nombre_ubicacion,\n      geolocalizacion_ubicacion: row.geolocalizacion_ubicacion,\n\n      // ---------- Enriquecidos (solo lectura) ----------\n      nombre_cliente:     cli.nombre_cliente ?? cli.nombre ?? null,\n      prefijo_cliente:    cli.prefijo_nombre_cliente ?? cli.prefijo ?? null,\n      email_cliente:      cli.email_cliente ?? null,\n      celular_cliente:    cli.celular_cliente ?? null,\n      direccion_ubicacion: ubi.direccion_ubicacion ?? null,\n\n    };\n  });\n})()\n}}\n",
   "textSize": "0.875rem",
   "topRow": 19,

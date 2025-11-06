@@ -1,0 +1,18 @@
+{
+  "_nombre_ubicacion": {{ nombre_ubicacion.text || null }},
+  "_geolocalizacion_ubicacion": {{ geolocalizacion_ubicacion.text || null }},
+  "_direccion_ubicacion": {{ direccion_ubicacion.text || null }}, 
+  "_prefijo_contacto_ubicacion": null, 
+  "_nombre_contacto_ubicacion": null, 
+  "_celular_contacto_ubicacion": null, 
+  "_email_contacto_ubicacion": null, 
+  "_id_ruta": null, 
+  "_comentario_ubicacion": {{ comentario_ubicacion.text || null }}, 
+  "_comodinubi_a": null,
+  "_comodinubi_b": null,
+  "_comodinubi_c": null,
+  "_comodinubi_d": null,
+  "_comodinubi_e": null,
+  "_colonia_ubicacion": null,
+  "_codigo_postal_ubicacion": null, 
+}

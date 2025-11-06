@@ -1,0 +1,73 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 17,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \n  appsmith.store.clienteSel?.prefijo_nombre_cliente\n))(prefijo_nombre_cliente.options, prefijo_nombre_cliente.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": "{{ !es_cliente_existente.isSwitchedOn && !es_cliente_nuevo.isSwitchedOn  }}",
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "ktxslnhytr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Prefijo",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 11,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 44,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 15,
+  "mobileTopRow": 37,
+  "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 12.6875,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 22,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n[\n  { label: \"Arquitecta\",   value: \"Arquitecta\" },\n  { label: \"Arquitecto\",   value: \"Arquitecto\" },\n  { label: \"Constructora\", value: \"Constructora\" },\n  { label: \"Despacho\",     value: \"Despacho\" },\n  { label: \"Ingeniero\",    value: \"Ingeniero\" },\n  { label: \"Ingeniera\",    value: \"Ingeniera\" },\n  { label: \"Licenciada\",   value: \"Licenciada\" },\n  { label: \"Licenciado\",   value: \"Licenciado\" },\n  { label: \"Maestro\",      value: \"Maestro\" },\n  { label: \"Sin Prefijo\",  value: \"\" }  // vacío = sin prefijo\n]\n}}\n",
+  "topRow": 10,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "il71g6ooak",
+  "widgetName": "prefijo_nombre_cliente"
+}

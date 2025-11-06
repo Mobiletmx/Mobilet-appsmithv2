@@ -1,0 +1,17 @@
+{
+  "_id_cliente": "C0116",
+  "_id_item_pedido": "PE00006753",
+  "_id_factura": "FAC-TEST-001",
+  "_product_key": "43231500",
+  "_unit_key": "H87",
+  "_unit_name": "Pieza",
+  "_price": 1500.00,
+  "_tax_included": true,
+  "_taxability": "02",
+  "_sku": "SKU-ESTANDAR",
+  "_comodinfac_a": null,
+  "_comodinfac_b": null,
+  "_comodinfac_c": null,
+  "_comodinfac_d": null,
+  "_comodinfac_e": null
+}

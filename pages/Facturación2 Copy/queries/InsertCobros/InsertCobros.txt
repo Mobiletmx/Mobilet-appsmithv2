@@ -1,0 +1,20 @@
+{
+  "_id_cobro": null,
+  "_id_item_pedido": null,
+  "_id_cliente": "CLI_SMOKE_01",
+  "_id_ubicacion": null,
+  "_periodo_cobro": "2025-01",
+  "_monto_sin_iva": null,
+  "_monto_iva": null,
+  "_monto_isr": null,
+  "_monto_total_con_iva": 11600.00,
+  "_requiere_factura": true,
+  "_persona_moral": false,
+  "_nombre_cliente": "Smoke Test Cliente 01",
+  "_nombre_ubicacion": "Sucursal Centro",
+  "_id_bano": "BANO_SMK_01",
+  "_fecha_inicio": "2025-01-01T00:00:00Z",
+  "_fecha_fin": "2025-01-31T23:59:59Z",
+  "_estatus_pago": false,
+  "_estatus_factura": false
+}

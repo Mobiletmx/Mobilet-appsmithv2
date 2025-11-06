@@ -1,0 +1,9 @@
+{
+  "p_id_bano": {{ select_three_new.selectedOptionValue || null }},
+  "p_tipo_bano": {{ text_five_new.text || null }},
+  "p_fecha_compra": {{ text_six_new.text || null }},
+  "p_estatus_bano": "Asignado a pedido",
+  "p_dias_activo": {{ text_seven_new.text || null }},
+  "p_contador_reparaciones": {{ text_eight_new.text || null }},
+  "p_costo_total_reparaciones": {{ text_nine_new.text || null }},
+}

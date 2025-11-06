@@ -8,7 +8,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 420,
+      "bottomRow": 470,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 424,
+      "minHeight": 470,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -58,7 +58,7 @@
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
-  "height": 424,
+  "height": 470,
   "isCanvas": true,
   "isLoading": false,
   "key": "u7paj8vny7",
@@ -81,5 +81,5 @@
   "version": 2,
   "widgetId": "0mltedvin0",
   "widgetName": "Modal_Editar",
-  "width": 1126
+  "width": 1076.35
 }

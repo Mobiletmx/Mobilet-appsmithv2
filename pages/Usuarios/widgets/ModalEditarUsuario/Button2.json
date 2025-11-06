@@ -1,15 +1,12 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 40,
+  "bottomRow": 38,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#22c55e",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     }
@@ -29,7 +26,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "eem7nvovsq",
-  "leftColumn": 32,
+  "leftColumn": 3,
   "minWidth": 120,
   "mobileBottomRow": 40,
   "mobileLeftColumn": 36,
@@ -45,9 +42,9 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 61,
+  "rightColumn": 30,
   "text": "Guardar",
-  "topRow": 36,
+  "topRow": 34,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "b2dl3xwg9b",

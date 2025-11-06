@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 24,
+  "bottomRow": 29,
   "boxShadow": "none",
   "defaultText": "{{ (appsmith.store.cliente_edit_row?.email_cliente || \"\").toLowerCase() }}",
   "dynamicBindingPathList": [
@@ -53,7 +53,7 @@
   "rightColumn": 35,
   "shouldAllowAutofill": true,
   "showStepArrows": false,
-  "topRow": 17,
+  "topRow": 22,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "41rv05h9lv",

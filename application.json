@@ -1,7 +1,7 @@
 {
   "appIsExample": false,
   "appLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   },
   "applicationVersion": 2,
   "collapseInvisibleWidgets": true,
@@ -41,23 +41,51 @@
       "isDefault": false
     },
     {
-      "id": "Pedidos2",
+      "id": "Pedidos",
       "isDefault": false
     },
     {
-      "id": "Ordenes de trabajo2",
+      "id": "Ordenes de trabajo",
       "isDefault": false
     },
     {
-      "id": "Cobros2",
+      "id": "Cobros",
       "isDefault": false
     },
     {
-      "id": "Pagos2",
+      "id": "Datos Clientes Facturación",
       "isDefault": false
     },
     {
-      "id": "Facturación2",
+      "id": "Facturación",
+      "isDefault": false
+    },
+    {
+      "id": "Pedidos2 Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Ordenes de trabajo2 Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Cobros2 Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Pagos2 Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Facturación2 Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Pagos Dummy Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Datos Facturación2 Copy",
       "isDefault": false
     },
     {
@@ -65,11 +93,19 @@
       "isDefault": false
     },
     {
-      "id": "Pedidos",
+      "id": "Cotizaciones Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Pedidos Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Pagos Dummy Copy1",
       "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   }
 }

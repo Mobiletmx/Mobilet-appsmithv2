@@ -1,0 +1,77 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 24,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \nappsmith.store?.cliente_edit_row?.id_bano\n? String(appsmith.store.cliente_edit_row.id_bano)\n: \"\"\n))(select_four.options, select_four.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultOptionValue"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": true,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "ktxslnhytr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "ID Baño",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 44,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 15,
+  "mobileTopRow": 37,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{\n(() => {\nconst id = select_four?.selectedOptionValue || null;\nstoreValue(\n\"cliente_edit_row\",\n{ ...(appsmith.store.cliente_edit_row || {}), id_bano: id },\ntrue\n);\n})()\n}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 33,
+  "originalTopRow": 26,
+  "parentColumnSpace": 12.6875,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 11,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n(() => {\nvar inv = GetInventario.data || [];\n\n// Filtra disponibles\nvar disponibles = inv.filter(function(b){\nvar eb = (b && b.estatus_bano) ? String(b.estatus_bano) : \"\";\neb = eb.trim().toLowerCase();\nreturn eb === \"disponible en almacen\";\n});\n\n// Mapea opciones\nvar opts = disponibles.map(function(b){\nvar id = (b && b.id_bano) ? String(b.id_bano) : \"\";\nreturn { label: id, value: id };\n});\n\n// Baño actual del pedido en edición\nvar actual = appsmith.store && appsmith.store.cliente_edit_row && appsmith.store.cliente_edit_row.id_bano\n? String(appsmith.store.cliente_edit_row.id_bano).trim()\n: \"\";\n\n// Si el actual no está en disponibles, lo anteponemos\nif (actual && !opts.some(function(o){ return o.value === actual; })) {\nvar found = inv.find(function(b){\nvar id = (b && b.id_bano) ? String(b.id_bano) : \"\";\nreturn id === actual;\n});\nopts.unshift({\nlabel: found ? (actual + \" (actual)\") : (actual + \" (no disponible)\"),\nvalue: actual\n});\n}\n\nreturn opts;\n})()\n}}",
+  "topRow": 17,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "fy082iaqub",
+  "widgetName": "select_four"
+}

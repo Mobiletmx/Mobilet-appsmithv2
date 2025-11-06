@@ -60,7 +60,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 9,
   "serverSideFiltering": false,
-  "sourceData": "{{\n[\n  { label: \"Arquitecta\",   value: \"Arquitecta\" },\n  { label: \"Arquitecto\",   value: \"Arquitecto\" },\n  { label: \"Constructora\", value: \"Constructora\" },\n  { label: \"Despacho\",     value: \"Despacho\" },\n  { label: \"Ingeniero\",    value: \"Ingeniero\" },\n  { label: \"Ingeniera\",    value: \"Ingeniera\" },\n  { label: \"Licenciada\",   value: \"Licenciada\" },\n  { label: \"Licenciado\",   value: \"licenciado\" },\n  { label: \"Maestro\",      value: \"Maestro\" },\n  { label: \"Sin Prefijo\",  value: \"\" }  // vacío = sin prefijo\n]\n}}\n",
+  "sourceData": "{{\n[\n  { label: \"Sin Prefijo\",  value: \"\" },\n\t{ label: \"Arquitecta\",   value: \"Arquitecta\" },\n  { label: \"Arquitecto\",   value: \"Arquitecto\" },\n  { label: \"Constructora\", value: \"Constructora\" },\n  { label: \"Despacho\",     value: \"Despacho\" },\n  { label: \"Ingeniero\",    value: \"Ingeniero\" },\n  { label: \"Ingeniera\",    value: \"Ingeniera\" },\n  { label: \"Licenciada\",   value: \"Licenciada\" },\n  { label: \"Licenciado\",   value: \"licenciado\" },\n  { label: \"Maestro\",      value: \"Maestro\" },\n  { label: \"Maestra\",      value: \"Maestra\" }\n\n\t// vacío = sin prefijo\n]\n}}\n",
   "topRow": 6,
   "type": "SELECT_WIDGET",
   "version": 1,
