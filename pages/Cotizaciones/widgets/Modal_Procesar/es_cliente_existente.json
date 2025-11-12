@@ -44,7 +44,7 @@
   "mobileRightColumn": 31,
   "mobileTopRow": 32,
   "needsErrorInfo": false,
-  "onChange": "{{\n(() => {\n  if (es_cliente_existente.isSwitchedOn) {\n    // Exclusión\n    es_cliente_nuevo.setValue(false);\n\n    // Abrir el buscador de clientes\n    showModal(\"Identificacion_de_cliente\");\n  } else {\n    // Limpiar selección y campos\n    storeValue(\"clienteSel\", null, true);\n    id_cliente.setValue(\"\");\n    nombre_cliente.setValue(\"\");\n  }\n})()\n}}\n",
+  "onChange": "{{\n(() => {\n  if (es_cliente_existente.isSwitchedOn) {\n    // Exclusividad\n    es_cliente_nuevo.setValue(false);\n    // Abrir buscador de clientes\n    showModal(\"Identificacion_de_cliente\");\n  } else {\n    // Se apaga: quitar selección de cliente existente\n    storeValue(\"clienteSel\", null, true);\n    // No limpiar campos: el default de nombre_cliente mostrará el original\n  }\n})()\n}}\n\n",
   "originalBottomRow": 37,
   "originalTopRow": 33,
   "parentColumnSpace": 12.6875,

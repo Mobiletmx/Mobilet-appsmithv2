@@ -7,7 +7,7 @@
   "closeOnSelection": true,
   "dateFormat": "YYYY-MM-DD",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "{{\n(() => {\nconst v = appsmith.store?.cliente_edit_row?.fecha_inicio;\nif (!v) return \"\";\n\n// Si ya viene como YYYY-MM-DD, úsalo tal cual\nvar mYMD = String(v).match(/^(\\d{4})-(\\d{2})-(\\d{2})$/);\nif (mYMD) {\nreturn mYMD[0];\n}\n\n// Si viene como DD/MM/YYYY o DD-MM-YYYY, conviértelo a YYYY-MM-DD\nvar mDMY = String(v).match(/^(\\d{2})/-/-$/);\nif (mDMY) {\nvar dd = mDMY[1], mm = mDMY[2], yyyy = mDMY[3];\nreturn yyyy + \"-\" + mm + \"-\" + dd;\n}\n\n// Intento final: parsear con Date y regresar YYYY-MM-DD en local\nvar d = new Date(v);\nif (!isNaN(d.getTime())) {\nvar yyyy2 = d.getFullYear();\nvar mm2 = String(d.getMonth() + 1).padStart(2, \"0\");\nvar dd2 = String(d.getDate()).padStart(2, \"0\");\nreturn yyyy2 + \"-\" + mm2 + \"-\" + dd2;\n}\n\nreturn \"\";\n})()\n}}",
+  "defaultDate": "{{ \"\" }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

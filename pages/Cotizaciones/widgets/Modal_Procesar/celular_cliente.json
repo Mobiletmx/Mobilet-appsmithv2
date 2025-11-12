@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 26,
   "boxShadow": "none",
-  "defaultText": "{{ appsmith.store.cotSel?.celular_cliente_contacto || \"\" }}\n",
+  "defaultText": "{{\n(() => {\n  const cel = String(appsmith.store.cotSel?.celular_cliente_contacto || \"\").trim();\n  // Si tiene más de 10 dígitos, toma los últimos 10\n  return cel.length > 10 ? cel.slice(-10) : cel;\n})()\n}}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

@@ -41,7 +41,7 @@
   "rightColumn": 9,
   "shouldTruncate": false,
   "text": "ID Pedido",
-  "textAlign": "LEFT",
+  "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 7,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",

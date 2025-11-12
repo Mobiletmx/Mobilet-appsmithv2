@@ -14,6 +14,9 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -60,7 +63,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Persona Física\",\n    \"value\": \"Persona Física\"\n  },\n  {\n    \"name\": \"Persona Moral\",\n    \"value\": \"Persona Moral\"\n  }\n]",
+  "sourceData": "{{\n[\n  {\n    \"name\": \"Persona Física\",\n    \"value\": \"Persona Física\"\n  },\n  {\n    \"name\": \"Persona Moral\",\n    \"value\": \"Persona Moral\"\n  }\n]\n}}",
   "topRow": 19,
   "type": "SELECT_WIDGET",
   "version": 1,

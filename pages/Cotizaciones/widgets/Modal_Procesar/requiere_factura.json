@@ -4,19 +4,25 @@
   "animateLoading": true,
   "bottomRow": 47,
   "boxShadow": "none",
-  "defaultSwitchState": false,
+  "defaultSwitchState": "{{ appsmith.store.cotSel?.requiere_factura_contacto || \"\" }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "defaultSwitchState"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "defaultSwitchState"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -24,7 +30,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "75t8ae6qe7",
-  "label": "Factura:",
+  "label": "Requiere factura?",
   "labelPosition": "Left",
   "labelStyle": "BOLD",
   "labelTextSize": "1rem",
@@ -36,14 +42,14 @@
   "mobileRightColumn": 59,
   "mobileTopRow": 35,
   "needsErrorInfo": false,
-  "originalBottomRow": 47,
+  "originalBottomRow": 49,
   "originalTopRow": 43,
   "parentColumnSpace": 12.6875,
   "parentId": "t6m6k5xey8",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 22,
+  "rightColumn": 23,
   "topRow": 43,
   "type": "SWITCH_WIDGET",
   "version": 1,

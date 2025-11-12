@@ -34,7 +34,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{\n(() => {\n  const id     = (Listado_clientes.selectedOptionValue  || \"\").trim();\n  const nombre = (Listado_clientes.selectedOptionLabel || \"\").trim();\n\n  if (id) {\n    storeValue(\"clienteSel\", { id_cliente: id, nombre_cliente: nombre }, true);\n    es_cliente_existente.setValue(true);\n    es_cliente_nuevo.setValue(false);\n  } else {\n    storeValue(\"clienteSel\", null, true);\n    es_cliente_existente.setValue(false);\n    es_cliente_nuevo.setValue(false);\n  }\n\n  closeModal(\"Identificacion_de_cliente\");\n  // Si el Modal_Procesar estaba abierto, el default ya reflejará clienteSel.\n  // Si quieres asegurarte de llevar al usuario ahí:\n  showModal(\"Modal_Procesar\");\n})()\n}}\n",
+  "onClick": "{{\n(() => {\n  const id     = (Listado_clientes.selectedOptionValue  || \"\").trim();\n  const nombre = (Listado_clientes.selectedOptionLabel || \"\").trim();\n\n  if (id) {\n    storeValue(\"clienteSel\", { id_cliente: id, nombre_cliente: nombre }, true);\n    es_cliente_existente.setValue(true);\n    es_cliente_nuevo.setValue(false);\n  } else {\n    storeValue(\"clienteSel\", null, true);\n    es_cliente_existente.setValue(false);\n    es_cliente_nuevo.setValue(false);\n  }\n\n  closeModal(\"Identificacion_de_cliente\");\n  showModal(\"Modal_Procesar\"); // opcional: re-enfoca el modal principal\n})()\n}}\n",
   "parentId": "nzlzbqsm2p",
   "placement": "CENTER",
   "recaptchaType": "V3",

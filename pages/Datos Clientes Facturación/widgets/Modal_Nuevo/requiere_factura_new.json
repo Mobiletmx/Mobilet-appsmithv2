@@ -4,13 +4,10 @@
   "animateLoading": true,
   "bottomRow": 22,
   "boxShadow": "none",
-  "defaultSwitchState": "{{ Boolean(GetClientes.data?.find(c => c.id_cliente == dropdownNombreCliente_new.selectedOptionValue)?.requiere_factura) }}",
+  "defaultSwitchState": "true",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
-    },
-    {
-      "key": "defaultSwitchState"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",

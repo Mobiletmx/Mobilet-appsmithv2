@@ -37,7 +37,7 @@
   "mobileRightColumn": 47,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{\n(() => {\n  const sel = appsmith.store.clienteSel;\n\n  if (sel?.id_cliente) {\n    // Hay cliente en store → reflejamos EXISTENTE\n    es_cliente_existente.setValue(true);\n    es_cliente_nuevo.setValue(false);\n\n    // No pisar lo que el usuario ya escribió manualmente:\n    if (!id_cliente.text) {\n      id_cliente.setValue(sel.id_cliente);\n    }\n    if (!nombre_cliente.text) {\n      nombre_cliente.setValue(sel.nombre_cliente);\n    }\n  } else {\n    // No hay selección → ambos OFF (ni existente ni nuevo)\n    es_cliente_existente.setValue(false);\n    es_cliente_nuevo.setValue(false);\n    // No limpiamos inputs para no perder lo que el usuario haya escrito\n  }\n\n  closeModal(\"Identificacion_de_cliente\");\n  showModal(\"Modal_Procesar\");\n})()\n}}\n",
+  "onClick": "{{\n(() => {\n  const sel = appsmith.store.clienteSel;\n\n  if (sel?.id_cliente) {\n    // Hay selección: mantener \"existente\"\n    es_cliente_existente.setValue(true);\n    es_cliente_nuevo.setValue(false);\n  } else {\n    // Sin selección: switches OFF; el default mostrará el nombre original\n    es_cliente_existente.setValue(false);\n    es_cliente_nuevo.setValue(false);\n  }\n\n  closeModal(\"Identificacion_de_cliente\");\n  showModal(\"Modal_Procesar\");\n})()\n}}\n",
   "parentId": "nzlzbqsm2p",
   "placement": "CENTER",
   "recaptchaType": "V3",

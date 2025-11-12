@@ -57,7 +57,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "serverSideFiltering": false,
-  "sourceData": "{{\n(() => {\nvar inv = GetInventario.data || [];\n\n// Filtra disponibles\nvar disponibles = inv.filter(function(b){\nvar eb = (b && b.estatus_bano) ? String(b.estatus_bano) : \"\";\neb = eb.trim().toLowerCase();\nreturn eb === \"disponible en almacen\";\n});\n\n// Mapea opciones\nvar opts = disponibles.map(function(b){\nvar id = (b && b.id_bano) ? String(b.id_bano) : \"\";\nreturn { label: id, value: id };\n});\n\n\treturn opts;\n})()\n}}",
+  "sourceData": "{{\n(() => {\n  var inv = GetInventario.data || [];\n\n  // Filtra disponibles y disponibles en almacén\n  var disponibles = inv.filter(function(b) {\n    var eb = (b && b.estatus_bano) ? String(b.estatus_bano).trim().toLowerCase() : \"\";\n    return eb === \"disponible\" || eb === \"disponible en almacen\";\n  });\n\n  // Mapea opciones\n  var opts = disponibles.map(function(b) {\n    var id = (b && b.id_bano) ? String(b.id_bano) : \"\";\n    return { label: id, value: id };\n  });\n\n  return opts;\n})()\n}}\n",
   "topRow": 10,
   "type": "SELECT_WIDGET",
   "version": 1,

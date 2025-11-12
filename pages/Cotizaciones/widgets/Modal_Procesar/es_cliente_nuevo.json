@@ -44,7 +44,7 @@
   "mobileRightColumn": 31,
   "mobileTopRow": 32,
   "needsErrorInfo": false,
-  "onChange": "{{\n(() => {\n  const nuevo = es_cliente_nuevo.isSwitchedOn;\n\n  if (nuevo) {\n    // 1) Exclusividad: apaga \"cliente existente\"\n    es_cliente_existente.setValue(false);\n\n    // 2) Limpia selección previa de cliente\n    storeValue(\"clienteSel\", null, true);\n\n    // 3) Limpia campos de confirmación para capturar nuevo cliente\n    id_cliente.setValue(\"\");\n    nombre_cliente.setValue(\"\");\n  } else {\n    // Apagado de \"cliente nuevo\": no forzamos nada aquí.\n    // El binding de tus inputs decide si quedan editables o no.\n  }\n})()\n}}\n",
+  "onChange": "{{\n(() => {\n  const nuevo = es_cliente_nuevo.isSwitchedOn;\n\n  if (nuevo) {\n    // Exclusividad\n    es_cliente_existente.setValue(false);\n    // No hay cliente existente seleccionado\n    storeValue(\"clienteSel\", null, true);\n    // No limpiar nombre_cliente: que conserve el original\n  } else {\n    // Se apaga: sin acciones extra; el default conservará el original\n  }\n})()\n}}\n\n",
   "originalBottomRow": 6,
   "originalTopRow": 2,
   "parentColumnSpace": 12.6875,

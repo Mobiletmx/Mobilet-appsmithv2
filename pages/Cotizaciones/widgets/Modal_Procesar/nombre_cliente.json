@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 17,
   "boxShadow": "none",
-  "defaultText": "{{\n  appsmith.store.clienteSel?.nombre_cliente\n    ? appsmith.store.clienteSel.nombre_cliente\n    : (appsmith.store.cotSel?.nombre_cliente_contacto || \"\")\n}}\n",
+  "defaultText": "{{ appsmith.store.clienteSel?.nombre_cliente || appsmith.store.cotSel?.nombre_cliente_contacto || \"\" }}\n",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

@@ -103,6 +103,10 @@
     {
       "id": "Pagos Dummy Copy1",
       "isDefault": false
+    },
+    {
+      "id": "Facturación Copy",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

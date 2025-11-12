@@ -13,7 +13,7 @@
   "p_monto_total_con_iva": "{{ monto_total_factura_con_iva.text }}",
   "p_requiere_factura": "true",
   "p_persona_moral": "{{ persona_moral.text }}",
-  "p_nombre_cliente": "{{ InputNombre.text }}",
+  "p_nombre_cliente": "{{ InputNombre2.text }}",
   "p_nombre_ubicacion": "{{ nombre_ubicacion_string.text }}",
   "p_id_bano_string": "{{ id_bano_string.text }}",
   "p_fecha_inicio": null,

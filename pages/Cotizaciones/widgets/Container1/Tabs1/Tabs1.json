@@ -5,12 +5,12 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 101,
+  "bottomRow": 106,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 810,
+      "bottomRow": 860,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -56,7 +56,7 @@
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 810,
+      "bottomRow": 860,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -93,7 +93,7 @@
       "rightColumn": 473.25,
       "shouldScrollContents": false,
       "tabId": "tab2",
-      "tabName": "Procesadas",
+      "tabName": "Registradas",
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -102,7 +102,7 @@
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 810,
+      "bottomRow": 860,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -171,6 +171,8 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 24,
   "needsErrorInfo": false,
+  "originalBottomRow": 106,
+  "originalTopRow": 16,
   "parentColumnSpace": 19.71875,
   "parentId": "rij680cndl",
   "parentRowSpace": 10,
@@ -183,6 +185,7 @@
     "tab1": {
       "id": "tab1",
       "index": 0,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Pendientes",
       "positioning": "vertical",
@@ -191,14 +194,16 @@
     "tab2": {
       "id": "tab2",
       "index": 1,
+      "isDuplicateLabel": false,
       "isVisible": true,
-      "label": "Procesadas",
+      "label": "Registradas",
       "positioning": "vertical",
       "widgetId": "h61v3cyb9m"
     },
     "tabcg4bngxknq": {
       "id": "tabcg4bngxknq",
       "index": 2,
+      "isDuplicateLabel": false,
       "isVisible": true,
       "label": "Archivadas",
       "widgetId": "rwg85otp34"

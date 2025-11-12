@@ -1,6 +1,8 @@
 {
   "animateLoading": true,
+  "borderColor": "#3b82f6",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "3",
   "bottomRow": 15,
   "dynamicBindingPathList": [
     {
@@ -20,7 +22,7 @@
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1rem",
-  "fontStyle": "",
+  "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "3flkeu2mqz",
@@ -44,7 +46,7 @@
   "rightColumn": 9,
   "shouldTruncate": false,
   "text": "{{ switch_nuevo.isSwitchedOn ? \"\" : (appsmith.store.cliente_edit_row?.id_item_pedido || \"\") }}\n",
-  "textAlign": "LEFT",
+  "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 11,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",

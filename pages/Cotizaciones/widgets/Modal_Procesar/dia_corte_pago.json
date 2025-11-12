@@ -14,6 +14,9 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -60,7 +63,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 10,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"10\",\n    \"code\": \"10\"\n  },\n  {\n    \"name\": \"25\",\n    \"code\": \"25\"\n  }\n]",
+  "sourceData": "{{\n[\n  {\n    \"name\": \"10\",\n    \"code\": \"10\"\n  },\n  {\n    \"name\": \"25\",\n    \"code\": \"25\"\n  }\n]\n}}",
   "topRow": 40,
   "type": "SELECT_WIDGET",
   "version": 1,

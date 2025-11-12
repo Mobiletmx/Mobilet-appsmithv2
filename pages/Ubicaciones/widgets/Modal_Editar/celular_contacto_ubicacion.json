@@ -15,12 +15,15 @@
     },
     {
       "key": "defaultText"
+    },
+    {
+      "key": "validation"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
-  "inputType": "TEXT",
+  "inputType": "NUMBER",
   "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
@@ -34,8 +37,11 @@
   "labelTextSize": "1rem",
   "labelWidth": 5,
   "leftColumn": 37,
+  "maxChars": "10",
   "maxDynamicHeight": 9000,
+  "maxNum": "",
   "minDynamicHeight": 4,
+  "minNum": "",
   "minWidth": 450,
   "mobileBottomRow": 18,
   "mobileLeftColumn": 3,
@@ -49,9 +55,11 @@
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 47,
+  "shouldAllowAutofill": false,
   "showStepArrows": false,
   "topRow": 16,
   "type": "INPUT_WIDGET_V2",
+  "validation": "{{celular_contacto_ubicacion.text.length == 10}}",
   "version": 2,
   "widgetId": "3nywb3oxdg",
   "widgetName": "celular_contacto_ubicacion"

@@ -9,7 +9,7 @@
   "_tipo_de_servicio": null,
   "_cantidad_de_banos": null,
   "_nombre_ubicacion_contacto": null,
-  "_estatus_contacto": Procesado,
+  "_estatus_contacto": Registrado,
   "_comentario_ubicacion":null,
   "_id_cliente_confirmado": null,
   "_nombre_cliente_confirmado": null,

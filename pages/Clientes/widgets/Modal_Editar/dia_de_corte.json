@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 29,
+  "bottomRow": 25,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  String(appsmith.store.cliente_edit_row?.dia_de_corte ?? \"\") ))(dia_de_corte.options, dia_de_corte.serverSideFiltering) }}",
   "dynamicBindingPathList": [
@@ -58,7 +58,7 @@
   "rightColumn": 63,
   "serverSideFiltering": false,
   "sourceData": "[\n  {\n    \"name\": \"10\",\n    \"code\": \"10\"\n  },\n  {\n    \"name\": \"25\",\n    \"code\": \"25\"\n  }\n]",
-  "topRow": 22,
+  "topRow": 18,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "orhirg02rl",

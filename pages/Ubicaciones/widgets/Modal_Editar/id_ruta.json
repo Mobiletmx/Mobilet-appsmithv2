@@ -58,7 +58,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "serverSideFiltering": false,
-  "sourceData": "{{\n[\n  { label: \"LOMAS\",       value: \"LOMAS\" },\n  { label: \"CHOLULA\",     value: \"CHOLULA\" },\n  { label: \"PUEBLA\",      value: \"PUEBLA\" },\n  { label: \"ATLIXCAYOTL\", value: \"ATLIXCAYOTL\" },\n  { label: \"SANIMOVIL\",   value: \"SANIMOVIL\" },\n  { label: \"ATLIXCO\",     value: \"ATLIXCO\" },\n  { label: \"HARAS\",       value: \"HARAS\" },\n  { label: \"EXTERNA 1\",   value: \"EXTERNA 1\" },\n  { label: \"EXTERNA 2\",   value: \"EXTERNA 2\" },\n  { label: \"EXTERNA 3\",   value: \"EXTERNA 3\" },\n  { label: \"EXTERNA 4\",   value: \"EXTERNA 4\" },\n  { label: \"EXTERNA 5\",   value: \"EXTERNA 5\" }\n]\n}}\n",
+  "sourceData": "{{\n[\n  { label: \"LOMAS\",       value: \"LOMAS\" },\n  { label: \"CHOLULA\",     value: \"CHOLULA\" },\n  { label: \"PUEBLA\",      value: \"PUEBLA\" },\n  { label: \"ATLIXCAYOTL\", value: \"ATLIXCAYOTL\" },\n  { label: \"SANIMOVIL\",   value: \"SANIMOVIL\" },\n  { label: \"EXTERNA 1\",   value: \"EXTERNA 1\" },\n  { label: \"EXTERNA 2\",   value: \"EXTERNA 2\" },\n  { label: \"EXTERNA 3\",   value: \"EXTERNA 3\" },\n  { label: \"EXTERNA 4\",   value: \"EXTERNA 4\" },\n  { label: \"EXTERNA 5\",   value: \"EXTERNA 5\" }\n]\n}}\n",
   "topRow": 24,
   "type": "SELECT_WIDGET",
   "version": 1,

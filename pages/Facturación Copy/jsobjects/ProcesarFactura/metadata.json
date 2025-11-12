@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68fa28cb2b0762607528340c_ce4fa73c-bbef-45ba-9709-0966e2d69b72",
+  "id": "Facturación Copy_ProcesarFactura",
+  "unpublishedCollection": {
+    "name": "ProcesarFactura",
+    "pageId": "Facturación Copy",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
