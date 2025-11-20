@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 47,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (GetClientes.data.find(c => c.id_cliente === id_cliente.text) || {}).dia_de_corte || \"\" \n))(dia_corte_pago.options, dia_corte_pago.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -16,7 +16,7 @@
       "key": "isDisabled"
     },
     {
-      "key": "sourceData"
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -33,7 +33,7 @@
   "isFilterable": true,
   "isLoading": false,
   "isRequired": true,
-  "isVisible": true,
+  "isVisible": false,
   "key": "ktxslnhytr",
   "labelAlignment": "left",
   "labelPosition": "Top",
@@ -63,7 +63,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 10,
   "serverSideFiltering": false,
-  "sourceData": "{{\n[\n  {\n    \"name\": \"10\",\n    \"code\": \"10\"\n  },\n  {\n    \"name\": \"25\",\n    \"code\": \"25\"\n  }\n]\n}}",
+  "sourceData": "[\n  {\n    \"name\": \"10\",\n    \"code\": 10\n  },\n  {\n    \"name\": \"25\",\n    \"code\": 25\n  }\n]",
   "topRow": 40,
   "type": "SELECT_WIDGET",
   "version": 1,

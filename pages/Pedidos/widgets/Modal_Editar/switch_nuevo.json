@@ -28,7 +28,7 @@
   "dynamicTriggerPathList": [],
   "isDisabled": "{{\n  !!(appsmith.store.cliente_edit_row && appsmith.store.cliente_edit_row.id_cliente)\n}}\n",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": false,
   "key": "3pjmq8hi2w",
   "label": "Nuevo registro",
   "labelPosition": "Left",

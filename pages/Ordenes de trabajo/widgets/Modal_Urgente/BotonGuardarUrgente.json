@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 42,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "right",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n  (() => {\n    const actividad = Radio_urgente.selectedOptionValue;\n    const pedido    = DropdownIdItemUrgente.selectedOptionValue;\n    const fecha     = DatePickerUrgente.selectedDate;\n\n    // Deshabilitar mientras falte cualquiera de los tres\n    if (!actividad) return true;\n    if (!pedido)    return true;\n    if (!fecha)     return true;\n\n    return false;\n  })()\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 41,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n  // =============================\n  // 1) Leer valores de widgets\n  // =============================\n  const id_item_pedido = DropdownIdItemUrgente.selectedOptionValue || null;\n  const actividad = Radio_urgente.selectedOptionValue || null;  // \"Entrega con cliente\" / \"Recoleccion con cliente\"\n  const rawFecha = DatePickerUrgente.selectedDate || null;\n\n  // Estado auxiliar ya poblado por el DropdownIdItemUrgente\n  const otUrgente = appsmith.store.otUrgente || {};\n\n  const {\n    id_bano,\n    id_cliente,\n    id_ubicacion,\n    id_ruta,\n    nombre_ubicacion,\n    geolocalizacion_ubicacion\n  } = otUrgente;\n\n  // =============================\n  // 2) Validaciones mínimas\n  // =============================\n  const errors = [];\n\n  if (!actividad) {\n    errors.push(\"Selecciona una actividad en el radio.\");\n  }\n\n  if (!id_item_pedido) {\n    errors.push(\"Selecciona un pedido de referencia.\");\n  }\n\n  if (!rawFecha) {\n    errors.push(\"Selecciona una fecha.\");\n  }\n\n  if (errors.length > 0) {\n    showAlert(\"Faltan datos:\\n• \" + errors.join(\"\\n• \"), \"warning\");\n    return;\n  }\n\n  // =============================\n  // 3) Interpretar la fecha como inicio o fin\n  // =============================\n  const fechaISO = new Date(rawFecha).toISOString();\n\n  let fecha_inicio = null;\n  let fecha_fin = null;\n\n  const actLower = actividad.toString().toLowerCase();\n\n  if (actLower === \"entrega con cliente\") {\n    // La fecha del modal es fecha de inicio\n    fecha_inicio = fechaISO;\n    // fecha_fin la dejamos en null para NO tocarla en BD (lo controlaremos en el RPC)\n    fecha_fin = null;\n  } else if (actLower === \"recoleccion con cliente\" || actLower === \"recolección con cliente\") {\n    // La fecha del modal es fecha de fin\n    fecha_inicio = null;   // No se debe sobreescribir en BD si ya existe\n    fecha_fin = fechaISO;\n  }\n\n  // =============================\n  // 4) Construir payload para OT urgente\n  // =============================\n  const payload = {\n    // Datos clave del pedido\n    id_item_pedido: id_item_pedido,\n    id_bano: id_bano || null,\n    id_cliente: id_cliente || null,\n    id_ubicacion: id_ubicacion || null,\n    id_ruta: id_ruta || null,\n\n    // Datos de ubicación\n    nombre_ubicacion: nombre_ubicacion || null,\n    geolocalizacion_ubicacion: geolocalizacion_ubicacion || null,\n\n    // Actividad y fechas interpretadas\n    actividad_programada: actividad,\n    fecha_modal: fechaISO,       // fecha tal cual del DatePickerUrgente\n    fecha_inicio: fecha_inicio,  // solo llena si es Entrega\n    fecha_fin: fecha_fin,        // solo llena si es Recolección\n\n    // Otros campos base para la OT\n    estatus_ot: \"Activa\"\n  };\n\n  // =============================\n  // 5) Guardar en store y abrir modal de confirmación\n  // =============================\n  await storeValue(\"ot_urgente_payload\", payload, true);\n\n  // Guardar también la fila de pedido original (por si la necesitamos en el siguiente paso)\n  const pedidos = GetPedidos.data || [];\n  const pedidoRow = pedidos.find(p => String(p.id_item_pedido) === String(id_item_pedido)) || null;\n  await storeValue(\"ot_urgente_row\", pedidoRow, true);\n\n  // Abrir el modal de confirmación específica de urgente\n  showModal(\"Modal_Confirmar_urgente\");\n})()\n}}",
+  "originalBottomRow": 42,
+  "originalTopRow": 38,
+  "parentId": "9lewrds7ch",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "Guardar",
+  "topRow": 38,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "56qqut5t7r",
+  "widgetName": "BotonGuardarUrgente"
+}

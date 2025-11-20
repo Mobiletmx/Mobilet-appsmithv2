@@ -9,11 +9,11 @@
   "evaluationVersion": 2,
   "pages": [
     {
-      "id": "DashboardGral",
+      "id": "Dashboard General",
       "isDefault": false
     },
     {
-      "id": "InicioDeSesion",
+      "id": "Inicio de sesión",
       "isDefault": true
     },
     {
@@ -21,7 +21,7 @@
       "isDefault": false
     },
     {
-      "id": "RolesPermisos",
+      "id": "Roles - Permisos",
       "isDefault": false
     },
     {
@@ -53,7 +53,7 @@
       "isDefault": false
     },
     {
-      "id": "Datos Clientes Facturación",
+      "id": "Datos Facturación",
       "isDefault": false
     },
     {
@@ -106,6 +106,14 @@
     },
     {
       "id": "Facturación Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Clientes Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Ordenes de trabajo Copy",
       "isDefault": false
     }
   ],

@@ -1,0 +1,82 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "closeOnSelection": true,
+  "dateFormat": "MM/DD/YYYY",
+  "datePickerType": "DATE_PICKER",
+  "defaultDate": "{{ appsmith.store.otIsEditMode ? (appsmith.store.otSel?.fecha_programada || \"\") : (appsmith.store.otForm?.fecha_programada || \"\") }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultDate"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onDateSelected"
+    },
+    {
+      "key": "defaultDate"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDateSelected"
+    }
+  ],
+  "firstDayOfWeek": 0,
+  "isDisabled": "{{\n  appsmith.store.otIsEditMode === true && appsmith.store.otSel?.actividad_programada === \"Reparacion en almacen\" && appsmith.store.otSel?.estatus_ot === \"Completada\"\n}}",
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "bjfphkilde",
+  "label": "Fecha programada",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 48,
+  "maxDate": "2121-12-31T18:29:00.000Z",
+  "maxDynamicHeight": 9000,
+  "minDate": "2011-01-01T11:53:24.2424-06:00",
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 31,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 36,
+  "mobileTopRow": 24,
+  "needsErrorInfo": false,
+  "onDateSelected": "{{\n  (() => {\n    // usar selectedDate (prop soportada) y evitar ?? para compatibilidad\n    const date = (typeof DatePickerProgramada !== \"undefined\" && DatePickerProgramada.selectedDate) ? DatePickerProgramada.selectedDate : null;\n\n    if (appsmith.store.otIsEditMode) {\n      // Guardar en ambos stores para que tanto otSel como otForm reflejen el cambio\n      storeValue(\"otSel\", { ...(appsmith.store.otSel || {}), fecha_programada: date }, true);\n      storeValue(\"otForm\", { ...(appsmith.store.otForm || {}), fecha_programada: date }, true);\n    } else {\n      storeValue(\"otForm\", { ...(appsmith.store.otForm || {}), fecha_programada: date }, true);\n    }\n    return;\n  })()\n}}",
+  "originalBottomRow": 23,
+  "originalTopRow": 16,
+  "parentColumnSpace": 12.6875,
+  "parentId": "tszk7sied9",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shortcuts": false,
+  "timePrecision": "minute",
+  "topRow": 8,
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "mh6vp40itt",
+  "widgetName": "DatePickerProgramada"
+}

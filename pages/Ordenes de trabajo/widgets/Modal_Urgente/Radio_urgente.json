@@ -1,0 +1,72 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "left",
+  "animateLoading": true,
+  "bottomRow": 18,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "options"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onSelectionChange"
+    },
+    {
+      "key": "options"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSelectionChange"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "isDisabled": "{{ !!appsmith.store.otIsEditMode }}",
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "fhh1cpqact",
+  "label": "Actividad programada",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 29,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 23,
+  "needsErrorInfo": false,
+  "onSelectionChange": "{{\n  (() => {\n    const val = RadioActividad.selectedOptionValue; // <-- uso seleccionado (solo el value)\n    if (appsmith.store.otIsEditMode) {\n      storeValue(\"otSel\", {...(appsmith.store.otSel || {}), actividad_programada: val}, true);\n    } else {\n      storeValue(\"otForm\", {...(appsmith.store.otForm || {}), actividad_programada: val}, true);\n    }\n    return;\n  })()\n}}",
+  "options": "{{[\n  { label: \"Entrega con cliente\", value: \"Entrega con cliente\" },\n  { label: \"Recolección con cliente\", value: \"Recoleccion con cliente\" }\n]\n}}",
+  "originalBottomRow": 18,
+  "originalTopRow": 8,
+  "parentColumnSpace": 12.6875,
+  "parentId": "9lewrds7ch",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 15,
+  "topRow": 8,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "i1lnovzjto",
+  "widgetName": "Radio_urgente"
+}

@@ -59,7 +59,7 @@
     ],
     "name": "GetInventario",
     "pageId": "Facturación",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": true
   }
 }

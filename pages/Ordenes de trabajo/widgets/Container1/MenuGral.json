@@ -1,0 +1,400 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlgy56p11ty.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton8vawidclxd.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonck86gy2nop.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkwjo3rlg9b.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2xueehb5ad.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonwkd53m6p4o.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonbj33ykkke4.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonnmgvxd4e87.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonqbo4yf3n4f.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonayrpwrsmnw.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton0fedgzyugl.onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonlgy56p11ty.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton8vawidclxd.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonck86gy2nop.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonkwjo3rlg9b.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2xueehb5ad.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonwkd53m6p4o.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonbj33ykkke4.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonnmgvxd4e87.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonqbo4yf3n4f.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonayrpwrsmnw.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton0fedgzyugl.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton0fedgzyugl": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "iconName": "log-out",
+      "id": "groupButton0fedgzyugl",
+      "index": 13,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Salir",
+      "menuItems": {},
+      "onClick": "{{logoutUser(navigateTo(\"Inicio de sesión\"))}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "8bmp5cpjq0"
+    },
+    "groupButton1": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "disabledWhenInvalid": false,
+      "iconName": "home",
+      "id": "groupButton1",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Inicio",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Inicio de sesión\")}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton2": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "disabledWhenInvalid": false,
+      "iconName": "grouped-bar-chart",
+      "id": "groupButton2",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Tablero",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Dashboard General\")}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton2xueehb5ad": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "iconName": "timeline-events",
+      "id": "groupButton2xueehb5ad",
+      "index": 7,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "OT's",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Ordenes de trabajo\")}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "rqpozrzyqj"
+    },
+    "groupButton3": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "disabledWhenInvalid": false,
+      "iconName": "folder-new",
+      "id": "groupButton3",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Cotizaciones",
+      "menuItems": {
+        "menuItem1": {
+          "backgroundColor": "#FFFFFF",
+          "disabledWhenInvalid": false,
+          "id": "menuItem1",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "First Option",
+          "onClick": "",
+          "widgetId": ""
+        },
+        "menuItem2": {
+          "backgroundColor": "#FFFFFF",
+          "disabledWhenInvalid": false,
+          "id": "menuItem2",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Second Option",
+          "onClick": "",
+          "widgetId": ""
+        },
+        "menuItem3": {
+          "backgroundColor": "#DD4B34",
+          "disabledWhenInvalid": false,
+          "iconAlign": "right",
+          "iconColor": "#FFFFFF",
+          "iconName": "trash",
+          "id": "menuItem3",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Delete",
+          "onClick": "",
+          "textColor": "#FFFFFF",
+          "widgetId": ""
+        }
+      },
+      "onClick": "{{navigateTo(\"Cotizaciones\")}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton8vawidclxd": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "iconName": "person",
+      "id": "groupButton8vawidclxd",
+      "index": 4,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Clientes",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Clientes\")}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "n3afkxal2a"
+    },
+    "groupButtonayrpwrsmnw": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "iconName": "user",
+      "id": "groupButtonayrpwrsmnw",
+      "index": 11,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Usuarios",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Usuarios\")}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "1mpzaohj5q"
+    },
+    "groupButtonbj33ykkke4": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "iconName": "manually-entered-data",
+      "id": "groupButtonbj33ykkke4",
+      "index": 9,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "RFC's",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Datos Facturación\")}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "oszhendn5b"
+    },
+    "groupButtonck86gy2nop": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "iconName": "map-marker",
+      "id": "groupButtonck86gy2nop",
+      "index": 5,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Ubicaciones",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Ubicaciones\")}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "3yeur6xmki"
+    },
+    "groupButtonkwjo3rlg9b": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "iconName": "document-open",
+      "id": "groupButtonkwjo3rlg9b",
+      "index": 6,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Pedidos",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Pedidos\")}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "gsjlzer7jc"
+    },
+    "groupButtonlgy56p11ty": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "iconName": "shop",
+      "id": "groupButtonlgy56p11ty",
+      "index": 3,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Baños",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Inventario\")}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "coc4ec4wg0"
+    },
+    "groupButtonnmgvxd4e87": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "iconName": "applications",
+      "id": "groupButtonnmgvxd4e87",
+      "index": 10,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Facturación",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Facturación\")}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "6bglwjzwmy"
+    },
+    "groupButtonqbo4yf3n4f": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "iconName": "comparison",
+      "id": "groupButtonqbo4yf3n4f",
+      "index": 12,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Roles",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Roles - Permisos\")}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "rrjy1hkje1"
+    },
+    "groupButtonwkd53m6p4o": {
+      "buttonColor": "#f4f4f5",
+      "buttonType": "SIMPLE",
+      "iconName": "dollar",
+      "id": "groupButtonwkd53m6p4o",
+      "index": 8,
+      "isDisabled": false,
+      "isSeparator": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Cobros",
+      "menuItems": {},
+      "onClick": "{{navigateTo(\"Cobros\")}}",
+      "placement": "CENTER",
+      "variant": "filled",
+      "widgetId": "58gipnr473"
+    }
+  },
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "gz01115q07",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 24,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "orientation": "horizontal",
+  "parentColumnSpace": 18.640625,
+  "parentId": "u6d9ls55i5",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "topRow": 0,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "w1zmngjpkc",
+  "widgetName": "MenuGral"
+}

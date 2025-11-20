@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 40,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3flkeu2mqz",
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "originalBottomRow": 40,
+  "originalTopRow": 5,
+  "overflow": "NONE",
+  "parentId": "8tc05e5eax",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "shouldTruncate": false,
+  "text": "{{\n  (() => {\n    const p = appsmith.store.otPending || (appsmith.store.otIsEditMode ? appsmith.store.otSel : appsmith.store.otForm) || {};\n\n    const tipo = p._actividad_programada || p.tipo_actividad || p.actividad_programada || \"\";\n    const idItem = p._id_item_pedido || p.id_item_pedido || \"\";\n    const idBano = p._id_bano || p.id_bano || \"\";\n    const nombreUbic = p._nombre_ubicacion || p.nombre_ubicacion || \"\";\n    const rawFecha = p._fecha_programada || p.fecha_programada || \"\";\n\t\tconst idOT = p._id_orden_de_trabajo || p.id_orden_de_trabajo || \"\";\n    // Intentar formatear fecha a local (si existe)\n    const fecha = rawFecha ? (new Date(rawFecha)).toLocaleDateString() : \"\";\n    const costo = p._costo_reparacion || p.costo_reparacion || \"\";\n\n    return `Vas a procesar la orden con los siguientes datos:\\n\\nOrden de trabajo: ${idOT}\\n\\nActividad: ${tipo}\\nID item pedido: ${idItem}\\nID baño: ${idBano}\\nNombre ubicación: ${nombreUbic}\\nFecha programada: ${fecha}\\nCosto (si aplica): ${costo}\\n\\nMarca la casilla y confirma para continuar.`;\n  })()\n}}",
+  "textAlign": "CENTER",
+  "textColor": "#231F20",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "tknshej8iw",
+  "widgetName": "Mensaje_procesarCopy"
+}

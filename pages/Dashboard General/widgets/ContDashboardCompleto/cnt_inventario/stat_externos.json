@@ -1,0 +1,46 @@
+{
+  "animateLoading": true,
+  "borderColor": "#3b82f6",
+  "borderRadius": "0px",
+  "borderWidth": "2",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "displayName": "Text",
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "System Default",
+  "fontSize": "1.0m/",
+  "fontStyle": "",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.97c59b52.svg",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "deco66gubs",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 52,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "NONE",
+  "parentId": "wckpophu03",
+  "renderMode": "CANVAS",
+  "rightColumn": 59,
+  "text": "Externos colocados\n\n{{\n  GetInventario.data.filter(\n    b =>\n      b.tipo_bano === \"Externo\" &&\n      b.estatus_bano === \"Colocado con cliente\"\n  ).length\n}}",
+  "textAlign": "CENTER",
+  "textColor": "#27272a",
+  "topRow": 4,
+  "truncateButtonColor": "#FFC13D",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "ka5y40nyjd",
+  "widgetName": "stat_externos"
+}

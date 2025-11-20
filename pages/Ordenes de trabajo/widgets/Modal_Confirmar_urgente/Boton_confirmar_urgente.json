@@ -1,0 +1,65 @@
+{
+  "animateLoading": "{{ appsmith.store.otProcessing === true }}",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 56,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "animateLoading"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "animateLoading"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !Chk_entiendo_confirmar_urgente.isChecked || appsmith.store.otProcessing === true }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ffwdv9n8py",
+  "leftColumn": 27,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (async () => {\n    // =========================\n    // 0) Validar checkbox\n    // =========================\n    if (!Chk_entiendo_confirmar_urgente.isChecked) {\n      showAlert(\"Debes marcar la casilla de confirmación para continuar.\", \"warning\");\n      return;\n    }\n\n    const p = appsmith.store.ot_urgente_payload || null;\n\n    if (!p) {\n      showAlert(\"No hay información de OT urgente en memoria. Vuelve a capturar la orden.\", \"error\");\n      return;\n    }\n\n    const actividad = (p.actividad_programada || \"\").toString().toLowerCase();\n\n    // =========================\n    // 1) Ejecutar InsertOrdenesTrabajo\n    // =========================\n    try {\n      const resInsert = await InsertOTUrgente.run();\n      // Si tu RPC devuelve algún indicador de error, ajústalo aquí:\n      if (resInsert && (resInsert.isError || resInsert.error)) {\n        throw new Error(resInsert.error?.message || JSON.stringify(resInsert));\n      }\n\n      // =========================\n      // 2) Según actividad, actualizar pedido\n      // =========================\n      if (actividad === \"entrega con cliente\") {\n        // Solo fecha_inicio\n        const resUpd = await UpdatePedidosEntrega.run();\n        if (resUpd && (resUpd.isError || resUpd.error)) {\n          throw new Error(resUpd.error?.message || JSON.stringify(resUpd));\n        }\n      } else if (actividad === \"recoleccion con cliente\" || actividad === \"recolección con cliente\") {\n        // Solo fecha_fin\n        const resUpd = await UpdatePedidosRecoleccion.run();\n        if (resUpd && (resUpd.isError || resUpd.error)) {\n          throw new Error(resUpd.error?.message || JSON.stringify(resUpd));\n        }\n      } else {\n        // Si hubiera otros tipos en el futuro, podrías decidir no tocar pedidos\n        // o manejar otra lógica aquí.\n      }\n\n      // =========================\n      // 3) Refrescar datos en pantalla\n      // =========================\n      if (typeof GetOrdenesTrabajo?.run === \"function\") {\n        await GetOrdenesTrabajo.run();\n      }\n      if (typeof GetPedidos?.run === \"function\") {\n        await GetPedidos.run();\n      }\n\n      // =========================\n      // 4) Limpiar stores solo si todo salió bien\n      // =========================\n      await storeValue(\"ot_urgente_payload\", null, true);\n      await storeValue(\"ot_urgente_row\", null, true);\n      await storeValue(\"otUrgente\", null, true);\n\n      // =========================\n      // 5) Cerrar modales\n      // =========================\n      closeModal(\"Modal_Confirmar_urgente\");\n      closeModal(\"Modal_Urgente\");\n\n      showAlert(\"Orden urgente procesada correctamente.\", \"success\");\n    } catch (err) {\n      const msg = err?.message || JSON.stringify(err) || \"Error desconocido\";\n      showAlert(\"Error al procesar la orden urgente: \" + msg, \"error\");\n    }\n\n    return;\n  })()\n}}",
+  "originalBottomRow": 56,
+  "originalTopRow": 52,
+  "parentId": "8tc05e5eax",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 43,
+  "text": "Confirmar",
+  "topRow": 52,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "tn6rfmif5n",
+  "widgetName": "Boton_confirmar_urgente"
+}

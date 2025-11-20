@@ -1,0 +1,80 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "optionLabel"
+    },
+    {
+      "key": "optionValue"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "ktxslnhytr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "ID item pedido",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 16,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 21,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{\n(async () => {\n  const selectedIdItem = DropdownIdItemUrgente.selectedOptionValue;\n  const pedidos = GetPedidos.data || [];\n\n  // Buscar la fila del pedido seleccionado\n  const pedidoRow = pedidos.find(p =>\n    String(p.id_item_pedido) === String(selectedIdItem)\n  );\n\n  if (!pedidoRow) {\n    // Limpia estado si no hay match\n    storeValue(\n      \"otUrgente\",\n      {\n        ...(appsmith.store.otUrgente || {}),\n        id_item_pedido: selectedIdItem || null,\n        id_bano: null,\n        id_cliente: null,\n        id_ubicacion: null,\n        id_ruta: null,\n        nombre_ubicacion: null,\n        geolocalizacion_ubicacion: null\n      },\n      true\n    );\n    return;\n  }\n\n  // Construir objeto con los campos que necesitas\n  const otUrgentePatch = {\n    ...(appsmith.store.otUrgente || {}),\n    id_item_pedido: pedidoRow.id_item_pedido ?? null,\n    id_bano: pedidoRow.id_bano ?? null,\n    id_cliente: pedidoRow.id_cliente ?? null,\n    id_ubicacion: pedidoRow.id_ubicacion ?? null,\n    id_ruta: pedidoRow.id_ruta ?? null,\n    nombre_ubicacion: pedidoRow.nombre_ubicacion ?? null,\n    geolocalizacion_ubicacion: pedidoRow.geolocalizacion_ubicacion ?? null\n  };\n\n  // Guardar en el store\n  storeValue(\"otUrgente\", otUrgentePatch, true);\n})();\n}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 48,
+  "originalTopRow": 41,
+  "parentColumnSpace": 6.9375,
+  "parentId": "9lewrds7ch",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 31,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n  // Siempre devolver la lista completa de items (labels con cliente)\n  (GetPedidos.data || []).map(p => {\n    const cli = (GetClientes.data || []).find(c => String(c.id_cliente) === String(p.id_cliente));\n    const nombreCli = cli ? (cli.nombre_cliente || cli.nombre || \"\") : (p.nombre_cliente || \"\");\n    return {\n      label: `${p.id_item_pedido} — ${nombreCli}`,\n      value: p.id_item_pedido,\n      _bano: p.id_bano,\n      _id_ubicacion: p.id_ubicacion,\n      _id_ruta: p.id_ruta\n    };\n  });\n}}",
+  "topRow": 8,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "whprhg5zyb",
+  "widgetName": "DropdownIdItemUrgente"
+}

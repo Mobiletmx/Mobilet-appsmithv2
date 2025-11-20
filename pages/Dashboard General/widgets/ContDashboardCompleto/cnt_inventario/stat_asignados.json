@@ -1,0 +1,46 @@
+{
+  "animateLoading": true,
+  "borderColor": "#22c55e",
+  "borderRadius": "0px",
+  "borderWidth": "2",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "displayName": "Text",
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "System Default",
+  "fontSize": "1.0m/",
+  "fontStyle": "",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.97c59b52.svg",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "deco66gubs",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 17,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "NONE",
+  "parentId": "wckpophu03",
+  "renderMode": "CANVAS",
+  "rightColumn": 24,
+  "text": "Asignados\n\n{{\n  GetInventario.data.filter(b => b.estatus_bano === \"Asignado a pedido\").length\n}}",
+  "textAlign": "CENTER",
+  "textColor": "#27272a",
+  "topRow": 4,
+  "truncateButtonColor": "#FFC13D",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "eb91znlnlb",
+  "widgetName": "stat_asignados"
+}

@@ -29,10 +29,17 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "onOptionChange"
     }
   ],
-  "dynamicTriggerPathList": [],
-  "isDisabled": "{{ !requiere_factura_new.isSwitchedOn }}",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": "{{ \n  !requiere_factura_new.isSwitchedOn \n  || !tipo_cliente.selectedOptionValue \n}}\n",
   "isFilterable": true,
   "isLoading": false,
   "isRequired": true,
@@ -54,6 +61,7 @@
   "mobileRightColumn": 15,
   "mobileTopRow": 37,
   "needsErrorInfo": false,
+  "onOptionChange": "{{\n  () => {\n    uso_de_cfdi.setSelectedOption(null);\n  }\n}}\n",
   "optionLabel": "label",
   "optionValue": "value",
   "originalBottomRow": 55,
@@ -66,7 +74,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 32,
   "serverSideFiltering": false,
-  "sourceData": "{{\n[\n  { label: \"601 - General de Ley Personas Morales\", value: \"601\" },\n  { label: \"603 - Personas Morales con Fines no Lucrativos\", value: \"603\" },\n  { label: \"605 - Sueldos y Salarios e Ingresos Asimilados\", value: \"605\" },\n  { label: \"606 - Arrendamiento\", value: \"606\" },\n  { label: \"612 - Actividades Empresariales y Profesionales\", value: \"612\" },\n  { label: \"621 - Incorporación Fiscal\", value: \"621\" },\n  { label: \"614 - Intereses\", value: \"614\" },\n  { label: \"616 - Sin obligaciones fiscales\", value: \"616\" },\n  { label: \"622 - Actividades Agropecuarias\", value: \"622\" }\n]\n}}\n",
+  "sourceData": "{{ CFDIHelper.optionsRegimenFiscal() }}\n",
   "topRow": 45,
   "type": "SELECT_WIDGET",
   "version": 1,

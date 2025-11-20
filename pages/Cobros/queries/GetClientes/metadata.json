@@ -59,7 +59,7 @@
     ],
     "name": "GetClientes",
     "pageId": "Cobros",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": true
   }
 }

@@ -59,7 +59,7 @@
     ],
     "name": "GetUbicaciones",
     "pageId": "Facturación",
-    "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "runBehaviour": "AUTOMATIC",
+    "userSetOnLoad": true
   }
 }

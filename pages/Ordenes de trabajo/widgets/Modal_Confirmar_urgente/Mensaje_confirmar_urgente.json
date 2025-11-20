@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 45,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3flkeu2mqz",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "originalBottomRow": 45,
+  "originalTopRow": 5,
+  "overflow": "NONE",
+  "parentId": "8tc05e5eax",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "shouldTruncate": false,
+  "text": "{{\n  (() => {\n    const p = appsmith.store.ot_urgente_payload || {};\n\n    const tipo          = p.actividad_programada || \"\";\n    const idItem        = p.id_item_pedido       || \"\";\n    const idBano        = p.id_bano              || \"\";\n    const nombreUbic    = p.nombre_ubicacion     || \"\";\n    const geoUbic       = p.geolocalizacion_ubicacion || \"\";\n    const fechaModalRaw = p.fecha_modal          || null;\n\n    // Formatear la fecha que el usuario eligió en el DatePickerUrgente\n    const fecha = fechaModalRaw\n      ? (new Date(fechaModalRaw)).toLocaleDateString()\n      : \"\";\n\n    // Si quieres mostrar también si se usará como inicio o fin:\n    const fechaInicio = p.fecha_inicio\n      ? (new Date(p.fecha_inicio)).toLocaleDateString()\n      : \"\";\n    const fechaFin = p.fecha_fin\n      ? (new Date(p.fecha_fin)).toLocaleDateString()\n      : \"\";\n\n    let lineaFechaExtra = \"\";\n    if (fechaInicio && !fechaFin) {\n      lineaFechaExtra = `\\n(Se tomará como FECHA DE INICIO del pedido)`;\n    } else if (!fechaInicio && fechaFin) {\n      lineaFechaExtra = `\\n(Se tomará como FECHA DE FIN del pedido)`;\n    }\n\n    return (\n      \"Vas a procesar la orden urgente con los siguientes datos:\\n\\n\" +\n      `Actividad: ${tipo}\\n` +\n      `ID item pedido: ${idItem}\\n` +\n      `ID baño: ${idBano}\\n` +\n      `Nombre ubicación: ${nombreUbic}\\n` +\n      (geoUbic ? `Geolocalización: ${geoUbic}\\n` : \"\") +\n      `Fecha seleccionada: ${fecha}${lineaFechaExtra}\\n\\n` +\n      \"Marca la casilla debajo y confirma para continuar.\"\n    );\n  })()\n}}",
+  "textAlign": "CENTER",
+  "textColor": "#231F20",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "tknshej8iw",
+  "widgetName": "Mensaje_confirmar_urgente"
+}

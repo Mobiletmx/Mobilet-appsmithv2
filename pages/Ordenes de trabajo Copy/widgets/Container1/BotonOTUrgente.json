@@ -1,0 +1,49 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 10,
+  "boxShadow": "none",
+  "buttonColor": "#ef4444",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "plus",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "zvud7tz6vk",
+  "leftColumn": 48,
+  "minWidth": 50,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 58,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n  // =========================\n  // 0) Reinicia el modal (defaults)\n  // =========================\n  resetWidget(\"Modal_Urgente\", true);\n\n  // =========================\n  // 1) Limpia/Inicializa estado (stores, si aplica)\n  // =========================\n  await storeValue(\"ot_urgente_payload\", null, true);\n  await storeValue(\"ot_urgente_row\", null, true);\n\n  // =========================\n  // 2) Radio: tipo de OT (Entrega/Recolección con cliente)\n  // =========================\n  if (typeof Radio_urgente?.setSelectedOption === \"function\") {\n    Radio_urgente.setSelectedOption(null); // o \"Entrega\"/\"Recolección\" si quieres default\n  }\n\n  // =========================\n  // 3) Dropdown: id_item_pedido\n  // =========================\n  if (typeof DropdownIdItemUrgente?.setSelectedOption === \"function\") {\n    DropdownIdItemUrgente.setSelectedOption(null);\n  }\n\n  // =========================\n  // 4) Inputs de texto/numéricos\n  // =========================\n  if (typeof InputIdBanoUrgente?.setValue === \"function\")        InputIdBanoUrgente.setValue(\"\");\n  if (typeof InputIdUbicacionUrgente?.setValue === \"function\")   InputIdUbicacionUrgente.setValue(\"\");\n  if (typeof InputIdRutaUrgente?.setValue === \"function\")        InputIdRutaUrgente.setValue(\"\");\n  if (typeof InputGeoUrgente?.setValue === \"function\")           InputGeoUrgente.setValue(\"\");\n  if (typeof InputNombreUbicacionUrgente?.setValue === \"function\") InputNombreUbicacionUrgente.setValue(\"\");\n\n  // =========================\n  // 5) DatePicker: fecha\n  // =========================\n  if (typeof DatePickerUrgente?.setValue === \"function\") {\n    DatePickerUrgente.setValue(\"\"); // también puedes usar null\n  }\n\n  // =========================\n  // 6) Texts / labels de apoyo\n  // =========================\n  // =========================\n  // 7) Abre el modal\n  // =========================\n  showModal(\"Modal_Urgente\");\n})()\n}}\n",
+  "originalBottomRow": 19,
+  "originalTopRow": 15,
+  "parentColumnSpace": 8.974609375,
+  "parentId": "u6d9ls55i5",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 52,
+  "topRow": 6,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "fcqtb55du5",
+  "widgetName": "BotonOTUrgente"
+}

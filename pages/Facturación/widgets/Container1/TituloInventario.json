@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 7,
+  "bottomRow": 13,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,7 +13,7 @@
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "Inter",
-  "fontSize": "3rem",
+  "fontSize": "1.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -27,8 +27,8 @@
   "mobileRightColumn": 52,
   "mobileTopRow": 9,
   "needsErrorInfo": false,
-  "originalBottomRow": 7,
-  "originalTopRow": 0,
+  "originalBottomRow": 13,
+  "originalTopRow": 8,
   "overflow": "NONE",
   "parentColumnSpace": 11.451171875,
   "parentId": "vbngw2e8y7",
@@ -39,11 +39,11 @@
   "shouldTruncate": false,
   "text": "Facturación",
   "textAlign": "LEFT",
-  "textColor": "#231F20",
-  "topRow": 0,
+  "textColor": "#3b82f6",
+  "topRow": 8,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "oo2x014qzx",
+  "widgetId": "2h9il65lqq",
   "widgetName": "TituloInventario"
 }

@@ -45,17 +45,17 @@
     "fecha_fin",
     "id_ruta",
     "monto_sin_iva",
+    "monto_iva",
     "monto_total_con_iva",
     "estatus_pedido",
-    "estatus_pago",
     "id_cliente",
     "id_usuario",
     "id_ubicacion",
-    "monto_iva",
     "comodinp_a",
     "email_cliente",
     "celular_cliente",
     "direccion_ubicacion",
+    "estatus_pago",
     "item_consecutivo",
     "categoria_bano",
     "costo_por_item",
@@ -67,7 +67,7 @@
     "comodinp_e",
     "geolocalizacion_ubicacion"
   ],
-  "columnUpdatedAt": 1762888938418,
+  "columnUpdatedAt": 1762970628429,
   "columnWidthMap": {
     "Cantidad_banos": 150,
     "Celular": 60,
@@ -104,6 +104,7 @@
     "id_cotizacion_str": 114,
     "lista_negra": 117,
     "medio_contacto": 133,
+    "monto_iva": 89,
     "monto_sin_iva": 125,
     "nivel_cliente": 89,
     "nombre_cliente": 236,
@@ -249,9 +250,6 @@
       "key": "primaryColumns.customColumn1.onClick"
     },
     {
-      "key": "isVisibleFilters"
-    },
-    {
       "key": "isSortable"
     },
     {
@@ -275,7 +273,7 @@
   "isSortable": "",
   "isVisible": true,
   "isVisibleDownload": true,
-  "isVisibleFilters": "",
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "brkafahj92",
@@ -733,7 +731,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "Pagado?",
       "notation": "standard",
       "originalId": "estatus_pago",

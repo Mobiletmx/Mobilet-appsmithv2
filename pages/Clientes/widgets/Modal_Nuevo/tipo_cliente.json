@@ -29,9 +29,16 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "onOptionChange"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": "{{ !requiere_factura_new.isSwitchedOn }}",
   "isFilterable": true,
   "isLoading": false,
@@ -54,6 +61,7 @@
   "mobileRightColumn": 15,
   "mobileTopRow": 37,
   "needsErrorInfo": false,
+  "onOptionChange": "{{\n  () => {\n    regimen_fiscal.setSelectedOption(null);\n    uso_de_cfdi.setSelectedOption(null);\n  }\n}}\n",
   "optionLabel": "label",
   "optionValue": "value",
   "originalBottomRow": 55,
@@ -66,7 +74,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 16,
   "serverSideFiltering": false,
-  "sourceData": "{{\n[\n  { label: \"Persona Moral\",  value: \"Persona Moral\"  },\n  { label: \"Persona Física\", value: \"Persona Física\" }\n]\t\n}}\n",
+  "sourceData": "{{ CFDIHelper.optionsTipoCliente() }}\n",
   "topRow": 45,
   "type": "SELECT_WIDGET",
   "version": 1,

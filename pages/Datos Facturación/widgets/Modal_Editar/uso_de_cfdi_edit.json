@@ -1,0 +1,69 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 56,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  appsmith.store.cliente_edit_row?.uso_de_cfdi || \"\" ))(uso_de_cfdi_edit.options, uso_de_cfdi_edit.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "ktxslnhytr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "*Uso de CFDI",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 34,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 44,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 15,
+  "mobileTopRow": 37,
+  "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 55,
+  "originalTopRow": 48,
+  "parentColumnSpace": 12.6875,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 47,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n[\n  { label: \"G01 - Adquisición de mercancías\", value: \"G01\" },\n  { label: \"G02 - Devoluciones, descuentos o bonificaciones\", value: \"G02\" },\n  { label: \"G03 - Gastos en general\", value: \"G03\" },\n  { label: \"I01 - Construcciones\", value: \"I01\" },\n  { label: \"I02 - Mobiliario y equipo de oficina por inversiones\", value: \"I02\" },\n  { label: \"I03 - Equipo de transporte\", value: \"I03\" },\n  { label: \"I04 - Equipo de cómputo y accesorios\", value: \"I04\" },\n  { label: \"I05 - Dados, troqueles, moldes\", value: \"I05\" },\n  { label: \"I06 - Comunicaciones telefónicas\", value: \"I06\" },\n  { label: \"I07 - Comunicaciones satelitales\", value: \"I07\" },\n  { label: \"S01 - Sin efectos fiscales\", value: \"S01\" },\n\t{ label: \"I08 - Otra maquinaria y equipo\", value: \"I08\" }\n]\n}}\n",
+  "topRow": 49,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "8x5qy1lolo",
+  "widgetName": "uso_de_cfdi_edit"
+}

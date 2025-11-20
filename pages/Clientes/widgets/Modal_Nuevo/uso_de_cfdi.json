@@ -32,7 +32,7 @@
     }
   ],
   "dynamicTriggerPathList": [],
-  "isDisabled": "{{ !requiere_factura_new.isSwitchedOn }}",
+  "isDisabled": "{{ \n  !requiere_factura_new.isSwitchedOn \n  || !tipo_cliente.selectedOptionValue \n  || !regimen_fiscal.selectedOptionValue \n}}\n",
   "isFilterable": true,
   "isLoading": false,
   "isRequired": true,
@@ -66,7 +66,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 47,
   "serverSideFiltering": false,
-  "sourceData": "{{\n[\n  { label: \"G01 - Adquisición de mercancías\", value: \"G01\" },\n  { label: \"G02 - Devoluciones, descuentos o bonificaciones\", value: \"G02\" },\n  { label: \"G03 - Gastos en general\", value: \"G03\" },\n  { label: \"I01 - Construcciones\", value: \"I01\" },\n  { label: \"I02 - Mobiliario y equipo de oficina por inversiones\", value: \"I02\" },\n  { label: \"I03 - Equipo de transporte\", value: \"I03\" },\n  { label: \"I04 - Equipo de cómputo y accesorios\", value: \"I04\" },\n  { label: \"I05 - Dados, troqueles, moldes\", value: \"I05\" },\n  { label: \"I06 - Comunicaciones telefónicas\", value: \"I06\" },\n  { label: \"I07 - Comunicaciones satelitales\", value: \"I07\" },\n  { label: \"I08 - Otra maquinaria y equipo\", value: \"I08\" }\n]\n}}\n",
+  "sourceData": "{{ CFDIHelper.optionsUsoCFDI() }}\n",
   "topRow": 45,
   "type": "SELECT_WIDGET",
   "version": 1,

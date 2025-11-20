@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignment": "left",
   "animateLoading": true,
-  "bottomRow": 20,
+  "bottomRow": 21,
   "boxShadow": "none",
   "defaultOptionValue": "{{\n  (() => {\n    // Si existe actividad en otSel/otForm puede venir como string o como objeto {label, value}.\n    const raw = appsmith.store.otIsEditMode ? appsmith.store.otSel?.actividad_programada : appsmith.store.otForm?.actividad_programada;\n    if (raw === undefined || raw === null) return \"\";\n    return (typeof raw === \"object\") ? String(raw.value ?? raw.label ?? \"\") : String(raw);\n  })()\n}}",
   "dynamicBindingPathList": [
@@ -60,7 +60,7 @@
   "needsErrorInfo": false,
   "onSelectionChange": "{{\n  (() => {\n    const val = RadioActividad.selectedOptionValue; // <-- uso seleccionado (solo el value)\n    if (appsmith.store.otIsEditMode) {\n      storeValue(\"otSel\", {...(appsmith.store.otSel || {}), actividad_programada: val}, true);\n    } else {\n      storeValue(\"otForm\", {...(appsmith.store.otForm || {}), actividad_programada: val}, true);\n    }\n    return;\n  })()\n}}",
   "options": "{{[\n  { label: \"Limpieza con cliente\", value: \"Limpieza con cliente\" },\n  { label: \"Limpieza en almacen\", value: \"Limpieza en almacen\" },\n  { label: \"Reparacion en almacen\", value: \"Reparacion en almacen\" }\n]\n}}",
-  "originalBottomRow": 20,
+  "originalBottomRow": 21,
   "originalTopRow": 8,
   "parentColumnSpace": 12.6875,
   "parentId": "tszk7sied9",

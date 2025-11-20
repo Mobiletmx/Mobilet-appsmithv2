@@ -1,0 +1,65 @@
+{
+  "animateLoading": "{{ appsmith.store.otProcessing === true }}",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 51,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "animateLoading"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "animateLoading"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !Chk_entiendo_confirmar.isChecked || appsmith.store.otProcessing === true }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ffwdv9n8py",
+  "leftColumn": 27,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (async () => {\n    const insertQuery = InsertOrdenesTrabajo;\n    const updateQuery = UpdateOrdenesTrabajo;\n\n    const isEdit = appsmith.store.otIsEditMode === true;\n    // payload preferido: otPending; si no existe, usar otSel/otForm\n    const payloadCandidate = appsmith.store.otPending || (isEdit ? appsmith.store.otSel : appsmith.store.otForm) || {};\n\n    // Asegurar PK: comprobar en varias fuentes\n    const idFromPayload = payloadCandidate._id_orden_de_trabajo ?? payloadCandidate.id_orden_de_trabajo ?? payloadCandidate.id_orden ?? null;\n    const idFromSel = appsmith.store.otSel?.id_orden_de_trabajo ?? appsmith.store.otSel?._id_orden_de_trabajo ?? appsmith.store.otSel?.id_orden ?? null;\n    const idFromPending = appsmith.store.otPending?.id_orden_de_trabajo ?? appsmith.store.otPending?._id_orden_de_trabajo ?? appsmith.store.otPending?.id_orden ?? null;\n    const idFromTable = Informacion_tabla.triggeredRow?.id_orden_de_trabajo ?? Informacion_tabla.selectedRow?.id_orden_de_trabajo ?? null;\n\n    const idToSend = idFromPayload || idFromPending || idFromSel || idFromTable || null;\n\n    if (isEdit && !idToSend) {\n      showAlert(\"Falta id_orden_de_trabajo. No se puede actualizar hasta que el registro tenga su PK.\", \"error\");\n      return;\n    }\n\n    // Aseguramos que el objeto que enviaremos contiene la PK (clave underscored)\n    const payload = {\n      ...payloadCandidate,\n      _id_orden_de_trabajo: payloadCandidate._id_orden_de_trabajo ?? payloadCandidate.id_orden_de_trabajo ?? payloadCandidate.id_orden ?? idToSend ?? null,\n      id_orden: payloadCandidate.id_orden ?? payloadCandidate.id_orden_de_trabajo ?? idToSend ?? null\n    };\n\n    // Guardar request para debug\n    storeValue(\"lastRequest\", payload, true);\n    storeValue(\"otProcessing\", true, true);\n\n    try {\n      let res;\n      if (isEdit) {\n        // Pasar body explícito al .run()\n        res = await updateQuery.run({ body: payload });\n      } else {\n        res = await insertQuery.run({ body: payload });\n      }\n\n      // Guardar response para debug\n      storeValue(\"lastResponse\", res, true);\n\n      // Validación genérica de error (ajusta si tu RPC devuelve distinto)\n      if (res && (res.isError || res.error)) {\n        throw new Error(res.error?.message || JSON.stringify(res));\n      }\n\n      // Refrescar listado\n      await GetOrdenesTrabajo.run();\n\n      // Limpiar stores y cerrar modales\n      storeValue(\"otProcessing\", false, true);\n      storeValue(\"otSel\", null, true);\n      storeValue(\"otForm\", null, true);\n      storeValue(\"otPending\", null, true);\n      storeValue(\"otIsEditMode\", false, true);\n\n      closeModal(\"Modal_ConfirmarCopy\");\n      closeModal(\"Modal_Procesar\");\n\n      showAlert(\"Orden procesada correctamente\", \"success\");\n    } catch (err) {\n      storeValue(\"otProcessing\", false, true);\n      const msg = err?.message || JSON.stringify(err) || \"Error desconocido\";\n      storeValue(\"lastResponse\", { error: msg }, true);\n      showAlert(\"Error al procesar la orden: \" + msg, \"error\");\n    }\n    return;\n  })()\n}}",
+  "originalBottomRow": 51,
+  "originalTopRow": 47,
+  "parentId": "8tc05e5eax",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 43,
+  "text": "Confirmar",
+  "topRow": 47,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "tn6rfmif5n",
+  "widgetName": "Boton_confirmar_urgente"
+}

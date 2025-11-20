@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 26,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \n  (GetClientes.data.find(c => c.id_cliente === id_cliente.text) || {}).tipo_cliente || \"\" \n))(tipo_de_cliente.options, tipo_de_cliente.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -17,6 +17,9 @@
     },
     {
       "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -63,7 +66,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "serverSideFiltering": false,
-  "sourceData": "{{\n[\n  {\n    \"name\": \"Persona Física\",\n    \"value\": \"Persona Física\"\n  },\n  {\n    \"name\": \"Persona Moral\",\n    \"value\": \"Persona Moral\"\n  }\n]\n}}",
+  "sourceData": "{{\n[\n  {\n    \"name\": \"Persona Física\",\n    \"value\": \"Persona Fisica\"\n  },\n  {\n    \"name\": \"Persona Moral\",\n    \"value\": \"Persona Moral\"\n  }\n]\n}}",
   "topRow": 19,
   "type": "SELECT_WIDGET",
   "version": 1,

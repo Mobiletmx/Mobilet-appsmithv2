@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68fa28cb2b0762607528340c_c4ea06a9-a59c-47d5-8e6d-071a7640e13e",
+  "id": "Datos Facturación_CFDIHelper",
+  "unpublishedCollection": {
+    "name": "CFDIHelper",
+    "pageId": "Datos Facturación",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

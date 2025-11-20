@@ -1,0 +1,38 @@
+{{
+  (() => {
+    const p = appsmith.store.ot_urgente_payload || {};
+
+    return {
+      _id_item_pedido:  p.id_item_pedido || null,
+
+      _id_usuario: null,
+      _fecha_pedido: null,
+      _id_cliente: null,
+      _id_ubicacion: null,
+      _item_consecutivo: null,
+      _categoria_bano: null,
+      _costo_por_item: null,
+
+      _fecha_inicio: null,
+      _fecha_fin:    p.fecha_fin || null,   // viene del flujo urgente
+
+      _monto_sin_iva: null,
+      _estatus_pago: null,
+      _id_pedido: null,
+      _fecha_cierre_pedido: null,
+      _estatus_pedido: null,
+      _monto_iva: null,
+      _monto_total_con_iva: null,
+      _comodinp_a: null,
+      _comodinp_b: null,
+      _comodinp_c: null,
+      _comodinp_d: null,
+      _comodinp_e: null,
+      _id_bano: null,
+      _id_ruta: null,
+      _nombre_ubicacion: null,
+      _geolocalizacion_ubicacion: null,
+      _estatus_factura: true
+    };
+  })()
+}}

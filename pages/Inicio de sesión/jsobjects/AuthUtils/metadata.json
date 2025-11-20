@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "68b0fc8d2b07626075282edf_7296ddd4-bc31-41ca-9ea7-ad101388bccf",
+  "id": "Inicio de sesión_AuthUtils",
+  "unpublishedCollection": {
+    "name": "AuthUtils",
+    "pageId": "Inicio de sesión",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "IDLE_MAX_SEC",
+        "value": "2 * 60 * 60"
+      }
+    ]
+  }
+}

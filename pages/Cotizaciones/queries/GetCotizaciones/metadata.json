@@ -60,6 +60,6 @@
     "name": "GetCotizaciones",
     "pageId": "Cotizaciones",
     "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

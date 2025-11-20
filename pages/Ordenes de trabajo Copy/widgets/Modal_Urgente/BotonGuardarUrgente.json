@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 42,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "right",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n  (() => {\n    const isEdit = appsmith.store.otIsEditMode === true;\n    const source = isEdit ? (appsmith.store.otSel || {}) : (appsmith.store.otForm || {});\n    const tipo = source.actividad_programada || RadioActividad.selectedOption || \"\";\n    const fecha = source.fecha_programada || DatePickerProgramada.selectedDate;\n    if (tipo === \"Limpieza con cliente\") {\n      return !(source.id_item_pedido && fecha);\n    }\n    // Para otros tipos se requiere id_bano y fecha\n    return !(source.id_bano && fecha);\n  })()\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 41,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (async () => {\n    const isEdit = appsmith.store.otIsEditMode === true;\n\n    // Stores actuales\n    const otSel = appsmith.store.otSel || {};\n    const otForm = appsmith.store.otForm || {};\n\n    // Construir src priorizando valores editados:\n    // - en edición: preferimos otSel luego otForm (otForm contiene cambios)\n    // - en nuevo: preferimos otForm luego otSel\n    const src = isEdit ? ({ ...otSel, ...otForm }) : ({ ...otForm, ...otSel });\n\n    const pedidos = (GetPedidos.data || []);\n    const inventario = (GetInventario.data || []);\n\n    // Encontrar el pedido seleccionado (si aplica)\n    const pedidoRow = src.id_item_pedido\n      ? pedidos.find(p => String(p.id_item_pedido) === String(src.id_item_pedido))\n      : null;\n\n    // Encontrar baño en inventario: preferir src.id_bano, si no, el del pedido\n    const banoRow = src.id_bano\n      ? inventario.find(b => String(b.id_bano) === String(src.id_bano))\n      : (pedidoRow ? inventario.find(b => String(b.id_bano) === String(pedidoRow.id_bano)) : null);\n\n    // Valores base\n    const id_item_pedido = src.id_item_pedido || null;\n    // Para 'Limpieza con cliente' preferimos el id_bano del pedido si existe\n    const id_bano = (pedidoRow && pedidoRow.id_bano) ? pedidoRow.id_bano : (src.id_bano || null);\n    const id_ubicacion = (pedidoRow && pedidoRow.id_ubicacion) ? pedidoRow.id_ubicacion : (src.id_ubicacion || null);\n    const id_ruta = (pedidoRow && pedidoRow.id_ruta) ? pedidoRow.id_ruta : (src.id_ruta || null);\n\n    // Nombre ubicación y geolocalización: preferir datos del pedido, luego del baño, luego src\n    const nombre_ubicacion = (pedidoRow && pedidoRow.nombre_ubicacion) ? pedidoRow.nombre_ubicacion : (banoRow && banoRow.nombre_ubicacion) ? banoRow.nombre_ubicacion : (src.nombre_ubicacion || null);\n    const geolocalizacion_ubicacion = (pedidoRow && pedidoRow.geolocalizacion_ubicacion) ? pedidoRow.geolocalizacion_ubicacion : (banoRow && banoRow.geolocalizacion_ubicacion) ? banoRow.geolocalizacion_ubicacion : (src.geolocalizacion_ubicacion || null);\n\n    // Actividad: tomar del source o del radio si hace falta\n    const actividad_programada = src.tipo_actividad || src.actividad_programada || src.actividad || (RadioActividad && RadioActividad.selectedOptionValue) || null;\n\n    // --- Priorizar la fecha del widget DatePicker si existe (usar solo selectedDate) ---\n    let widgetFecha = null;\n    if (typeof DatePickerProgramada !== \"undefined\" && DatePickerProgramada.selectedDate) {\n      widgetFecha = DatePickerProgramada.selectedDate;\n    }\n\n    // Preferir la fecha del widget si el usuario la cambió, si no, tomar del src (store)\n    const rawFecha = widgetFecha || src.fecha_programada || src._fecha_programada || null;\n    const fecha_programada = rawFecha ? (new Date(rawFecha)).toISOString() : null;\n\n    const costo_reparacion = src.costo_reparacion || null;\n\n    const dias_transcurridos = (() => {\n      const fProg = rawFecha || src.fecha_programada || null;\n      const fEje  = src.fecha_ejecucion || null;\n      if (!fProg || !fEje) return null;\n      const d = JS_OT.diasTranscurridos(fProg, fEje);\n      return (d === null || d === undefined) ? null : d;\n    })();\n\n    const estatus_ot = isEdit ? (src.estatus_ot || src.estatus || \"Activa\") : \"Activa\";\n\n    // Determinar PK id_orden_de_trabajo: revisar varias fuentes (src, otSel, otPending, tabla)\n    const idFromSrc = src.id_orden || src.id_orden_de_trabajo || src._id_orden_de_trabajo || null;\n    const idFromSel = otSel && (otSel.id_orden_de_trabajo || otSel._id_orden_de_trabajo || otSel.id_orden) ? (otSel.id_orden_de_trabajo || otSel._id_orden_de_trabajo || otSel.id_orden) : null;\n    const idFromPending = appsmith.store.otPending && (appsmith.store.otPending.id_orden_de_trabajo || appsmith.store.otPending._id_orden_de_trabajo || appsmith.store.otPending.id_orden) ? (appsmith.store.otPending.id_orden_de_trabajo || appsmith.store.otPending._id_orden_de_trabajo || appsmith.store.otPending.id_orden) : null;\n    const idFromTable = (Informacion_tabla.triggeredRow && (Informacion_tabla.triggeredRow.id_orden_de_trabajo || Informacion_tabla.triggeredRow._id_orden_de_trabajo)) ? (Informacion_tabla.triggeredRow.id_orden_de_trabajo || Informacion_tabla.triggeredRow._id_orden_de_trabajo) : (Informacion_tabla.selectedRow && (Informacion_tabla.selectedRow.id_orden_de_trabajo || Informacion_tabla.selectedRow._id_orden_de_trabajo) ? (Informacion_tabla.selectedRow.id_orden_de_trabajo || Informacion_tabla.selectedRow._id_orden_de_trabajo) : null);\n    const id_orden = isEdit ? (idFromSrc || idFromSel || idFromPending || idFromTable || null) : null;\n\n    // Validaciones por tipo de actividad\n    const errors = [];\n    const activityLabel = (actividad_programada || \"\").toString().toLowerCase();\n\n    if (!fecha_programada) {\n      errors.push(\"Fecha programada es obligatoria.\");\n    } else if (isNaN(new Date(fecha_programada).getTime())) {\n      errors.push(\"Fecha programada inválida.\");\n    }\n\n    if (activityLabel === \"limpieza con cliente\") {\n      if (!id_item_pedido) errors.push(\"Selecciona el ID item pedido (requerido para 'Limpieza con cliente').\");\n      if (id_item_pedido && !pedidoRow) errors.push(\"El ID item pedido seleccionado no existe en los pedidos disponibles.\");\n    } else if (activityLabel === \"limpieza en almacen\" || activityLabel === \"reparacion en almacen\" || activityLabel === \"reparacion en almacén\") {\n      if (!id_bano) errors.push(\"Selecciona ID Baño (requerido para limpieza/reparación en almacén).\");\n    } else {\n      if (!actividad_programada) errors.push(\"Selecciona una actividad programada.\");\n    }\n\n    if (errors.length > 0) {\n      showAlert(\"Faltan datos:\\n• \" + errors.join(\"\\n• \"), \"warning\");\n      return;\n    }\n\n    // Construir payload (underscored keys para RPC) e incluir PK robustamente\n    const payload = {\n      ...(isEdit ? { _id_orden_de_trabajo: id_orden } : {}),\n      _id_item_pedido: id_item_pedido,\n      _id_bano: id_bano,\n      _id_ubicacion: id_ubicacion,\n      _fecha_programada: fecha_programada,\n      _fecha_ejecucion: src.fecha_ejecucion ? (new Date(src.fecha_ejecucion)).toISOString() : null,\n      _geolocalizacion_programada: geolocalizacion_ubicacion,\n      _actividad_programada: actividad_programada,\n      _dias_transcurridos: dias_transcurridos,\n      _costo_reparacion: costo_reparacion,\n      _geolocalizacion_confirmacion: null,\n      _estatus_ot: estatus_ot,\n      _nombre_ubicacion: nombre_ubicacion,\n      _id_ruta: id_ruta,\n      _comodinot_a: null,\n      _comodinot_b: null,\n      _comodinot_c: null,\n      _comodinot_d: null,\n      _comodinot_e: null\n    };\n\n    // Aliases sin underscore para UI (mensaje y debug)\n    const payloadWithAliases = {\n      ...payload,\n      actividad_programada: payload._actividad_programada || null,\n      id_item_pedido: payload._id_item_pedido || null,\n      id_bano: payload._id_bano || null,\n      id_ubicacion: payload._id_ubicacion || null,\n      // Asegurar que la alias fecha venga de la variable calculada\n      fecha_programada: payload._fecha_programada || fecha_programada || null,\n      fecha_ejecucion: payload._fecha_ejecucion || null,\n      geolocalizacion_ubicacion: payload._geolocalizacion_programada || null,\n      nombre_ubicacion: payload._nombre_ubicacion || null,\n      costo_reparacion: payload._costo_reparacion || null,\n      id_ruta: payload._id_ruta || null,\n      dias_transcurridos: payload._dias_transcurridos || null,\n      estatus_ot: payload._estatus_ot || null,\n      id_orden: payload._id_orden_de_trabajo || id_orden || null\n    };\n\n    // Guardar en store (este objeto es el que enviará el query)\n    storeValue(\"otPending\", payloadWithAliases, true);\n    storeValue(\"otPending_debug_ts\", new Date().toISOString(), true);\n\n    // Abrir modal de confirmación\n    showModal(\"Modal_Confirmar\");\n  })()\n}}",
+  "originalBottomRow": 73,
+  "originalTopRow": 69,
+  "parentId": "9lewrds7ch",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "Guardar",
+  "topRow": 38,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "56qqut5t7r",
+  "widgetName": "BotonGuardarUrgente"
+}

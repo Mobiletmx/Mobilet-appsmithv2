@@ -75,6 +75,7 @@
     "cantidad_de_banos": 85,
     "celular_cliente": 133,
     "celular_cliente_contacto": 118,
+    "comentario_ubicacion": 277,
     "customColumn1": 119,
     "customColumn2": 108,
     "customColumn3": 85,
@@ -89,7 +90,7 @@
     "id_cotizacion_old": 190,
     "id_cotizacion_str": 114,
     "medio_contacto": 133,
-    "nombre_cliente_contacto": 257,
+    "nombre_cliente_contacto": 190,
     "prefijo_contacto": 85,
     "requiere_factura_contacto": 104,
     "tipo_cliente": 121,
@@ -218,9 +219,6 @@
       "key": "primaryColumns.customColumn1.onClick"
     },
     {
-      "key": "isVisibleFilters"
-    },
-    {
       "key": "primaryColumns.customColumn1.isDisabled"
     }
   ],
@@ -241,7 +239,7 @@
   "isSortable": true,
   "isVisible": true,
   "isVisibleDownload": true,
-  "isVisibleFilters": "",
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
   "isVisibleSearch": true,
   "key": "brkafahj92",

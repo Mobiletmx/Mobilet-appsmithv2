@@ -1,0 +1,54 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 25,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{ !!appsmith.store.cliente_edit_row?.requiere_factura }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "75t8ae6qe7",
+  "label": "Factura:",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "leftColumn": 37,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 39,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 59,
+  "mobileTopRow": 35,
+  "needsErrorInfo": false,
+  "originalBottomRow": 24,
+  "originalTopRow": 20,
+  "parentColumnSpace": 12.6875,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 48,
+  "shouldScrollContents": true,
+  "topRow": 21,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "uy4ow4dxzb",
+  "widgetName": "requiere_factura"
+}

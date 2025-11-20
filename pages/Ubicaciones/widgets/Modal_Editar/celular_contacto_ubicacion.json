@@ -15,9 +15,6 @@
     },
     {
       "key": "defaultText"
-    },
-    {
-      "key": "validation"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -59,7 +56,7 @@
   "showStepArrows": false,
   "topRow": 16,
   "type": "INPUT_WIDGET_V2",
-  "validation": "{{celular_contacto_ubicacion.text.length == 10}}",
+  "validation": "",
   "version": 2,
   "widgetId": "3nywb3oxdg",
   "widgetName": "celular_contacto_ubicacion"

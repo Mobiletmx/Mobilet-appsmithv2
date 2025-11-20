@@ -11,24 +11,18 @@
     },
     {
       "key": "defaultSwitchState"
-    },
-    {
-      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "defaultSwitchState"
-    },
-    {
-      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [],
-  "isDisabled": "{{\n  !!(appsmith.store.cliente_edit_row && appsmith.store.cliente_edit_row.id_cliente)\n}}\n",
+  "isDisabled": true,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": false,
   "key": "3pjmq8hi2w",
   "label": "Nuevo pedido",
   "labelPosition": "Left",

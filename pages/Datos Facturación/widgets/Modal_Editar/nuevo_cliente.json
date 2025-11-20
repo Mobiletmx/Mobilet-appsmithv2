@@ -1,0 +1,56 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{\n  // Si hay fila para editar => switch apagado (false)\n  // Si no hay fila (alta nueva) => switch encendido (true)\n  !(appsmith.store.cliente_edit_row && appsmith.store.cliente_edit_row.id_cliente)\n}}\n",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": "{{\n  !!(appsmith.store.cliente_edit_row && appsmith.store.cliente_edit_row.id_cliente)\n}}\n",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3pjmq8hi2w",
+  "label": "Nuevo cliente",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextSize": "1rem",
+  "leftColumn": 33,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 33,
+  "mobileRightColumn": 45,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 17.40625,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 45,
+  "topRow": 1,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "mrk1iq8skq",
+  "widgetName": "nuevo_cliente"
+}
