@@ -5,8 +5,9 @@
   },
   "applicationVersion": 2,
   "collapseInvisibleWidgets": true,
-  "color": "#F5D1D1",
+  "color": "#D9E7FF",
   "evaluationVersion": 2,
+  "icon": "bag",
   "pages": [
     {
       "id": "Dashboard General",
