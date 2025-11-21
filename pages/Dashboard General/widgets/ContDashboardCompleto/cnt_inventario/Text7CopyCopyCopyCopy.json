@@ -4,7 +4,11 @@
   "bottomRow": 4,
   "boxShadow": "none",
   "displayName": "Text",
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
@@ -24,7 +28,7 @@
   "parentId": "wckpophu03",
   "renderMode": "CANVAS",
   "rightColumn": 64,
-  "text": "ESTATUS INVENTARIO",
+  "text": "ESTATUS INVENTARIO AL {{ moment().toDate() }}",
   "textAlign": "CENTER",
   "textColor": "#231f20",
   "topRow": 0,

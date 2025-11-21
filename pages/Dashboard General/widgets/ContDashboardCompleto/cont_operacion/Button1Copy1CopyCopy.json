@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "buttonColor": "#27272a",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "c5jdy6st37",
+  "leftColumn": 52,
+  "minWidth": 120,
+  "mobileBottomRow": 34,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 19,
+  "mobileTopRow": 30,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  storeValue(\"tabOT\", \"Lista negra\");\n  navigateTo(\"Ordenes de trabajo\");\n}}",
+  "parentColumnSpace": 17.38232421875,
+  "parentId": "sxp58e0rzd",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 60,
+  "text": "Lista negra:\n{{\n  OperacionDia.datosFiltradosConListaNegra().filter(\n    ot => ot.estatus_ot === \"Lista negra\"\n  ).length\n}}",
+  "topRow": 11,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "zih2iipvyd",
+  "widgetName": "Button1Copy1CopyCopy"
+}

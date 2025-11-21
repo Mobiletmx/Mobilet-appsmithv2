@@ -45,7 +45,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 9,
   "shouldTruncate": false,
-  "text": "{{ switch_nuevo.isSwitchedOn ? \"\" : (appsmith.store.cliente_open_row?.id_item_pedido || \"\") }}\n",
+  "text": "{{ switch_nuevo_view.isSwitchedOn ? \"\" : (appsmith.store.cliente_open_row?.id_item_pedido || \"\") }}\n",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 11,

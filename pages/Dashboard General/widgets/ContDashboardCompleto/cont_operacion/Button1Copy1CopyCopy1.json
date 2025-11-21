@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 42,
+  "boxShadow": "none",
+  "buttonColor": "#3b82f6",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "c5jdy6st37",
+  "leftColumn": 28,
+  "minWidth": 120,
+  "mobileBottomRow": 34,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 19,
+  "mobileTopRow": 30,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  storeValue(\"tabOT\", \"Limpiezas\");\n  navigateTo(\"Ordenes de trabajo\");\n}}",
+  "parentColumnSpace": 17.38232421875,
+  "parentId": "sxp58e0rzd",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 36,
+  "text": "Limpiezas:\n{{\n  OperacionDia.datosFiltrados().filter(\n    ot => ot.actividad_programada === \"Limpieza con cliente\"\n  ).length\n}}",
+  "topRow": 38,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "hm2d74fdmb",
+  "widgetName": "Button1Copy1CopyCopy1"
+}

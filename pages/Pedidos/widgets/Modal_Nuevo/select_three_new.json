@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 16,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -58,7 +58,7 @@
   "rightColumn": 63,
   "serverSideFiltering": false,
   "sourceData": "{{\n(() => {\n  var inv = GetInventario.data || [];\n\n  // Filtra disponibles y disponibles en almacén\n  var disponibles = inv.filter(function(b) {\n    var eb = (b && b.estatus_bano) ? String(b.estatus_bano).trim().toLowerCase() : \"\";\n    return eb === \"disponible\" || eb === \"disponible en almacen\";\n  });\n\n  // Mapea opciones\n  var opts = disponibles.map(function(b) {\n    var id = (b && b.id_bano) ? String(b.id_bano) : \"\";\n    return { label: id, value: id };\n  });\n\n  return opts;\n})()\n}}\n",
-  "topRow": 10,
+  "topRow": 9,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "n366do8jcz",

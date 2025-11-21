@@ -1,0 +1,46 @@
+{
+  "animateLoading": true,
+  "borderColor": "#22c55e",
+  "borderRadius": "0px",
+  "borderWidth": "2",
+  "bottomRow": 16,
+  "boxShadow": "none",
+  "displayName": "Text",
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "fontSize"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fontFamily": "System Default",
+  "fontSize": "1.0m/",
+  "fontStyle": "",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.97c59b52.svg",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "deco66gubs",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 8,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "overflow": "NONE",
+  "parentId": "f6foc2rwth",
+  "renderMode": "CANVAS",
+  "rightColumn": 15,
+  "text": "Cerrados sin pagar\n\n{{\n  GetInventario.data.filter(b => b.estatus_bano === \"Asignado a pedido\").length\n}}",
+  "textAlign": "CENTER",
+  "textColor": "#27272a",
+  "topRow": 5,
+  "truncateButtonColor": "#FFC13D",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "3i7p6ukam0",
+  "widgetName": "stat_asignadosCopy"
+}

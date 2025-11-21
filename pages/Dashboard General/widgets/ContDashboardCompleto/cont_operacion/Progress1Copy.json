@@ -1,0 +1,50 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 36,
+  "counterClockwise": true,
+  "counterClosewise": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "progress"
+    },
+    {
+      "key": "fillColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "fillColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fillColor": "{{\n  (() => {\n    const total = OperacionDia.totalSinListaNegra() || 1;\n    const activas = OperacionDia.datosFiltrados().filter(\n      ot => ot.estatus_ot === \"Activa\"\n    ).length;\n    const pct = (activas / total) * 100;\n\n    if (pct < 50) return \"#dc2626\"; // rojo\n    if (pct >= 50 && pct < 75) return \"#fb923c\"; // naranja\n    if (pct >= 75 && pct < 95) return \"#eab308\"; // amarillo\n    return \"#16a34a\"; // verde\n  })()\n}}",
+  "isCanvas": false,
+  "isIndeterminate": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "95igqfixe4",
+  "leftColumn": 2,
+  "mobileBottomRow": 51,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 47,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 15.78515625,
+  "parentId": "sxp58e0rzd",
+  "parentRowSpace": 10,
+  "progress": "{{\n  (\n    OperacionDia.datosFiltrados().filter(\n      ot => ot.estatus_ot === \"Activa\"\n    ).length /\n    (OperacionDia.totalSinListaNegra() || 1)\n  * 100\n  ).toFixed(0)\n}}",
+  "progressType": "circular",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 14,
+  "showResult": true,
+  "steps": "4",
+  "topRow": 17,
+  "type": "PROGRESS_WIDGET",
+  "version": 1,
+  "widgetId": "5z418lq80s",
+  "widgetName": "Progress1Copy"
+}

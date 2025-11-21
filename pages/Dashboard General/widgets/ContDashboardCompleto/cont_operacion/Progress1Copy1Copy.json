@@ -1,0 +1,49 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 34,
+  "counterClosewise": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "progress"
+    },
+    {
+      "key": "fillColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "fillColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fillColor": "{{\n  (() => {\n    const total = OperacionDia.datosFiltrados().filter(\n      ot => ot.actividad_programada === \"Entrega con cliente\"\n    ).length || 1;\n\n    const completadas = OperacionDia.datosFiltrados().filter(\n      ot => ot.actividad_programada === \"Entrega con cliente\" &&\n            ot.estatus_ot === \"Completada\"\n    ).length;\n\n    const pct = (completadas / total) * 100;\n\n    if (pct < 50) return \"#dc2626\"; // rojo\n    if (pct >= 50 && pct < 75) return \"#fb923c\"; // naranja\n    if (pct >= 75 && pct < 95) return \"#eab308\"; // amarillo\n    return \"#16a34a\"; // verde\n  })()\n}}",
+  "isCanvas": false,
+  "isIndeterminate": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "95igqfixe4",
+  "leftColumn": 14,
+  "mobileBottomRow": 51,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 47,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 15.78515625,
+  "parentId": "sxp58e0rzd",
+  "parentRowSpace": 10,
+  "progress": "{{\n  (\n    OperacionDia.datosFiltrados().filter(\n      ot => ot.actividad_programada === \"Entrega con cliente\" &&\n            ot.estatus_ot === \"Completada\"\n    ).length /\n    (OperacionDia.datosFiltrados().filter(\n      ot => ot.actividad_programada === \"Entrega con cliente\"\n    ).length || 1)\n  * 100\n  ).toFixed(0)\n}}",
+  "progressType": "circular",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 26,
+  "showResult": true,
+  "steps": "4",
+  "topRow": 19,
+  "type": "PROGRESS_WIDGET",
+  "version": 1,
+  "widgetId": "wiggwxm20m",
+  "widgetName": "Progress1Copy1Copy"
+}

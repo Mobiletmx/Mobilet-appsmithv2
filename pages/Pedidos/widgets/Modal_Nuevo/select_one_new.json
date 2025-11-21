@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 16,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -58,7 +58,7 @@
   "rightColumn": 23,
   "serverSideFiltering": false,
   "sourceData": "{{ (GetClientes.data || []).map(u => ({\nlabel: u.nombre_cliente,\nvalue: String(u.id_cliente)\n})) }}",
-  "topRow": 10,
+  "topRow": 9,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "mcyeigjpxt",
