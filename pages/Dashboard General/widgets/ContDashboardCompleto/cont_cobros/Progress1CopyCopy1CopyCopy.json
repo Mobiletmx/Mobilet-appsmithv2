@@ -1,0 +1,50 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 44,
+  "counterClockwise": true,
+  "counterClosewise": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "progress"
+    },
+    {
+      "key": "fillColor"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "fillColor"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "fillColor": "{{\n  (() => {\n    const pct = parseFloat(JSCobros.factPendientePct());\n    if (pct >= 0 && pct < 5) return \"#16a34a\"; // verde\n    if (pct >= 5 && pct < 25) return \"#eab308\"; // amarillo\n    if (pct >= 25 && pct < 50) return \"#fb923c\"; // naranja\n    return \"#dc2626\"; // rojo\n  })()\n}}",
+  "isCanvas": false,
+  "isIndeterminate": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "95igqfixe4",
+  "leftColumn": 14,
+  "mobileBottomRow": 51,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 30,
+  "mobileTopRow": 47,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 15.78515625,
+  "parentId": "y87tl6h5yw",
+  "parentRowSpace": 10,
+  "progress": "{{ parseFloat(JSCobros.factPendientePct()) }}",
+  "progressType": "circular",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 26,
+  "showResult": true,
+  "steps": "4",
+  "topRow": 33,
+  "type": "PROGRESS_WIDGET",
+  "version": 1,
+  "widgetId": "yn4ekfrwro",
+  "widgetName": "Progress1CopyCopy1CopyCopy"
+}

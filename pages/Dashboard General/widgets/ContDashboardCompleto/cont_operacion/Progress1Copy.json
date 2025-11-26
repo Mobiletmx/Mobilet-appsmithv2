@@ -1,6 +1,6 @@
 {
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 36,
+  "bottomRow": 42,
   "counterClockwise": true,
   "counterClosewise": false,
   "dynamicBindingPathList": [
@@ -20,7 +20,7 @@
     }
   ],
   "dynamicTriggerPathList": [],
-  "fillColor": "{{\n  (() => {\n    const total = OperacionDia.totalSinListaNegra() || 1;\n    const activas = OperacionDia.datosFiltrados().filter(\n      ot => ot.estatus_ot === \"Activa\"\n    ).length;\n    const pct = (activas / total) * 100;\n\n    if (pct < 50) return \"#dc2626\"; // rojo\n    if (pct >= 50 && pct < 75) return \"#fb923c\"; // naranja\n    if (pct >= 75 && pct < 95) return \"#eab308\"; // amarillo\n    return \"#16a34a\"; // verde\n  })()\n}}",
+  "fillColor": "{{\n  (() => {\n    const total = OperacionDia.totalSinListaNegra() || 1;\n    const activas = OperacionDia.datosFiltrados().filter(\n      ot => ot.estatus_ot === \"Activa\"\n    ).length;\n    const pct = (activas / total) * 100;\n\n    if (pct >= 0 && pct < 5) return \"#16a34a\"; // verde (0-5%)\n    if (pct >= 5 && pct < 25) return \"#eab308\"; // amarillo (5-25%)\n    if (pct >= 25 && pct < 50) return \"#fb923c\"; // naranja (25-50%)\n    return \"#dc2626\"; // rojo (50-100%)\n  })()\n}}",
   "isCanvas": false,
   "isIndeterminate": false,
   "isLoading": false,
@@ -42,7 +42,7 @@
   "rightColumn": 14,
   "showResult": true,
   "steps": "4",
-  "topRow": 17,
+  "topRow": 23,
   "type": "PROGRESS_WIDGET",
   "version": 1,
   "widgetId": "5z418lq80s",

@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 83,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "txq6zi3xwb",
+  "leftColumn": 53,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 16,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 14,
+  "mobileTopRow": 12,
+  "needsErrorInfo": false,
+  "originalBottomRow": 84,
+  "originalTopRow": 80,
+  "overflow": "NONE",
+  "parentColumnSpace": 17.38232421875,
+  "parentId": "xflhu03o4k",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldTruncate": false,
+  "text": "{{\n  \"$\" +\n  JSEstadoCuenta.totalConIVA().toLocaleString(\"es-MX\", {\n    minimumFractionDigits: 2,\n    maximumFractionDigits: 2\n  })\n}}",
+  "textAlign": "RIGHT",
+  "textColor": "#231F20",
+  "topRow": 79,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "uqi0mkh9oq",
+  "widgetName": "txt_ec_total_con_iva"
+}

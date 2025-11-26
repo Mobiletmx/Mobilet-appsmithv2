@@ -1,6 +1,6 @@
 {
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 36,
+  "bottomRow": 42,
   "counterClockwise": false,
   "counterClosewise": false,
   "dynamicBindingPathList": [
@@ -42,7 +42,7 @@
   "rightColumn": 38,
   "showResult": true,
   "steps": "4",
-  "topRow": 17,
+  "topRow": 23,
   "type": "PROGRESS_WIDGET",
   "version": 1,
   "widgetId": "wmnjkb580o",

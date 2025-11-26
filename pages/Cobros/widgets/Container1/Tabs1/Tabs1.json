@@ -189,6 +189,51 @@
       "version": 1,
       "widgetId": "q7yh0cevxn",
       "widgetName": "Canvas5"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 860,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "cmng4gtm5x",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 900,
+      "minWidth": 450,
+      "mobileBottomRow": 901,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 1262,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "q7v8bb6bg1",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 1262,
+      "tabId": "tabor2bq009gc",
+      "tabName": "Reporte por cliente",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "myg6nqp2wj",
+      "widgetName": "Canvas6"
     }
   ],
   "defaultTab": "Pago pendiente",
@@ -247,6 +292,13 @@
       "label": "Pagados",
       "positioning": "vertical",
       "widgetId": "ss0k2j6zo9"
+    },
+    "tabor2bq009gc": {
+      "id": "tabor2bq009gc",
+      "index": 4,
+      "isVisible": true,
+      "label": "Reporte por cliente",
+      "widgetId": "myg6nqp2wj"
     },
     "tabw196jk3yft": {
       "id": "tabw196jk3yft",
