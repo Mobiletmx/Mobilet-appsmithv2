@@ -1,0 +1,48 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "refresh",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ekdz73k5n8",
+  "leftColumn": 55,
+  "minWidth": 50,
+  "mobileBottomRow": 12,
+  "mobileLeftColumn": 54,
+  "mobileRightColumn": 58,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  GetRoles.run();\n  GetRolesPermisos.run();\n}}",
+  "parentColumnSpace": 16.75,
+  "parentId": "qbz82bfjhf",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 59,
+  "tooltip": "Actualizar información",
+  "topRow": 8,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "558efssj4x",
+  "widgetName": "Refresh"
+}

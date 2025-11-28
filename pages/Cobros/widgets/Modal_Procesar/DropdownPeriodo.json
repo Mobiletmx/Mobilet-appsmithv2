@@ -33,7 +33,7 @@
       "key": "onOptionChange"
     }
   ],
-  "isDisabled": false,
+  "isDisabled": true,
   "isFilterable": true,
   "isLoading": false,
   "isRequired": false,

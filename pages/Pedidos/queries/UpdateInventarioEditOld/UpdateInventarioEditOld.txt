@@ -1,0 +1,9 @@
+{
+  "p_id_bano": {{ select_four.selectedOptionValue || null }},
+  "p_tipo_bano": null,
+  "p_fecha_compra": null,
+  "p_estatus_bano": null,
+  "p_dias_activo": null,
+  "p_contador_reparaciones": null,
+  "p_costo_total_reparaciones": null,
+}

@@ -23,7 +23,7 @@
     }
   ],
   "dynamicTriggerPathList": [],
-  "isDisabled": false,
+  "isDisabled": true,
   "isFilterable": true,
   "isLoading": false,
   "isRequired": true,

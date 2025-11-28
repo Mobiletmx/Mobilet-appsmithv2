@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "68fa28cb2b0762607528340c_84fe4d48-a3e4-45d8-b020-2dea809483ca",
-  "id": "Pedidos_UpdateInventario",
+  "gitSyncId": "691f7e1c2b076260752839dd_ef8d4e40-ed19-4674-a686-ad412bc84076",
+  "id": "Pedidos_UpdateInventarioNew",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -56,7 +56,7 @@
         "key": "body"
       }
     ],
-    "name": "UpdateInventario",
+    "name": "UpdateInventarioNew",
     "pageId": "Pedidos",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

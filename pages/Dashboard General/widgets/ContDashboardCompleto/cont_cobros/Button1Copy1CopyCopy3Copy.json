@@ -33,7 +33,7 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 30,
   "needsErrorInfo": false,
-  "onClick": "{{\n  storeValue(\"tabOT\", \"Activas\");\n  navigateTo(\"Ordenes de trabajo\");\n}}",
+  "onClick": "{{\n  storeValue(\"tabCobros\", \"Pago pendiente\");\n  navigateTo(\"Cobros\");\n}}",
   "parentColumnSpace": 17.38232421875,
   "parentId": "y87tl6h5yw",
   "parentRowSpace": 10,

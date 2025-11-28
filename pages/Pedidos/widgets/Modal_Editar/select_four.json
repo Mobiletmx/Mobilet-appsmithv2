@@ -33,7 +33,7 @@
       "key": "onOptionChange"
     }
   ],
-  "isDisabled": true,
+  "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
   "isRequired": true,
@@ -68,7 +68,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 11,
   "serverSideFiltering": false,
-  "sourceData": "{{\n(() => {\nvar inv = GetInventario.data || [];\n\n// Filtra disponibles\nvar disponibles = inv.filter(function(b){\nvar eb = (b && b.estatus_bano) ? String(b.estatus_bano) : \"\";\neb = eb.trim().toLowerCase();\nreturn eb === \"disponible en almacen\";\n});\n\n// Mapea opciones\nvar opts = disponibles.map(function(b){\nvar id = (b && b.id_bano) ? String(b.id_bano) : \"\";\nreturn { label: id, value: id };\n});\n\n// Baño actual del pedido en edición\nvar actual = appsmith.store && appsmith.store.cliente_edit_row && appsmith.store.cliente_edit_row.id_bano\n? String(appsmith.store.cliente_edit_row.id_bano).trim()\n: \"\";\n\n// Si el actual no está en disponibles, lo anteponemos\nif (actual && !opts.some(function(o){ return o.value === actual; })) {\nvar found = inv.find(function(b){\nvar id = (b && b.id_bano) ? String(b.id_bano) : \"\";\nreturn id === actual;\n});\nopts.unshift({\nlabel: found ? (actual + \" (actual)\") : (actual + \" (no disponible)\"),\nvalue: actual\n});\n}\n\nreturn opts;\n})()\n}}",
+  "sourceData": "{{  \n(() => {  \n  var inv = GetInventario.data || [];  \n  \n  // Mapea todas las opciones sin filtrar por estatus  \n  var opts = inv.map(function(b) {  \n    var id = (b && b.id_bano) ? String(b.id_bano) : \"\";  \n    return { label: id, value: id };  \n  });\n\n// Baño actual del pedido en edición\nvar actual = appsmith.store && appsmith.store.cliente_edit_row && appsmith.store.cliente_edit_row.id_bano\n? String(appsmith.store.cliente_edit_row.id_bano).trim()\n: \"\";\n\n// Si el actual no está en disponibles, lo anteponemos\nif (actual && !opts.some(function(o){ return o.value === actual; })) {\nvar found = inv.find(function(b){\nvar id = (b && b.id_bano) ? String(b.id_bano) : \"\";\nreturn id === actual;\n});\nopts.unshift({\nlabel: found ? (actual + \" (actual)\") : (actual + \" (no disponible)\"),\nvalue: actual\n});\n}\n\nreturn opts;\n})()\n}}",
   "topRow": 17,
   "type": "SELECT_WIDGET",
   "version": 1,

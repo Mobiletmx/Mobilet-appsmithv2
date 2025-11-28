@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 21,
+  "bottomRow": 26,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -41,8 +41,8 @@
   "mobileRightColumn": 31,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 18,
-  "originalTopRow": 14,
+  "originalBottomRow": 26,
+  "originalTopRow": 22,
   "overflow": "NONE",
   "parentColumnSpace": 13.6181640625,
   "parentId": "qbz82bfjhf",
@@ -54,7 +54,7 @@
   "text": "Selecciona un rol para ver los permisos ",
   "textAlign": "LEFT",
   "textColor": "{{appsmith.theme.colors.primaryColor}}",
-  "topRow": 17,
+  "topRow": 22,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

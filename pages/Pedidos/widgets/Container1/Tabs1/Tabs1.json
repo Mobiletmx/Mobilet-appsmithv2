@@ -146,7 +146,7 @@
       "widgetName": "Canvas6"
     }
   ],
-  "defaultTab": "Activos",
+  "defaultTab": "{{ appsmith.store.tabPedidos || \"Activos\" }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -156,6 +156,9 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "defaultTab"
     }
   ],
   "dynamicHeight": "FIXED",

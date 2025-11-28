@@ -269,7 +269,16 @@ export default {
     return { nuevos, activos, cerrados };
   },
 
-  // 5.4 Valor de cobros no pagados (suma total_no_pagado_sin_iva)
+  // 5.4 Monto total cobrado (suma total_cobrado_sin_iva)
+  kpiCobradoTotal: () => {
+    const datos = JSPedidos.datosKPI();
+    return datos.reduce(
+      (sum, p) => sum + (p.total_cobrado_sin_iva || 0),
+      0
+    );
+  },
+
+  // 5.5 Valor de cobros no pagados (suma total_no_pagado_sin_iva)
   kpiNoPagadoValor: () => {
     const datos = JSPedidos.datosKPI();
     return datos.reduce(
@@ -278,7 +287,7 @@ export default {
     );
   },
 
-  // 5.5 Porcentaje no pagado = total_no_pagado_sin_iva / total_cobrado_sin_iva
+  // 5.6 Porcentaje no pagado = total_no_pagado_sin_iva / total_cobrado_sin_iva
   kpiNoPagadoPorcentaje: () => {
     const datos = JSPedidos.datosKPI();
     let totalCobrado = 0;
@@ -293,7 +302,7 @@ export default {
     return totalNoPagado / totalCobrado;
   },
 
-  // 5.6 Monto total pagado (total cobrado - no pagado)
+  // 5.7 Monto total pagado (total cobrado - no pagado)
   kpiPagadoValor: () => {
     const datos = JSPedidos.datosKPI();
     let totalCobrado = 0;
@@ -307,7 +316,7 @@ export default {
     return totalCobrado - totalNoPagado;
   },
 
-  // 5.7 Porcentaje pagado = pagado / total_cobrado
+  // 5.8 Porcentaje pagado = pagado / total_cobrado
   kpiPagadoPorcentaje: () => {
     const datos = JSPedidos.datosKPI();
     let totalCobrado = 0;
@@ -367,13 +376,13 @@ export default {
 
     return [
       {
-        x: "No Pagado",
-        y: noPagado,
+        x: "Pagado",
+        y: pagado,
         porcentaje: pagado / total
       },
       {
-        x: "Pagado",
-        y: pagado,
+        x: "No Pagado",
+        y: noPagado,
         porcentaje: noPagado / total
       }
     ];

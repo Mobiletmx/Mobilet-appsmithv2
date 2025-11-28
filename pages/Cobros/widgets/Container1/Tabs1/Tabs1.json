@@ -236,7 +236,7 @@
       "widgetName": "Canvas6"
     }
   ],
-  "defaultTab": "Pago pendiente",
+  "defaultTab": "{{ appsmith.store.tabCobros || \"Pago pendiente\" }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -246,6 +246,9 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "defaultTab"
     }
   ],
   "dynamicHeight": "FIXED",

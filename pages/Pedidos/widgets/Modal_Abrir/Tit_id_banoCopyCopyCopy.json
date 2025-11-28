@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 21,
+  "bottomRow": 22,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,7 +30,7 @@
   "mobileRightColumn": 10,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
-  "originalBottomRow": 22,
+  "originalBottomRow": 21,
   "originalTopRow": 17,
   "overflow": "NONE",
   "parentColumnSpace": 17.40625,
@@ -43,7 +43,7 @@
   "text": "Costo sin IVA",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 17,
+  "topRow": 18,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

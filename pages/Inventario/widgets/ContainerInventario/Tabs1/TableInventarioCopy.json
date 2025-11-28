@@ -564,7 +564,7 @@
   "rightColumn": 64,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
-  "tableData": "{{\n  GetInventario.data.filter(\n    b =>\n      b.tipo_bano !== \"Externo\" &&\n      b.estatus_bano === \"Disponible en almacen\"\n  )\n}}",
+  "tableData": "{{\n  GetInventario.data.filter(\n    b =>\n      b.tipo_bano !== \"Externo\" &&\n      (b.estatus_bano === \"Disponible en almacen\" || b.estatus_bano === \"Disponible\")\n  )\n}}",
   "textSize": "0.875rem",
   "topRow": 1,
   "totalRecordsCount": "",
