@@ -339,14 +339,22 @@
     },
     {
       "key": "defaultTab"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ PermisosUtils.tieneAcceso(\"Inventario\") }}",
   "key": "7rx9p40o2q",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,

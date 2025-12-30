@@ -4,10 +4,19 @@
   "capSide": 0,
   "capType": "nc",
   "dividerColor": "#3b82f6",
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ PermisosUtils.tieneAccesoBloque(\"DG_INVENTARIO\") }}",
   "key": "75uybmgxoq",
   "leftColumn": 0,
   "minWidth": 450,

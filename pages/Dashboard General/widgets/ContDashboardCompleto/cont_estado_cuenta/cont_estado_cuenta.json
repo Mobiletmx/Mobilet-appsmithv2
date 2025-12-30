@@ -4,7 +4,7 @@
   "borderColor": "#f4f4f5",
   "borderRadius": "15px",
   "borderWidth": "1",
-  "bottomRow": 323,
+  "bottomRow": 343,
   "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
   "children": [
     {
@@ -37,11 +37,18 @@
   ],
   "containerStyle": "card",
   "displayName": "Container",
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -49,21 +56,21 @@
   "iconSVG": "/static/media/icon.1977dca3.svg",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ PermisosUtils.tieneAccesoBloque(\"DG_ESTADO_CUENTA\") }}",
   "key": "2kh4ne8vc6",
   "labelTextSize": "0.875rem",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
-  "originalBottomRow": 323,
-  "originalTopRow": 234,
+  "originalBottomRow": 343,
+  "originalTopRow": 254,
   "parentColumnSpace": 17.9375,
   "parentId": "z8sumiq4u3",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 63,
   "shouldScrollContents": true,
-  "topRow": 234,
+  "topRow": 254,
   "type": "CONTAINER_WIDGET",
   "version": 1,
   "widgetId": "pc6ozswx0n",

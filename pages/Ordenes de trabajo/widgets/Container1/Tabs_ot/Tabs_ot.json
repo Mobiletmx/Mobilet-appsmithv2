@@ -5,7 +5,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 111,
+  "bottomRow": 119,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
@@ -384,14 +384,22 @@
     },
     {
       "key": "defaultTab"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ PermisosUtils.tieneAcceso(\"Ordenes de trabajo\") }}",
   "key": "uzmq1t2noz",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
@@ -477,7 +485,7 @@
       "widgetId": "wq2ai18y7g"
     }
   },
-  "topRow": 22,
+  "topRow": 30,
   "type": "TABS_WIDGET",
   "version": 3,
   "widgetId": "wrtp64noqo",

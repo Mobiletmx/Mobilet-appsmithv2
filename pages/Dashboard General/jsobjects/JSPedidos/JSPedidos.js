@@ -386,5 +386,53 @@ export default {
         porcentaje: noPagado / total
       }
     ];
+  },
+
+  /**
+   * 7) Distribución de pedidos por categoria_bano (Eventos vs Obras)
+   *    Usa los mismos filtros de JSPedidos, sin filtrar por estatus.
+   */
+  distribucionEventosObras: () => {
+    const datos = JSPedidos.datosFiltrados() || [];
+
+    const total = datos.length;
+    let eventos = 0;
+    let obras = 0;
+
+    datos.forEach(p => {
+      const cat = (p.categoria_bano || "").toString().trim().toLowerCase();
+      if (cat.includes("evento")) {
+        eventos++;
+      } else if (cat.includes("obra")) {
+        obras++;
+      }
+    });
+
+    const totalEO = eventos + obras;
+
+    return {
+      total,             // total de pedidos filtrados
+      eventos,
+      obras,
+      totalEO,           // total de eventos + obras
+      porcentajeEventos: totalEO > 0 ? eventos / totalEO : 0,
+      porcentajeObras: totalEO > 0 ? obras / totalEO : 0
+    };
+  },
+
+  /**
+   * 7.1 Porcentaje para widget de progreso: Eventos (0–100)
+   */
+  progresoEventos: () => {
+    const d = JSPedidos.distribucionEventosObras();
+    return d.porcentajeEventos * 100;
+  },
+
+  /**
+   * 7.2 Porcentaje para widget de progreso: Obras (0–100)
+   */
+  progresoObras: () => {
+    const d = JSPedidos.distribucionEventosObras();
+    return d.porcentajeObras * 100;
   }
 };

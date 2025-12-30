@@ -259,6 +259,9 @@
     },
     {
       "key": "primaryColumns.dia_de_corte.computedValue"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -273,6 +276,9 @@
     },
     {
       "key": "isSortable"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -287,7 +293,7 @@
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
   "isSortable": "",
-  "isVisible": true,
+  "isVisible": "{{ PermisosUtils.tieneAcceso(\"Datos Facturación\") }}",
   "isVisibleDownload": true,
   "isVisibleFilters": "",
   "isVisiblePagination": true,
@@ -301,8 +307,8 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 17,
   "needsErrorInfo": false,
-  "originalBottomRow": 89,
-  "originalTopRow": 21,
+  "originalBottomRow": 80,
+  "originalTopRow": 0,
   "parentColumnSpace": 18.880859375,
   "parentId": "a8jmqjnn68",
   "parentRowSpace": 10,

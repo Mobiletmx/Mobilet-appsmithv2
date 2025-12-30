@@ -159,14 +159,22 @@
     },
     {
       "key": "defaultTab"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ PermisosUtils.tieneAcceso(\"Pedidos\") }}",
   "key": "78c1k3h8ji",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,

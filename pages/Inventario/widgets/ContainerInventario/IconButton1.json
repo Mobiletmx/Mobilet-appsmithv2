@@ -8,6 +8,14 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -18,7 +26,7 @@
   "iconName": "plus",
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ PermisosUtils.tieneAcceso(\"Inventario\") }}",
   "key": "zvud7tz6vk",
   "leftColumn": 49,
   "minWidth": 50,

@@ -57,7 +57,7 @@
     "id_ubicacion",
     "created_at"
   ],
-  "columnUpdatedAt": 1762912613703,
+  "columnUpdatedAt": 1767129798041,
   "columnWidthMap": {
     "Cantidad_banos": 150,
     "Celular": 60,
@@ -1017,7 +1017,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "Factura?",
       "notation": "standard",
       "originalId": "requiere_factura",

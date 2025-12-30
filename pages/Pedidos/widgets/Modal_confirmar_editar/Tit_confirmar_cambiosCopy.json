@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 21,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,7 +33,7 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 11,
+  "originalBottomRow": 21,
   "originalTopRow": 5,
   "overflow": "NONE",
   "parentId": "7h5qu95wta",
@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "shouldTruncate": false,
-  "text": "Confirma que desea editar la información del pedido {{ switch_nuevo.isSwitchedOn ? \"\" : (appsmith.store.cliente_edit_row?.id_item_pedido || \"\") }} del cliente {{ switch_nuevo.isSwitchedOn ? \"\" : (appsmith.store.cliente_edit_row?.nombre_cliente || \"\") }}?",
+  "text": "{{\n  \"Confirma que desea editar la información del pedido \" +\n  (switch_nuevo.isSwitchedOn ? \"\" : (appsmith.store.cliente_edit_row?.id_item_pedido || \"\")) +\n  \" del cliente \" +\n  (switch_nuevo.isSwitchedOn ? \"\" : (appsmith.store.cliente_edit_row?.nombre_cliente || \"\")) +\n  \".\\n\\n\" +\n  (appsmith.store.mensaje_cambio_bano || \"\")\n}}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 5,

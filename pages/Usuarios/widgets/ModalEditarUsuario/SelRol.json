@@ -53,7 +53,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 62,
   "serverSideFiltering": false,
-  "sourceData": "[\n  { \"code\": \"key_user\",   \"name\": \"Key User\" },\n  { \"code\": \"operacion\",  \"name\": \"Operación\" },\n  { \"code\": \"chofer\",     \"name\": \"Chofer\" },\n  { \"code\": \"auxiliar\",   \"name\": \"Auxiliar\" },\n  { \"code\": \"onboarding\", \"name\": \"Onboarding\" }\n]",
+  "sourceData": "[\n  { \"code\": \"key_user\",   \"name\": \"Key User\" },\n  { \"code\": \"logistica\",  \"name\": \"Logística\" },\n  { \"code\": \"chofer\",     \"name\": \"Chofer\" },\n  { \"code\": \"auxiliar\",   \"name\": \"Auxiliar\" },\n  { \"code\": \"onboarding\", \"name\": \"Onboarding\" }\n]",
   "topRow": 25,
   "type": "SELECT_WIDGET",
   "version": 1,

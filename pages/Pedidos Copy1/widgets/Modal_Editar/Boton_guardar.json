@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 33,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "right",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 41,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(() => {\nconst trim = (v) => String(v ?? \"\").trim();\nconst has = (v) => trim(v).length > 0;\n\n// 1) Validaciones de requeridos\n// Ubicación\nif (!select_one?.selectedOptionValue) {\nshowAlert(\"Selecciona la ubicación.\", \"warning\");\nreturn;\n}\n\n// ID Baño\nif (!select_four?.selectedOptionValue) {\nshowAlert(\"Selecciona el baño.\", \"warning\");\nreturn;\n}\n\n// Fecha inicio (date_one)\nif (!has(date_one?.selectedDate)) {\nshowAlert(\"Selecciona la fecha de inicio del pedido.\", \"warning\");\nreturn;\n}\n\n\n// Precio sin IVA (input_four) > 0\nconst rawBase = input_four?.text ?? \"\";\nconst cleanBase = String(rawBase).replace(/,/g, \"\").trim();\nconst baseNum = Number(cleanBase);\nif (!Number.isFinite(baseNum) || baseNum <= 0) {\nshowAlert(\"Captura el precio sin IVA y debe ser mayor a 0.\", \"warning\");\nreturn;\n}\n\n// 2) Validación adicional de fechas (opcional): fin >= inicio\nconst ini = new Date(date_one.selectedDate);\nconst fin = new Date(date_two.selectedDate);\nif (!isNaN(ini.getTime()) && !isNaN(fin.getTime()) && fin < ini) {\nshowAlert(\"La fecha de recolección no puede ser anterior a la fecha de inicio.\", \"warning\");\nreturn;\n}\n\n// 3) Estado/Store (decisión sobre resetear)\n// Recomendación: NO resetear aquí, porque el usuario puede cancelar en el modal de confirmación.\n// Mantén los campos tal cual hasta que el usuario confirme o cierre sin guardar.\n\n// 4) Abrir confirmación\nresetWidget(\"Modal_confirmar_editar\", true); // limpia solo el modal de confirmación\nshowModal(\"Modal_confirmar_editar\");\n})()\n}}",
+  "originalBottomRow": 33,
+  "originalTopRow": 29,
+  "parentId": "t6m6k5xey8",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "Guardar cambios",
+  "topRow": 29,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "f99hm3bt9n",
+  "widgetName": "Boton_guardar"
+}

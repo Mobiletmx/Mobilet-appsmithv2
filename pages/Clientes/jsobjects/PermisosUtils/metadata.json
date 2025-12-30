@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "691f7e1c2b076260752839dd_8ec57cbe-64c4-4eff-b440-daa00ac1eb47",
+  "id": "Clientes_PermisosUtils",
+  "unpublishedCollection": {
+    "name": "PermisosUtils",
+    "pageId": "Clientes",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "usuariosRoles",
+        "value": "{\n  \"riosje@gmail.com\": \"key_user\",\n  \"riosje13@yahoo.com\": \"key_user\",\n  \"riosjp88@gmail.com\": \"key_user\",\n  \"miguegil@gmail.com\": \"key_user\",\n  \"rocytec@gmail.com\": \"auxiliar\",\n  \"logistica@example.com\": \"logistica\",\n  \"chofer@example.com\": \"chofer\",\n  \"onboarding@example.com\": \"onboarding\"\n}"
+      },
+      {
+        "name": "permisosPorPagina",
+        "value": "{\n  \"Inicio de Sesión\": [\"key_user\", \"auxiliar\", \"logistica\", \"chofer\"],\n  \"Dashboard General\": [\"key_user\", \"auxiliar\", \"logistica\", \"chofer\"],\n  \"Usuarios\": [\"key_user\"],\n  \"Roles-Permisos\": [\"key_user\"],\n  \"Cotizaciones\": [\"key_user\", \"auxiliar\"],\n  \"Inventario\": [\"key_user\", \"auxiliar\", \"logistica\", \"chofer\"],\n  \"Clientes\": [\"key_user\", \"auxiliar\"],\n  \"Ubicaciones\": [\"key_user\", \"auxiliar\", \"logistica\"],\n  \"Pedidos\": [\"key_user\", \"auxiliar\"],\n  \"Ordenes de trabajo\": [\"key_user\", \"logistica\", \"chofer\"],\n  \"Cobros\": [\"key_user\", \"auxiliar\"],\n  \"Datos Facturación\": [\"key_user\", \"auxiliar\"],\n  \"Facturación\": [\"key_user\", \"auxiliar\"]\n}"
+      }
+    ]
+  }
+}

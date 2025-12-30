@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 13,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3flkeu2mqz",
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "originalBottomRow": 13,
+  "originalTopRow": 5,
+  "overflow": "NONE",
+  "parentId": "2vrg79dqls",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "shouldTruncate": false,
+  "text": "Confirma que desea crear un pedido para {{  \n  (select_one_new.selectedOptionLabel || \"\")  \n}} en la ubicación {{  \n (select_two_new.selectedOptionLabel || \"\")  \n}} con el baño {{  \n (select_three_new.selectedOptionValue || \"\")\n\n}} y fecha de inicio {{  \n  (() => {  \n    const d = new Date(date_one_new.selectedDate);  \n    if (isNaN(d.getTime())) return \"\";  \n    const dd = String(d.getDate()).padStart(2, \"0\");  \n    const mm = String(d.getMonth() + 1).padStart(2, \"0\");  \n    const yyyy = d.getFullYear();  \n    return `${dd}-${mm}-${yyyy}`;  \n  })()  \n}}?",
+  "textAlign": "CENTER",
+  "textColor": "#231F20",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "wbsegqha9k",
+  "widgetName": "Tit_confirmar_cambios_new"
+}

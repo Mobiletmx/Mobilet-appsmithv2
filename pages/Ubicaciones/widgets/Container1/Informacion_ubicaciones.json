@@ -182,6 +182,9 @@
     },
     {
       "key": "primaryColumns.codigo_postal_ubicacion.computedValue"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -190,6 +193,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -204,7 +210,7 @@
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
   "isSortable": true,
-  "isVisible": true,
+  "isVisible": "{{ PermisosUtils.tieneAcceso(\"Ubicaciones\") }}",
   "isVisibleDownload": true,
   "isVisibleFilters": true,
   "isVisiblePagination": true,

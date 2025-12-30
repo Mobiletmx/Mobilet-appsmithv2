@@ -116,6 +116,10 @@
     {
       "id": "Ordenes de trabajo Copy",
       "isDefault": false
+    },
+    {
+      "id": "Pedidos Copy1",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

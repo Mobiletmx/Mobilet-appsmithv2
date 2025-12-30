@@ -37,11 +37,18 @@
   ],
   "containerStyle": "card",
   "displayName": "Container",
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -49,7 +56,7 @@
   "iconSVG": "/static/media/icon.1977dca3.svg",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ PermisosUtils.tieneAccesoBloque(\"DG_OPERACION\") }}",
   "key": "42vyvcsom4",
   "labelTextSize": "0.875rem",
   "leftColumn": 1,

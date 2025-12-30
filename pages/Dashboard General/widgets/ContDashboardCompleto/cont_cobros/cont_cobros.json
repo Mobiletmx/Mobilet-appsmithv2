@@ -4,7 +4,7 @@
   "borderColor": "#f4f4f5",
   "borderRadius": "15px",
   "borderWidth": "1",
-  "bottomRow": 230,
+  "bottomRow": 250,
   "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
   "children": [
     {
@@ -37,11 +37,18 @@
   ],
   "containerStyle": "card",
   "displayName": "Container",
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -49,21 +56,21 @@
   "iconSVG": "/static/media/icon.1977dca3.svg",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ PermisosUtils.tieneAccesoBloque(\"DG_COBROS\") }}",
   "key": "o5l84ycaor",
   "labelTextSize": "0.875rem",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "originalBottomRow": 230,
-  "originalTopRow": 175,
+  "originalBottomRow": 250,
+  "originalTopRow": 195,
   "parentColumnSpace": 17.9375,
   "parentId": "z8sumiq4u3",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "rightColumn": 63,
   "shouldScrollContents": true,
-  "topRow": 175,
+  "topRow": 195,
   "type": "CONTAINER_WIDGET",
   "version": 1,
   "widgetId": "h18byy7x7a",

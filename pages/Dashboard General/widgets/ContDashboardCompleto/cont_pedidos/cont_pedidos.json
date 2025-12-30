@@ -4,13 +4,13 @@
   "borderColor": "#f4f4f5",
   "borderRadius": "15px",
   "borderWidth": "1",
-  "bottomRow": 171,
+  "bottomRow": 191,
   "bottomRowBeforeCollapse": 49,
   "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
   "children": [
     {
       "borderRadius": "0px",
-      "bottomRow": 670,
+      "bottomRow": 870,
       "boxShadow": "none",
       "canExtend": false,
       "containerStyle": "none",
@@ -38,11 +38,18 @@
   ],
   "containerStyle": "card",
   "displayName": "Container",
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -50,13 +57,13 @@
   "iconSVG": "/static/media/icon.1977dca3.svg",
   "isCanvas": true,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ PermisosUtils.tieneAccesoBloque(\"DG_PEDIDOS\") }}",
   "key": "p5ueindstb",
   "labelTextSize": "0.875rem",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
-  "originalBottomRow": 171,
+  "originalBottomRow": 191,
   "originalTopRow": 104,
   "parentColumnSpace": 18.0625,
   "parentId": "z8sumiq4u3",

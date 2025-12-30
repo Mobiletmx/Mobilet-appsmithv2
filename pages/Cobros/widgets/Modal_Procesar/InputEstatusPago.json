@@ -2,7 +2,7 @@
   "accentColor": "#22c55e",
   "alignWidget": "LEFT",
   "animateLoading": true,
-  "bottomRow": 11,
+  "bottomRow": 14,
   "boxShadow": "none",
   "defaultSwitchState": "{{ appsmith.store.cobros_edit_row?.estatus_pago  || \"\" }}",
   "dynamicBindingPathList": [
@@ -39,6 +39,8 @@
   "mobileTopRow": 10,
   "needsErrorInfo": false,
   "onChange": "",
+  "originalBottomRow": 11,
+  "originalTopRow": 7,
   "parentColumnSpace": 18.575,
   "parentId": "tszk7sied9",
   "parentRowSpace": 10,

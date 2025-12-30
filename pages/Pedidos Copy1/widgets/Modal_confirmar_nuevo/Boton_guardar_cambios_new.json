@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 24,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{\n  !switch_nuevo_new.isSwitchedOn ||        // switch apagado\n  !Chk_entiendo_new.isChecked ||           // no aceptó la confirmación\n  InsertPedidos.isLoading                  // query corriendo\n}}\n",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ffwdv9n8py",
+  "leftColumn": 27,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n  // Validaciones previas\n  if (!switch_nuevo_new?.isSwitchedOn) {\n    showAlert(\"El switch de nuevo cliente debe estar activado.\", \"warning\");\n    return;\n  }\n  if (!Chk_entiendo_new?.isChecked) {\n    showAlert(\"Debes aceptar la confirmación para continuar.\", \"warning\");\n    return;\n  }\n\n  try {\n    // Evitar doble envío\n    if (InsertPedidos.isLoading || UpdateInventarioEditNew.isLoading) return;\n\n    // 1) Insertar pedido\n    const pedRes = await InsertPedidos.run();\n    showAlert(\"Pedido creado correctamente.\", \"success\");\n\n    // 2) Actualizar inventario\n    const invRes = await UpdateInventarioEditNew.run();\n    // Mensaje amigable según lo que regrese tu query (ajusta si conoces el shape)\n    const invMsg = invRes?.message || invRes?.status || \"Inventario actualizado correctamente.\";\n    showAlert(invMsg, \"success\");\n\n    // 3) Cerrar modal solo si todo fue OK\n    closeModal(\"Modal_confirmar_nuevo\");\n\n    // (Opcional) refrescar listados\n    // if (GetPedidos?.run) await GetPedidos.run();\n    // if (GetInventario?.run) await GetInventario.run();\n\n  } catch (e) {\n    // Mantener modal abierto en caso de error\n    showAlert(\"Error en el proceso: \" + (e?.message || e), \"error\");\n  }\n})()\n}}\n",
+  "originalBottomRow": 24,
+  "originalTopRow": 20,
+  "parentId": "2vrg79dqls",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 43,
+  "text": "Confirmar",
+  "topRow": 20,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "2t1edwgrbf",
+  "widgetName": "Boton_guardar_cambios_new"
+}

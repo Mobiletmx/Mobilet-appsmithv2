@@ -1,0 +1,52 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 34,
+  "boxShadow": "none",
+  "defaultSwitchState": "{{\n  // Si hay fila para editar => switch apagado (false)\n  // Si no hay fila (alta nueva) => switch encendido (true)\n  !(appsmith.store.cliente_edit_row && appsmith.store.cliente_edit_row.id_cliente)\n}}\n",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultSwitchState"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": true,
+  "isLoading": false,
+  "isVisible": false,
+  "key": "3pjmq8hi2w",
+  "label": "NP",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextSize": "1rem",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 33,
+  "mobileRightColumn": 45,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "originalBottomRow": 40,
+  "originalTopRow": 34,
+  "parentColumnSpace": 17.40625,
+  "parentId": "wkz26wna0c",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 3,
+  "topRow": 34,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "q2c0o17ik5",
+  "widgetName": "switch_nuevo_new"
+}
