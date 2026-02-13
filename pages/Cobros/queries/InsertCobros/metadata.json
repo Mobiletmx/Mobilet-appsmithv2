@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"_id_cobro\": null,\n  \"_id_item_pedido\": null,\n  \"_id_cliente\": \"CLI_SMOKE_01\",\n  \"_id_ubicacion\": null,\n  \"_periodo_cobro\": \"2025-01\",\n  \"_monto_sin_iva\": null,\n  \"_monto_iva\": null,\n  \"_monto_isr\": null,\n  \"_monto_total_con_iva\": 11600.00,\n  \"_requiere_factura\": true,\n  \"_persona_moral\": false,\n  \"_nombre_cliente\": \"Smoke Test Cliente 01\",\n  \"_nombre_ubicacion\": \"Sucursal Centro\",\n  \"_id_bano\": \"BANO_SMK_01\",\n  \"_fecha_inicio\": \"2025-01-01T00:00:00Z\",\n  \"_fecha_fin\": \"2025-01-31T23:59:59Z\",\n  \"_estatus_pago\": false,\n  \"_estatus_factura\": false\n}\n",
+      "body": "{\n  \"_id_cobro\": null,\n  \"_id_item_pedido\": {{ id_item_pedido_new.text || null }},\n  \"_id_cliente\": {{ id_cliente_new.text || null }},\n  \"_id_ubicacion\": {{ id_ubicacion_new.text || null }},\n  \"_periodo_cobro\": {{ DropdownPeriodoNew.selectedOptionValue || null }},\n  \"_monto_sin_iva\": {{ InputCostoNew.text || null }},\n  \"_monto_iva\": {{ InputIvaNew.text || null }},\n  \"_monto_isr\": null,\n  \"_monto_total_con_iva\": {{ InputCostoTotalNew.text || null }},\n  \"_requiere_factura\": {{ requiere_factura_new.isSwitchedOn || null }},\n  \"_persona_moral\": null,\n  \"_nombre_cliente\": {{ InputNombreClienteNew.text || null }},\n  \"_nombre_ubicacion\": {{ InputNombreUbicacionNew.text || null }},\n  \"_id_bano\": {{ IdBanoNew.text || null }},\n  \"_fecha_inicio\": {{ FechaInicioNew.selectedDate || null }},\n  \"_fecha_fin\": {{ FechaFinNew.selectedDate || null }},\n  \"_estatus_pago\": false,\n  \"_estatus_factura\": false\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -51,6 +51,9 @@
     "dynamicBindingPathList": [
       {
         "key": "headers[0].value"
+      },
+      {
+        "key": "body"
       }
     ],
     "name": "InsertCobros",

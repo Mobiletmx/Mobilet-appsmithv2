@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 56,
+  "bottomRow": 42,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  appsmith.store.cliente_edit_row?.forma_de_pago || \"\" ))(forma_de_pago_edit.options, forma_de_pago_edit.serverSideFiltering) }}",
   "dynamicBindingPathList": [
@@ -61,7 +61,7 @@
   "rightColumn": 63,
   "serverSideFiltering": false,
   "sourceData": "{{\n[\n  { label: \"01 - Efectivo\",      value: \"01\" },\n  { label: \"02 - Cheque\",        value: \"02\" },\n  { label: \"03 - Transferencia\",  value: \"03\" },\n\t{ label: \"04 - Tarjeta de  crédito\",                    value: \"04\" },\n  { label: \"28 - Tarjeta de débito\",                    value: \"28\" }\n]\n}}\n",
-  "topRow": 49,
+  "topRow": 35,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "864kilq7en",

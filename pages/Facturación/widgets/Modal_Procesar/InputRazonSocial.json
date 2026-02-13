@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 15,
+  "bottomRow": 11,
   "boxShadow": "none",
   "defaultText": "{{ appsmith.store.pedidoSel?.razon_social || \"\" \n}}",
   "dynamicBindingPathList": [
@@ -49,7 +49,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "showStepArrows": false,
-  "topRow": 8,
+  "topRow": 4,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "x7iu1nas3n",

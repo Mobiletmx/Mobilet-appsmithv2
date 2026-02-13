@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 29,
+  "bottomRow": 22,
   "boxShadow": "none",
   "defaultText": "{{ appsmith.store.cobros_edit_row?.id_bano  || \"\" }}",
   "dynamicBindingPathList": [
@@ -60,7 +60,7 @@
   "rightColumn": 63,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 22,
+  "topRow": 15,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "4y08n2sbn8",

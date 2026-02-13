@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 37,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "right",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 41,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(async () => {\n  const trim = (v) => String(v ?? \"\").trim();\n  const has = (v) => trim(v).length > 0;\n\n  // --- 1) Validaciones requeridos ---\n  const idItem = trim(DropdownIdItemNew?.selectedOptionValue ?? DropdownIdItemNew?.value);\n  if (!has(idItem)) {\n    showAlert(\"Selecciona el ID Pedido.\", \"warning\");\n    return;\n  }\n\n  const periodo = trim(DropdownPeriodoNew?.selectedOptionValue ?? DropdownPeriodoNew?.value);\n  if (!has(periodo)) {\n    showAlert(\"Selecciona el periodo de cobro.\", \"warning\");\n    return;\n  }\n\n  // Costo > 0\n  const rawBase = InputCostoNew?.text ?? InputCostoNew?.value ?? \"\";\n  const cleanBase = String(rawBase).replace(/,/g, \"\").trim();\n  const baseNum = Number(cleanBase);\n  if (!Number.isFinite(baseNum) || baseNum <= 0) {\n    showAlert(\"Captura el costo, debe ser mayor a 0.\", \"warning\");\n    return;\n  }\n\n  // --- 2) Validaciones de fechas ---\n  const fechaInicioRaw = trim(FechaInicioNew?.text ?? FechaInicioNew?.value);\n  const fechaFinRaw = trim(FechaFinNew?.text ?? FechaFinNew?.value);\n\n  if (!has(fechaInicioRaw) || !has(fechaFinRaw)) {\n    showAlert(\"La fecha de inicio y la fecha fin son obligatorias.\", \"warning\");\n    return;\n  }\n\n  const fechaInicio = new Date(fechaInicioRaw);\n  const fechaFin = new Date(fechaFinRaw);\n\n  if (isNaN(fechaInicio.getTime()) || isNaN(fechaFin.getTime())) {\n    showAlert(\"Las fechas capturadas no son válidas.\", \"warning\");\n    return;\n  }\n\n  if (fechaFin < fechaInicio) {\n    showAlert(\"La fecha fin no puede ser menor que la fecha inicio.\", \"warning\");\n    return;\n  }\n\n  // --- 3) Armar payload (draft) ---\n  const draft = {\n    id_item_pedido: idItem,\n    periodo_cobro: periodo,\n    costo: baseNum,\n\n    id_bano: trim(IdBanoNew?.text ?? IdBanoNew?.value),\n    nombre_cliente: trim(InputNombreClienteNew?.text ?? InputNombreClienteNew?.value),\n    nombre_ubicacion: trim(InputNombreUbicacionNew?.text ?? InputNombreUbicacionNew?.value),\n    fecha_inicio: fechaInicioRaw,\n    fecha_fin: fechaFinRaw,\n\n    created_at_local: new Date().toISOString(),\n    source: \"Modal_Nuevo\",\n  };\n\n  // --- 4) Guardar draft ---\n  await storeValue(\"nuevoCobroDraft\", draft, true);\n\n  // --- 5) Abrir confirmación ---\n  resetWidget(\"Modal_Confirmar_Nuevo\", true);\n  showModal(\"Modal_Confirmar_Nuevo\");\n})()\n}}\n",
+  "originalBottomRow": 40,
+  "originalTopRow": 36,
+  "parentId": "823ndm88k8",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "Guardar",
+  "topRow": 33,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "wkdhg14wi6",
+  "widgetName": "BotonGuardarNew"
+}

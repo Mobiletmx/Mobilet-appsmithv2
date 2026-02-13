@@ -627,7 +627,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = Informacion_tabla.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id_item_pedido\"])) : id_item_pedido })()}}",
+      "computedValue": "{{(() => { const tableData = Informacion_tabla.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id_item_pedido\"])) : id_item_pedido_new })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,

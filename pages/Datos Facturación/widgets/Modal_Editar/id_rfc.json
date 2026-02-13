@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 15,
+  "bottomRow": 14,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,8 +33,8 @@
   "mobileRightColumn": 14,
   "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "originalBottomRow": 15,
-  "originalTopRow": 11,
+  "originalBottomRow": 17,
+  "originalTopRow": 13,
   "overflow": "NONE",
   "parentColumnSpace": 17.40625,
   "parentId": "t6m6k5xey8",
@@ -46,7 +46,7 @@
   "text": "{{ nuevo_cliente.isSwitchedOn ? \"\" : (appsmith.store.cliente_edit_row?.id_rfc_facturacion || \"\") }}\n",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 11,
+  "topRow": 10,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

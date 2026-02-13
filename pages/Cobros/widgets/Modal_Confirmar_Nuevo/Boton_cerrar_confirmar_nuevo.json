@@ -1,17 +1,15 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 15,
+  "bottomRow": 48,
   "boxShadow": "none",
-  "buttonColor": "#93c5fd",
-  "buttonVariant": "PRIMARY",
+  "buttonColor": "#ef4444",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicPropertyPathList": [
@@ -28,28 +26,28 @@
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "uez1lttazm",
-  "leftColumn": 54,
+  "key": "ffwdv9n8py",
+  "leftColumn": 46,
   "minWidth": 120,
   "mobileBottomRow": 22,
-  "mobileLeftColumn": 2,
-  "mobileRightColumn": 18,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 47,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{\n  storeValue(\"tabInventario\", \"Todos\").then(() => {\n    navigateTo(\"Inventario\");\n  });\n}}",
-  "parentColumnSpace": 17.791015625,
-  "parentId": "wckpophu03",
-  "parentRowSpace": 10,
+  "onClick": "{{\n  (() => {\n    // No limpiamos stores: volvemos al modal anterior con la info tal cual estaba\n    closeModal(\"Modal_Confirmar_Nuevo\");\n    // Abrimos Modal_Procesar manteniendo otSel/otForm/otPending\n    showModal(\"Modal_Nuevo\");\n  })()\n}}",
+  "originalBottomRow": 44,
+  "originalTopRow": 40,
+  "parentId": "ebujhyjp0f",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 62,
-  "text": "Externos:\n\n{{\n  GetInventario.data.filter(\n    b =>\n      b.tipo_bano === \"Externo\" &&\n      b.estatus_bano === \"Colocado con cliente\"\n  ).length\n}}",
-  "topRow": 9,
+  "text": "Cerrar",
+  "topRow": 44,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "r5lspnqnhk",
-  "widgetName": "Button1CopyCopyCopyCopyCopy"
+  "widgetId": "wseg517lyv",
+  "widgetName": "Boton_cerrar_confirmar_nuevo"
 }

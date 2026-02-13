@@ -40,7 +40,7 @@
   "parentId": "wckpophu03",
   "renderMode": "CANVAS",
   "rightColumn": 38,
-  "text": "No disponibles\n{{\n  (\n    (GetInventario.data.filter(\n      b => b.tipo_bano !== \"Externo\"\n    ).length - \n     GetInventario.data.filter(\n       b => b.estatus_bano === \"Disponible en almacen\" &&\n            b.tipo_bano !== \"Externo\"\n     ).length\n    ) /\n    (GetInventario.data.filter(\n      b => b.tipo_bano !== \"Externo\"\n    ).length || 1)\n  * 100\n  ).toFixed(1) + \" %\"\n}}",
+  "text": "Colocados\n{{\n  (\n    (GetInventario.data.filter(\n      b => b.tipo_bano !== \"Externo\"\n    ).length - \n     GetInventario.data.filter(\n       b => b.estatus_bano === \"Disponible en almacen\" &&\n            b.tipo_bano !== \"Externo\"\n     ).length\n    ) /\n    (GetInventario.data.filter(\n      b => b.tipo_bano !== \"Externo\"\n    ).length || 1)\n  * 100\n  ).toFixed(1) + \" %\"\n}}",
   "textAlign": "CENTER",
   "textColor": "{{\n  (() => {\n    const totalSinExternos = GetInventario.data.filter(\n      b => b.tipo_bano !== \"Externo\"\n    ).length || 1;\n    const disponiblesSinExternos = GetInventario.data.filter(\n      b => b.estatus_bano === \"Disponible en almacen\" &&\n           b.tipo_bano !== \"Externo\"\n    ).length;\n    const porcentaje = ( (totalSinExternos - disponiblesSinExternos) / totalSinExternos ) * 100;\n\n    if (porcentaje >= 85 && porcentaje < 90) {\n      return \"#16a34a\"; // verde\n    }\n    if ((porcentaje >= 80 && porcentaje < 85) || (porcentaje >= 90 && porcentaje < 95)) {\n      return \"#eab308\"; // amarillo\n    }\n    return \"#dc2626\"; // rojo\n  })()\n}}",
   "topRow": 9,

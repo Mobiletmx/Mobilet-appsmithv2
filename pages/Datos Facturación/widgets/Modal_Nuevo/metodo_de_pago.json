@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 60,
+  "bottomRow": 41,
   "boxShadow": "none",
   "defaultOptionValue": "PUE",
   "dynamicBindingPathList": [
@@ -58,7 +58,7 @@
   "rightColumn": 16,
   "serverSideFiltering": false,
   "sourceData": "{{\n[\n  { label: \"PUE - Pago en una sola exhibición\",      value: \"PUE\" },\n  { label: \"PPD - Pago en Parcialidades o Diferidos\", value: \"PPD\" }\n]\n}}\n",
-  "topRow": 53,
+  "topRow": 34,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "vgggr56ppg",

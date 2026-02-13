@@ -189,6 +189,51 @@
       "version": 1,
       "widgetId": "q7yh0cevxn",
       "widgetName": "Canvas5"
+    },
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 860,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isLoading": false,
+      "isVisible": true,
+      "key": "dz1gg2od2n",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 900,
+      "minWidth": 450,
+      "mobileBottomRow": 901,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 1262,
+      "mobileTopRow": 1,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "q7v8bb6bg1",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 1262,
+      "tabId": "tabxpif666rsx",
+      "tabName": "Facturadas",
+      "topRow": 1,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "1hm8l7fcks",
+      "widgetName": "Canvas6"
     }
   ],
   "defaultTab": "{{ appsmith.store.tabCobros || \"Pago pendiente\" }}",
@@ -274,6 +319,13 @@
       "isVisible": true,
       "label": "Todos",
       "widgetId": "tmot3f4crf"
+    },
+    "tabxpif666rsx": {
+      "id": "tabxpif666rsx",
+      "index": 4,
+      "isVisible": true,
+      "label": "Facturadas",
+      "widgetId": "1hm8l7fcks"
     }
   },
   "topRow": 21,

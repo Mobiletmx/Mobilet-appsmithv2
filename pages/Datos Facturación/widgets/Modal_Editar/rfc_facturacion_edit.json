@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 40,
+  "bottomRow": 28,
   "boxShadow": "none",
   "defaultText": "{{ appsmith.store.cliente_edit_row?.rfc_facturacion || \"\" }}",
   "dynamicBindingPathList": [
@@ -54,7 +54,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "showStepArrows": false,
-  "topRow": 33,
+  "topRow": 21,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "5vtm3fic1f",

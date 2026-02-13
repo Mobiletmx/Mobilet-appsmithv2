@@ -65,6 +65,6 @@
   "p_tasa_iva": "0.16",
   "p_nombre_isr": "ISR",
   "p_tasa_isr": "0.0125",
-  "p_descripcion_producto_mobilet":  "{{ descripcion_producto_mobilet.text }}",
+  "p_descripcion_producto_mobilet":  "{{ descripcion_producto_mobilet2.text }}",
   "p_tax_included": null
   }

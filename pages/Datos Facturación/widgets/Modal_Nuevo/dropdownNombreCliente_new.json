@@ -58,7 +58,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 41,
+  "rightColumn": 29,
   "serverSideFiltering": false,
   "sourceData": "{{ GetClientes.data ? GetClientes.data.map(c => ({ label: c.nombre_cliente, value: c.id_cliente })) : [] }}",
   "topRow": 6,

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 83,
+  "bottomRow": 73,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 73,
   "needsErrorInfo": false,
-  "originalBottomRow": 84,
-  "originalTopRow": 80,
+  "originalBottomRow": 72,
+  "originalTopRow": 68,
   "overflow": "NONE",
   "parentColumnSpace": 17.38232421875,
   "parentId": "xflhu03o4k",
@@ -43,7 +43,7 @@
   "text": "Tickets pendientes:",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 79,
+  "topRow": 69,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

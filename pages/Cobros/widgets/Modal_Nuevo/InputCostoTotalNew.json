@@ -1,0 +1,68 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 14,
+  "boxShadow": "none",
+  "defaultText": "{{ (Number(InputCostoNew.text || 0) * 1.16).toFixed(2) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "iconAlign": "left",
+  "inputType": "NUMBER",
+  "isDisabled": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "6edus8d7lo",
+  "label": "Total con IVA",
+  "labelAlignment": "left",
+  "labelPosition": "Auto",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 54,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minNum": ".01",
+  "minWidth": 450,
+  "mobileBottomRow": 30,
+  "mobileLeftColumn": 40,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 23,
+  "needsErrorInfo": false,
+  "onTextChanged": "",
+  "originalBottomRow": 33,
+  "originalTopRow": 26,
+  "parentColumnSpace": 12.6875,
+  "parentId": "823ndm88k8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false,
+  "topRow": 7,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "8rj2jna8du",
+  "widgetName": "InputCostoTotalNew"
+}

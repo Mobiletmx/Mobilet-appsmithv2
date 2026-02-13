@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 58,
+  "bottomRow": 43,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "vcb2mu7um9",
-  "leftColumn": 20,
+  "leftColumn": 12,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -33,8 +33,8 @@
   "mobileRightColumn": 55,
   "mobileTopRow": 54,
   "needsErrorInfo": false,
-  "originalBottomRow": 61,
-  "originalTopRow": 57,
+  "originalBottomRow": 46,
+  "originalTopRow": 41,
   "overflow": "NONE",
   "parentColumnSpace": 17.40625,
   "parentId": "t6m6k5xey8",
@@ -44,9 +44,9 @@
   "rightColumn": 42,
   "shouldTruncate": false,
   "text": "{{ \"Monto total sin iva seleccionado: \"+\n  ProcesarFactura.monto_total_factura_sin_iva().toLocaleString(\"es-MX\", { style:\"currency\", currency:\"MXN\" })\n}}\n",
-  "textAlign": "LEFT",
+  "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 54,
+  "topRow": 39,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

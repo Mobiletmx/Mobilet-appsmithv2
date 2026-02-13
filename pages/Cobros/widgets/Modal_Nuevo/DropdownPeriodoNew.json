@@ -1,0 +1,72 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 14,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "ktxslnhytr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Periodo Cobro",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 24,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 21,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{\n(() => {\nconst id = DropdownPeriodo?.selectedOptionValue || null;\n\n\nstoreValue(\n\"cobros_edit_row\",\n{\n...(appsmith.store.cobros_edit_row || {}),\nperiodo_cobro: id,\n},\ntrue\n);\n})()\n}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 6.9375,
+  "parentId": "823ndm88k8",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 34,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n(() => {\n  const cobros = GetCobros.data || [];\n\n  // 1) Periodos existentes en cobros (normalizados a string)\n  const periodosCobros = (cobros || [])\n    .map(c => c.periodo_cobro)\n    .filter(Boolean)\n    .map(p => String(p));\n\n  const existentesSet = new Set(periodosCobros);\n\n  // Helpers\n  const pad2 = (n) => String(n).padStart(2, \"0\");\n  const mkPeriodo = (y, m, d) => `${y}${pad2(m)}${pad2(d)}`;\n\n  // 2) Calcular SOLO el candidato según el día de hoy\n  const now = new Date();\n  const y = now.getFullYear();\n  const m = now.getMonth() + 1; // 1-12\n  const day = now.getDate();\n\n  let candidato;\n  if (day >= 1 && day <= 10) {\n    candidato = mkPeriodo(y, m, 10);\n  } else if (day >= 11 && day <= 25) {\n    candidato = mkPeriodo(y, m, 25);\n  } else {\n    // 26-31 => mes siguiente día 10 (ajusta año si es diciembre)\n    const nextM = (m === 12) ? 1 : (m + 1);\n    const nextY = (m === 12) ? (y + 1) : y;\n    candidato = mkPeriodo(nextY, nextM, 10);\n  }\n\n  // 3) Unir: existentes + (candidato solo si no existe)\n  const all = [\n    ...periodosCobros,\n    ...(!existentesSet.has(String(candidato)) ? [String(candidato)] : [])\n  ];\n\n  // 4) Quitar duplicados, ordenar desc (más reciente -> más antigua)\n  const uniq = Array.from(new Set(all));\n  uniq.sort((a, b) => String(b).localeCompare(String(a)));\n\n  // 5) Formato dropdown\n  return uniq.map(p => ({ label: String(p), value: String(p) }));\n})();\n}}\n",
+  "topRow": 7,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "ilvl8e4nqu",
+  "widgetName": "DropdownPeriodoNew"
+}

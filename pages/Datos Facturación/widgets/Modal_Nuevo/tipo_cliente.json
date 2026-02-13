@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 52,
+  "bottomRow": 34,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  appsmith.store.cliente_edit_row?.tipo_cliente || \"\" ))(tipo_cliente.options, tipo_cliente.serverSideFiltering) }}",
   "dynamicBindingPathList": [
@@ -69,7 +69,7 @@
   "rightColumn": 16,
   "serverSideFiltering": false,
   "sourceData": "{{ CFDIHelper.optionsTipoCliente() }}\n",
-  "topRow": 45,
+  "topRow": 27,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "mcyeigjpxt",

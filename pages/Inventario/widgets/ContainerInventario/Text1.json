@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 10,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -38,8 +38,8 @@
   "mobileRightColumn": 47,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 11,
-  "originalTopRow": 7,
+  "originalBottomRow": 10,
+  "originalTopRow": 4,
   "overflow": "NONE",
   "parentColumnSpace": 8.974609375,
   "parentId": "20bp062f2o",
@@ -51,7 +51,7 @@
   "text": "Nuevo baño",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 8,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

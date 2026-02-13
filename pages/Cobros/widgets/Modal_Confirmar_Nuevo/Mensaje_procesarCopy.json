@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 37,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "3flkeu2mqz",
+  "leftColumn": 3,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 41,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "originalBottomRow": 33,
+  "originalTopRow": 5,
+  "overflow": "NONE",
+  "parentId": "ebujhyjp0f",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "shouldTruncate": false,
+  "text": "{{\n(() => {\n  const d = appsmith.store.nuevoCobroDraft || {};\n\n  const formatDate = (v) => {\n    if (!v) return \"-\";\n    const date = new Date(v);\n    if (isNaN(date)) return \"-\";\n    const dd = String(date.getDate()).padStart(2, \"0\");\n    const mm = String(date.getMonth() + 1).padStart(2, \"0\");\n    const yyyy = date.getFullYear();\n    return `${dd}/${mm}/${yyyy}`;\n  };\n\n  const formatMoney = (v) => {\n    const n = Number(v);\n    if (!Number.isFinite(n)) return \"-\";\n    return n.toLocaleString(\"es-MX\", { minimumFractionDigits: 2, maximumFractionDigits: 2 });\n  };\n\n  const periodo = String(d.periodo_cobro ?? d.periodo ?? \"\").trim() || \"-\";\n\n  return `\nDeseas confirmar la creación de un nuevo cobro con los siguentes datos:\n\n• Pedido: ${d.id_item_pedido || \"-\"}\n• Periodo de cobro: ${periodo}\n• Cliente: ${d.nombre_cliente || \"-\"}\n• Ubicación: ${d.nombre_ubicacion || \"-\"}\n• Baño: ${d.id_bano || \"-\"}\n• Fecha inicio: ${formatDate(d.fecha_inicio)}\n• Fecha fin: ${formatDate(d.fecha_fin)}\n• Costo: $${formatMoney(d.costo)}\n`;\n})()\n}}\n",
+  "textAlign": "CENTER",
+  "textColor": "#231F20",
+  "topRow": 5,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "x4e3j0tlly",
+  "widgetName": "Mensaje_procesarCopy"
+}

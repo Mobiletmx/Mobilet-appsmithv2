@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 67,
+  "bottomRow": 14,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,42 +11,50 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": false,
-  "key": "2fhr90z637",
-  "leftColumn": 11,
+  "isVisible": "{{ PermisosUtils.tieneAcceso(\"Clientes\") }}",
+  "key": "83s2v7tx72",
+  "leftColumn": 49,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 77,
-  "mobileLeftColumn": 25,
-  "mobileRightColumn": 41,
-  "mobileTopRow": 73,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 47,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 70,
-  "originalTopRow": 66,
+  "originalBottomRow": 14,
+  "originalTopRow": 8,
   "overflow": "NONE",
-  "parentColumnSpace": 17.26875,
-  "parentId": "t6m6k5xey8",
+  "parentColumnSpace": 8.974609375,
+  "parentId": "gd6wxubbyi",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 13,
+  "rightColumn": 56,
   "shouldTruncate": false,
-  "text": "IVA",
-  "textAlign": "LEFT",
+  "text": "Nuevo cobro",
+  "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 63,
+  "topRow": 8,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "2yjz0ztnao",
-  "widgetName": "nombre_iva"
+  "widgetId": "1p3dnyu6dl",
+  "widgetName": "Text1"
 }

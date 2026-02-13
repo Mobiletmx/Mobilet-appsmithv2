@@ -8,7 +8,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 510,
+      "bottomRow": 390,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 492,
+      "minHeight": 398,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -58,7 +58,7 @@
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
-  "height": 492,
+  "height": 398,
   "isCanvas": true,
   "isLoading": false,
   "key": "u7paj8vny7",
@@ -81,5 +81,5 @@
   "version": 2,
   "widgetId": "cvcftif0m7",
   "widgetName": "Modal_Procesar",
-  "width": 1200.8
+  "width": 896.8
 }

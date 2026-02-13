@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 40,
+  "bottomRow": 28,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  appsmith.store.cliente_edit_row?.tipo_cliente || \"\" ))(tipo_cliente_edit.options, tipo_cliente_edit.serverSideFiltering) }}",
   "dynamicBindingPathList": [
@@ -61,7 +61,7 @@
   "rightColumn": 52,
   "serverSideFiltering": false,
   "sourceData": "{{\n[\n  { label: \"Persona Moral\",  value: \"TRUE\"  },\n  { label: \"Persona Física\", value: \"FALSE\" }\n]\t\n}}\n",
-  "topRow": 33,
+  "topRow": 21,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "6rkyk1tb20",

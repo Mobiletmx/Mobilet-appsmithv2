@@ -49,10 +49,11 @@
   "columnWidthMap": {
     "contador_reparaciones": 133,
     "costo_total_reparaciones": 188,
+    "created_at": 147,
     "dias_activo": 124,
     "es_prueba": 134,
-    "estatus_bano": 122,
-    "fecha_compra": 184,
+    "estatus_bano": 244,
+    "fecha_compra": 138,
     "id_bano": 108,
     "tipo_bano": 108
   },

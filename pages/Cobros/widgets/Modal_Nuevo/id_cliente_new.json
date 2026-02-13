@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 35,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "garinhuhq4",
+  "leftColumn": 35,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 39,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 35,
+  "needsErrorInfo": false,
+  "overflow": "NONE",
+  "parentColumnSpace": 13.825,
+  "parentId": "823ndm88k8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 38,
+  "shouldTruncate": false,
+  "text": "{{\n(() => {\n  const pedidos = GetPedidos.data || [];\n  const idItem = String(DropdownIdItemNew.value ?? \"\");\n  if (!idItem) return \"\";\n\n  const pedido = pedidos.find(p =>\n    String(p.id_item_pedido ?? p._id_item_pedido ?? \"\") === idItem\n  );\n\n  return pedido?.id_cliente ? String(pedido.id_cliente) : \"\";\n})()\n}}\n",
+  "textAlign": "LEFT",
+  "textColor": "#ffffff",
+  "topRow": 31,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "evvqqxp5uo",
+  "widgetName": "id_cliente_new"
+}

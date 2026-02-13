@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 17,
+  "boxShadow": "none",
+  "buttonColor": "#eab308",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "plus",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "{{ PermisosUtils.tieneAcceso(\"Inventario\") }}",
+  "key": "zvud7tz6vk",
+  "leftColumn": 48,
+  "minWidth": 50,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 58,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "{{showModal(ModalNuevoBano.name);}}",
+  "originalBottomRow": 9,
+  "originalTopRow": 5,
+  "parentColumnSpace": 8.974609375,
+  "parentId": "20bp062f2o",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "topRow": 13,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ff49hph0bn",
+  "widgetName": "IconButton1Copy"
+}

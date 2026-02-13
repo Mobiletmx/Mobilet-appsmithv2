@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 51,
+  "bottomRow": 18,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,43 +13,48 @@
       "key": "borderRadius"
     },
     {
-      "key": "text"
+      "key": "isVisible"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": true,
-  "key": "tu63nvbu7u",
-  "leftColumn": 27,
+  "isVisible": "{{ PermisosUtils.tieneAcceso(\"Inventario\") }}",
+  "key": "83s2v7tx72",
+  "leftColumn": 52,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 30,
-  "mobileLeftColumn": 14,
-  "mobileRightColumn": 30,
-  "mobileTopRow": 26,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 47,
+  "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 42,
-  "originalTopRow": 38,
+  "originalBottomRow": 18,
+  "originalTopRow": 12,
   "overflow": "NONE",
-  "parentColumnSpace": 12.6875,
-  "parentId": "tszk7sied9",
+  "parentColumnSpace": 8.974609375,
+  "parentId": "20bp062f2o",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 40,
+  "rightColumn": 59,
   "shouldTruncate": false,
-  "text": "{{ new Date().toISOString() }}",
+  "text": "Cambio estatus",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 47,
+  "topRow": 12,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "2heqpryjpw",
-  "widgetName": "fecha_creacion_procesar"
+  "widgetId": "nzp74e6r31",
+  "widgetName": "Text1Copy"
 }

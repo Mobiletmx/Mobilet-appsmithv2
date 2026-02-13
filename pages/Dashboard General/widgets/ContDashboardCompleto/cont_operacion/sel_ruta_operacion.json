@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -30,6 +33,7 @@
   "labelPosition": "Left",
   "labelStyle": "BOLD",
   "labelText": "Ruta",
+  "labelTextColor": "#231f20",
   "labelTextSize": "1rem",
   "labelWidth": "5",
   "leftColumn": 11,
@@ -41,8 +45,8 @@
   "mobileRightColumn": 56,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "optionLabel": "name",
-  "optionValue": "code",
+  "optionLabel": "label",
+  "optionValue": "value",
   "parentColumnSpace": 15.78515625,
   "parentId": "sxp58e0rzd",
   "parentRowSpace": 10,
@@ -51,7 +55,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 32,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"LOMAS\",\n    \"code\": \"BLUE\"\n  },\n  {\n    \"name\": \"CHOLULA\",\n    \"code\": \"GREEN\"\n  },\n  {\n    \"name\": \"OUTLET\",\n    \"code\": \"RED\"\n  }\n]",
+  "sourceData": "{{ OperacionDia.rutasDisponibles() }}",
   "topRow": 8,
   "type": "SELECT_WIDGET",
   "version": 1,

@@ -1,0 +1,64 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "closeOnSelection": true,
+  "dateFormat": "DD/MM/YYYY",
+  "datePickerType": "DATE_PICKER",
+  "defaultDate": "{{\n(() => {\n  const pedidos = GetPedidos.data || [];\n  const idItem = String(DropdownIdItemNew.selectedOptionValue || \"\");\n  const pedido = pedidos.find(p =>\n    String(p.id_item_pedido ?? p._id_item_pedido ?? \"\") === idItem\n  );\n  return String(pedido?.fecha_inicio || \"\");\n})()\n}}\n",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "firstDayOfWeek": "0",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "zx6zpp498y",
+  "label": "Fecha inicio",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 24,
+  "maxDate": "2121-12-31T18:29:00.000Z",
+  "maxDynamicHeight": 9000,
+  "minDate": "1920-12-31T18:30:00.000Z",
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 37,
+  "mobileRightColumn": 57,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 18.575,
+  "parentId": "823ndm88k8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 34,
+  "shortcuts": false,
+  "timePrecision": "None",
+  "topRow": 15,
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "8kx90upngu",
+  "widgetName": "FechaInicioNew"
+}

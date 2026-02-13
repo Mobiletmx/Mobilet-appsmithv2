@@ -1,0 +1,68 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 30,
+  "boxShadow": "none",
+  "defaultText": "{{\n(() => {\n  const pedidos = GetPedidos.data || [];\n  const idItem = String(DropdownIdItemNew.value ?? \"\");\n  if (!idItem) return \"\";\n\n  const pedido = pedidos.find(p =>\n    String(p.id_item_pedido ?? p._id_item_pedido ?? \"\") === idItem\n  );\n\n  return pedido?.id_bano ? String(pedido.id_bano) : \"\";\n})()\n}}\n",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "6edus8d7lo",
+  "label": "ID Bano",
+  "labelAlignment": "left",
+  "labelPosition": "Auto",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 24,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minNum": ".01",
+  "minWidth": 450,
+  "mobileBottomRow": 30,
+  "mobileLeftColumn": 40,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 23,
+  "needsErrorInfo": false,
+  "onTextChanged": "",
+  "originalBottomRow": 25,
+  "originalTopRow": 18,
+  "parentColumnSpace": 12.6875,
+  "parentId": "823ndm88k8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 34,
+  "shouldAllowAutofill": false,
+  "showStepArrows": false,
+  "topRow": 23,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "gizyb8hvdr",
+  "widgetName": "IdBanoNew"
+}

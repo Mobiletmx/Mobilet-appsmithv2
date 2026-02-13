@@ -1,0 +1,59 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 47,
+  "boxShadow": "none",
+  "defaultText": "{{ ProcesarFactura.renta_sanitarios_descripcion() }}\n",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultText"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "inputType": "TEXT",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "z6ngln19cl",
+  "label": "Comentario",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextSize": "1rem",
+  "labelWidth": "6",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 49,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 42,
+  "needsErrorInfo": false,
+  "originalBottomRow": 49,
+  "originalTopRow": 42,
+  "parentColumnSpace": 13.825,
+  "parentId": "t6m6k5xey8",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 41,
+  "showStepArrows": false,
+  "topRow": 43,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "hfm2p6bhby",
+  "widgetName": "descripcion_producto_mobilet2"
+}
