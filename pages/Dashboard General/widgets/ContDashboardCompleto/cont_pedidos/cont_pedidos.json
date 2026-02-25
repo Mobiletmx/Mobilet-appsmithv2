@@ -4,7 +4,7 @@
   "borderColor": "#f4f4f5",
   "borderRadius": "15px",
   "borderWidth": "1",
-  "bottomRow": 191,
+  "bottomRow": 183,
   "bottomRowBeforeCollapse": 49,
   "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
   "children": [
@@ -71,7 +71,7 @@
   "renderMode": "CANVAS",
   "rightColumn": 63,
   "shouldScrollContents": true,
-  "topRow": 104,
+  "topRow": 96,
   "topRowBeforeCollapse": 22,
   "type": "CONTAINER_WIDGET",
   "version": 1,

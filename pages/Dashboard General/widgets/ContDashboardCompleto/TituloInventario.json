@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -27,8 +27,8 @@
   "mobileRightColumn": 52,
   "mobileTopRow": 9,
   "needsErrorInfo": false,
-  "originalBottomRow": 14,
-  "originalTopRow": 9,
+  "originalBottomRow": 9,
+  "originalTopRow": 4,
   "overflow": "NONE",
   "parentColumnSpace": 11.451171875,
   "parentId": "z8sumiq4u3",
@@ -40,7 +40,7 @@
   "text": "Tablero indicadores",
   "textAlign": "LEFT",
   "textColor": "#3b82f6",
-  "topRow": 9,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

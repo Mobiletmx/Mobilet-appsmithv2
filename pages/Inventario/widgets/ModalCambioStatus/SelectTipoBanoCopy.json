@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -50,7 +53,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 56,
   "serverSideFiltering": false,
-  "sourceData": "[\n  { \"label\": \"Normal\", \"value\": \"normal\" },\n  { \"label\": \"Flush\",  \"value\": \"flush\" }\n]",
+  "sourceData": "{{\n(() => {\n  var inv = GetInventario.data || [];\n\n  // Filtra disponibles y disponibles en almacén\n  var disponibles = inv.filter(function(b) {\n    var eb = (b && b.estatus_bano) ? String(b.estatus_bano).trim().toLowerCase() : \"\";\n    return eb === \"disponible\" || eb === \"disponible en almacen\"  || eb === \"limpieza en almacen\";\n  });\n\n  // Mapea opciones\n  var opts = disponibles.map(function(b) {\n    var id = (b && b.id_bano) ? String(b.id_bano) : \"\";\n    return { label: id, value: id };\n  });\n\n  return opts;\n})()\n}}\n",
   "topRow": 6,
   "type": "SELECT_WIDGET",
   "version": 1,
