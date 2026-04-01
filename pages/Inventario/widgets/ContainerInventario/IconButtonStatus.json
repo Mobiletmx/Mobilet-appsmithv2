@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 8,
   "boxShadow": "none",
   "buttonColor": "#eab308",
   "buttonVariant": "PRIMARY",
@@ -16,6 +16,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "isVisible"
+    },
+    {
+      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -35,18 +38,18 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(ModalCambioStatus.name);}}",
-  "originalBottomRow": 9,
-  "originalTopRow": 5,
+  "onClick": "{{\n  resetWidget(\"ModalCambioStatus\", true);\n  showModal(\"ModalCambioStatus\");\n}}",
+  "originalBottomRow": 15,
+  "originalTopRow": 11,
   "parentColumnSpace": 8.974609375,
   "parentId": "20bp062f2o",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
   "rightColumn": 51,
-  "topRow": 13,
+  "topRow": 4,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
   "widgetId": "ff49hph0bn",
-  "widgetName": "IconButton1Copy"
+  "widgetName": "IconButtonStatus"
 }

@@ -1,0 +1,72 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 23,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( \n tipo_de_corte_new.selectedOptionValue === \"finmes\" ? \"31\" : \"\"\n))(dia_de_corte_new.options, dia_de_corte_new.serverSideFiltering) }}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": "{{\n  [\"finmes\", \"manual\"].includes(tipo_de_corte_new.selectedOptionValue) || !tipo_de_corte_new.selectedOptionValue\n}}",
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "ktxslnhytr",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Día de corte pago",
+  "labelTextColor": "#231f20",
+  "labelTextSize": "1rem",
+  "labelWidth": 5,
+  "leftColumn": 37,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 44,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 15,
+  "mobileTopRow": 37,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 31,
+  "originalTopRow": 24,
+  "parentColumnSpace": 12.6875,
+  "parentId": "wkz26wna0c",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 50,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  { \"name\": \"1\", \"code\": \"1\" },\n  { \"name\": \"2\", \"code\": \"2\" },\n  { \"name\": \"3\", \"code\": \"3\" },\n  { \"name\": \"4\", \"code\": \"4\" },\n  { \"name\": \"5\", \"code\": \"5\" },\n  { \"name\": \"6\", \"code\": \"6\" },\n  { \"name\": \"7\", \"code\": \"7\" },\n  { \"name\": \"8\", \"code\": \"8\" },\n  { \"name\": \"9\", \"code\": \"9\" },\n  { \"name\":\"10\", \"code\": \"10\" },\n  { \"name\":\"11\", \"code\": \"11\" },\n  { \"name\":\"12\", \"code\": \"12\" },\n  { \"name\":\"13\", \"code\": \"13\" },\n  { \"name\":\"14\", \"code\": \"14\" },\n  { \"name\":\"15\", \"code\": \"15\" },\n  { \"name\":\"16\", \"code\": \"16\" },\n  { \"name\":\"17\", \"code\": \"17\" },\n  { \"name\":\"18\", \"code\": \"18\" },\n  { \"name\":\"19\", \"code\": \"19\" },\n  { \"name\":\"20\", \"code\": \"20\" },\n  { \"name\":\"21\", \"code\": \"21\" },\n  { \"name\":\"22\", \"code\": \"22\" },\n  { \"name\":\"23\", \"code\": \"23\" },\n  { \"name\":\"24\", \"code\": \"24\" },\n  { \"name\":\"25\", \"code\": \"25\" },\n  { \"name\":\"26\", \"code\": \"26\" },\n  { \"name\":\"27\", \"code\": \"27\" },\n  { \"name\":\"28\", \"code\": \"28\" },\n  { \"name\":\"29\", \"code\": \"29\" },\n  { \"name\":\"30\", \"code\": \"30\" },\n  { \"name\":\"31\", \"code\": \"31\" }\n]",
+  "topRow": 16,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "3a4bqcr124",
+  "widgetName": "dia_de_corte_new"
+}

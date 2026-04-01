@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"p_id_bano\": {{ select_four.selectedOptionValue || null }},\n  \"p_tipo_bano\": null,\n  \"p_fecha_compra\": null,\n  \"p_estatus_bano\": null,\n  \"p_dias_activo\": null,\n  \"p_contador_reparaciones\": null,\n  \"p_costo_total_reparaciones\": null,\n}",
+      "body": "{\n  \"p_id_bano\": {{ appsmith.store.bano_original_obj?.id_bano || null }},\n  \"p_tipo_bano\": {{ appsmith.store.bano_original_obj?.tipo_bano || null }},\n  \"p_fecha_compra\": {{ appsmith.store.bano_original_obj?.fecha_compra || null }},\n  \"p_estatus_bano\": \"Limpieza en almacen\",\n  \"p_dias_activo\": null,\n  \"p_contador_reparaciones\": null,\n  \"p_costo_total_reparaciones\": null,\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

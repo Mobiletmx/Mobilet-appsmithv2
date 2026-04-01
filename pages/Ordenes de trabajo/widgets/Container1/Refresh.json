@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 15,
+  "bottomRow": 8,
   "boxShadow": "none",
   "buttonColor": "#22c55e",
   "buttonVariant": "PRIMARY",
@@ -40,7 +40,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 63,
   "tooltip": "Actualizar información",
-  "topRow": 8,
+  "topRow": 4,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
   "widgetId": "pe92xj77dz",

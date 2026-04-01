@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 48,
+  "bottomRow": 51,
   "boxShadow": "none",
   "buttonColor": "#ef4444",
   "buttonStyle": "PRIMARY",
@@ -45,7 +45,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 62,
   "text": "Cerrar",
-  "topRow": 44,
+  "topRow": 47,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "mu907bhfmf",

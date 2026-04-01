@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignWidget": "LEFT",
   "animateLoading": true,
-  "bottomRow": 21,
+  "bottomRow": 20,
   "boxShadow": "none",
   "defaultSwitchState": "{{ !!appsmith.store.cliente_edit_row?.requiere_factura }}",
   "dynamicBindingPathList": [
@@ -16,7 +16,7 @@
       "key": "labelTextColor"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "defaultSwitchState"
@@ -32,7 +32,7 @@
   "labelStyle": "BOLD",
   "labelTextColor": "{{appsmith.theme.colors.primaryColor}}",
   "labelTextSize": "1.25rem",
-  "leftColumn": 34,
+  "leftColumn": 26,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "mobileBottomRow": 39,
@@ -40,16 +40,14 @@
   "mobileRightColumn": 59,
   "mobileTopRow": 35,
   "needsErrorInfo": false,
-  "originalBottomRow": 23,
-  "originalTopRow": 19,
   "parentColumnSpace": 12.6875,
   "parentId": "wkz26wna0c",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 50,
+  "rightColumn": 36,
   "shouldScrollContents": true,
-  "topRow": 17,
+  "topRow": 13,
   "type": "SWITCH_WIDGET",
   "version": 1,
   "widgetId": "zvdgdgty3a",

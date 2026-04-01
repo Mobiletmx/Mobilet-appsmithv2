@@ -37,7 +37,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{\n  (async () => {\n    try {\n      ButtonGuardar.setDisabled(true);\n      const r = await InsertInventario.run();   // SOLO 1 vez\n      showAlert(\"Baño creado correctamente ✅\", \"success\");\n      await GetInventario.run();                // refrescar tabla\n      closeModal('ModalNuevoBanoCopy');\n    } catch (e) {\n      showAlert(\"Error creando baño: \" + (e?.message || \"\"), \"error\");\n    } finally {\n      ButtonGuardar.setDisabled(false);\n    }\n  })()\n}}",
+  "onClick": "{{\n  (async () => {\n    try {\n      ButtonGuardarCopy.setDisabled(true);\n      const r = await UpdateInventario.run();   // SOLO 1 vez\n      showAlert(\"Baño actualizado correctamente ✅\", \"success\");\n      await GetInventario.run();                // refrescar tabla\n      closeModal('ModalCambioStatus');\n    } catch (e) {\n      showAlert(\"Error actualizando baño: \" + (e?.message || \"\"), \"error\");\n    } finally {\n      ButtonGuardarCopy.setDisabled(false);\n    }\n  })()\n}}",
   "parentId": "xk108pk87l",
   "placement": "CENTER",
   "recaptchaType": "V3",

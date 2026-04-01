@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 33,
+  "bottomRow": 29,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": false,
   "key": "prt2edvjvf",
-  "leftColumn": 5,
+  "leftColumn": 49,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -41,12 +41,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 9,
+  "rightColumn": 51,
   "shouldTruncate": false,
   "text": "{{\n(() => {\n  const idU =\n    select_one?.selectedOptionValue\n    ?? appsmith.store.pedidoSel?.id_ubicacion\n    ?? appsmith.store.ubicacionSel?.id_ubicacion\n    ?? \"\";\n\n  const ubiById = _.keyBy(GetUbicaciones.data || [], \"id_ubicacion\");\n  return ubiById[idU]?.id_ubicacion ?? \"\";\n})()\n}}",
   "textAlign": "LEFT",
   "textColor": "#231f20",
-  "topRow": 29,
+  "topRow": 25,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

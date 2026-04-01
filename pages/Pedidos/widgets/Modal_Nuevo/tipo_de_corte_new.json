@@ -2,27 +2,31 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 20,
+  "bottomRow": 23,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  String(appsmith.store.cliente_edit_row?.dia_corte_pago ?? \"\") ))(dia_de_corte_new.options, dia_de_corte_new.serverSideFiltering) }}",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
@@ -32,11 +36,12 @@
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "BOLD",
-  "labelText": "Día de corte pago",
+  "labelText": "Tipo de corte de pago",
   "labelTextColor": "#231f20",
   "labelTextSize": "1rem",
+  "labelTooltip": "Fin de Mes: Hace un corte el día 1ro de cada mes sobre los días por cobrar del mes anterior.\nDía fijo: se hace el corte el día elegido de cada mes.\nManual: No se genera cobro automáticamente, se debe de crear manualmente",
   "labelWidth": 5,
-  "leftColumn": 51,
+  "leftColumn": 19,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -45,8 +50,9 @@
   "mobileRightColumn": 15,
   "mobileTopRow": 37,
   "needsErrorInfo": false,
+  "onOptionChange": "{{\n  (function() {\n    if (tipo_de_corte_new.selectedOptionValue === \"mescolocacion\") {\n      resetWidget(\"dia_de_corte_new\", false);\n    }\n  })()\n}}",
   "optionLabel": "name",
-  "optionValue": "code",
+  "optionValue": "value",
   "originalBottomRow": 31,
   "originalTopRow": 24,
   "parentColumnSpace": 12.6875,
@@ -55,12 +61,12 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 35,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"10\",\n    \"code\": \"10\"\n  },\n  {\n    \"name\": \"25\",\n    \"code\": \"25\"\n  }\n]",
-  "topRow": 13,
+  "sourceData": "[\n  { \"name\": \"Fin de mes\", \"value\": \"finmes\" },\n\t{ \"name\": \"Día fijo\", \"value\": \"mescolocacion\" },\n  { \"name\": \"Cobro manual\", \"value\": \"manual\" }\n]",
+  "topRow": 16,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "5ry33loi79",
-  "widgetName": "dia_de_corte_new"
+  "widgetId": "ejbacu94j9",
+  "widgetName": "tipo_de_corte_new"
 }

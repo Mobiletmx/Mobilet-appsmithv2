@@ -40,7 +40,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 16,
+  "rightColumn": 12,
   "shouldTruncate": false,
   "text": "{{ appsmith.store.cobros_edit_row?.id_cobro || \"\" }}",
   "textAlign": "CENTER",

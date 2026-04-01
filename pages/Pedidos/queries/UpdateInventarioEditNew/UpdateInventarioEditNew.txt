@@ -1,8 +1,8 @@
 {
-  "p_id_bano": {{ select_four.selectedOptionValue || null }},
-  "p_tipo_bano": null,
-  "p_fecha_compra": null,
-  "p_estatus_bano": null,
+  "p_id_bano": {{ appsmith.store.bano_nuevo_obj?.id_bano || null }},
+  "p_tipo_bano": {{ appsmith.store.bano_nuevo_obj?.tipo_bano || null }},
+  "p_fecha_compra": {{ appsmith.store.bano_nuevo_obj?.fecha_compra || null }},
+  "p_estatus_bano": "Colocado con cliente",
   "p_dias_activo": null,
   "p_contador_reparaciones": null,
   "p_costo_total_reparaciones": null,

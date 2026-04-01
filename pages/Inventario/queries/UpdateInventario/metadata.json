@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"p_id_bano\": \"B0010\",\n  \"p_tipo_bano\": \"Portátil\",\n  \"p_fecha_compra\": \"2025-01-15\",\n  \"p_estatus_bano\": \"En reparación\",\n  \"p_dias_activo\": 120,\n  \"p_contador_reparaciones\": 3,\n  \"p_costo_total_reparaciones\": 2500\n}",
+      "body": "{\n  \"p_id_bano\": {{ id_bano_status.selectedOptionValue || null }},\n  \"p_tipo_bano\": {{ tipo_bano.text || null }},\n\t\"p_fecha_compra\": {{ fecha_compra.text || null }},\n  \"p_estatus_bano\":  {{ SelectTipoBanoCopyCopy.selectedOptionValue || null }},\n  \"p_dias_activo\": {{ dias_activo.text || null }},\n  \"p_contador_reparaciones\": {{ contador_reparaciones.text || null }},\n  \"p_costo_total_reparaciones\": {{ costo_total_reparaciones.text || null }},\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -51,6 +51,9 @@
     "dynamicBindingPathList": [
       {
         "key": "headers[1].value"
+      },
+      {
+        "key": "body"
       }
     ],
     "name": "UpdateInventario",

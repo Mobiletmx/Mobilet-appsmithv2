@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 8,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,7 +13,7 @@
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "Inter",
-  "fontSize": "1.875rem",
+  "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -27,8 +27,8 @@
   "mobileRightColumn": 52,
   "mobileTopRow": 9,
   "needsErrorInfo": false,
-  "originalBottomRow": 13,
-  "originalTopRow": 8,
+  "originalBottomRow": 9,
+  "originalTopRow": 4,
   "overflow": "NONE",
   "parentColumnSpace": 11.451171875,
   "parentId": "rij680cndl",
@@ -40,7 +40,7 @@
   "text": "Cotizaciones",
   "textAlign": "LEFT",
   "textColor": "#3b82f6",
-  "topRow": 8,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

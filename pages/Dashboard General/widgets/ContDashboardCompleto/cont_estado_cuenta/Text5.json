@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 5,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -32,7 +32,7 @@
   "text": "ESTADO DE CUENTA CLIENTE",
   "textAlign": "LEFT",
   "textColor": "#231f20",
-  "topRow": 2,
+  "topRow": 1,
   "truncateButtonColor": "#FFC13D",
   "type": "TEXT_WIDGET",
   "version": 1,

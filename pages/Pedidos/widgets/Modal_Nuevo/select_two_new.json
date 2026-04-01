@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 16,
+  "bottomRow": 14,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -58,7 +58,7 @@
   "rightColumn": 48,
   "serverSideFiltering": false,
   "sourceData": "{{ (GetUbicaciones.data || []).map(u => ({\nlabel: u.nombre_ubicacion,\nvalue: String(u.id_ubicacion)\n})) }}",
-  "topRow": 9,
+  "topRow": 7,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "jagtkwmz2r",

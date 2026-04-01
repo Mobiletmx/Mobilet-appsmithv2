@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 10,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -24,12 +24,12 @@
   ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
+  "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": "{{ PermisosUtils.tieneAcceso(\"Inventario\") }}",
   "key": "83s2v7tx72",
-  "leftColumn": 52,
+  "leftColumn": 42,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -38,7 +38,7 @@
   "mobileRightColumn": 47,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 10,
+  "originalBottomRow": 9,
   "originalTopRow": 4,
   "overflow": "NONE",
   "parentColumnSpace": 8.974609375,
@@ -46,7 +46,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 59,
+  "rightColumn": 46,
   "shouldTruncate": false,
   "text": "Nuevo baño",
   "textAlign": "LEFT",

@@ -7,16 +7,13 @@
   "closeOnSelection": true,
   "dateFormat": "DD/MM/YYYY",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "{{\n(() => {\n  const pedidos = GetPedidos.data || [];\n  const idItem = String(DropdownIdItemNew.selectedOptionValue || \"\");\n  const pedido = pedidos.find(p =>\n    String(p.id_item_pedido ?? p._id_item_pedido ?? \"\") === idItem\n  );\n  return String(pedido?.fecha_inicio || \"\");\n})()\n}}\n",
+  "defaultDate": "01/01/2026",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "defaultDate"
     }
   ],
   "dynamicHeight": "FIXED",

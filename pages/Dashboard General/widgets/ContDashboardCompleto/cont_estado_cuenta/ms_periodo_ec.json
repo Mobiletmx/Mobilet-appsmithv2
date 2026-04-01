@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "bottomRow": 16,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -57,7 +57,7 @@
   "rightColumn": 63,
   "serverSideFiltering": false,
   "sourceData": "{{\n  JSEstadoCuenta.periodosDisponibles().map(p => ({\n    label: p,\n    value: p\n  }))\n}}",
-  "topRow": 12,
+  "topRow": 9,
   "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
   "widgetId": "7aengr9vqk",

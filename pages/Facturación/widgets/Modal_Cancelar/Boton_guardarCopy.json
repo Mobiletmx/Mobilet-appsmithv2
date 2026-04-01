@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 37,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "right",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "281tt4cpdh",
+  "leftColumn": 41,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n(() => {\n  // ✅ CAPTURA INMEDIATA\n  const fechaFinManual = date_two.selectedDate;\n  const fechaInicioManual = date_one.selectedDate;\n\n  // Guardar inmediatamente en el store para que el Default Date lo reconozca al refrescar\n  storeValue(\"fecha_fin_temp\", fechaFinManual || null, false);\n\n  const trim = (v) => String(v ?? \"\").trim();\n  const has = (v) => trim(v).length > 0;\n\n  // 1) Validaciones\n  if (!select_one?.selectedOptionValue) {\n    showAlert(\"Selecciona la ubicación.\", \"warning\");\n    return;\n  }\n  if (!select_four?.selectedOptionValue) {\n    showAlert(\"Selecciona el baño.\", \"warning\");\n    return;\n  }\n  if (!has(fechaInicioManual)) {\n    showAlert(\"Selecciona la fecha de inicio.\", \"warning\");\n    return;\n  }\n\n  const rawBase = input_four?.text ?? \"\";\n  const cleanBase = String(rawBase).replace(/,/g, \"\").trim();\n  \n  // 2) Validación de fechas\n  const ini = new Date(fechaInicioManual);\n  const fin = new Date(fechaFinManual);\n  if (!isNaN(ini.getTime()) && !isNaN(fin.getTime()) && fin < ini) {\n    showAlert(\"La fecha de recolección no puede ser anterior a la de inicio.\", \"warning\");\n    return;\n  }\n\n  // 3) Cambio de baño\n  const idBanoOriginal = appsmith.store.bano_original_pedido || null;\n  const idBanoNuevo = select_four?.selectedOptionValue ? String(select_four.selectedOptionValue).trim() : null;\n  const huboCambio = idBanoOriginal && idBanoNuevo ? idBanoNuevo !== idBanoOriginal : false;\n\n  // 4) Guardar resto de info\n  storeValue(\"pedido_edit_temp\", {\n    fecha_inicio: fechaInicioManual || null,\n    fecha_fin: fechaFinManual || null,\n    precio_sin_iva: cleanBase || null\n  }, false);\n\n  storeValue(\"bano_nuevo_seleccionado\", idBanoNuevo, true);\n  storeValue(\"cambio_bano\", huboCambio, true);\n\n  const msgCambio = huboCambio\n    ? `Se cambiará el baño: ${idBanoOriginal} → ${idBanoNuevo}`\n    : `No hay cambio de baño.`;\n  storeValue(\"mensaje_cambio_bano\", msgCambio, true);\n\n  showModal(\"Modal_confirmar_editar\");\n})()\n}}",
+  "originalBottomRow": 33,
+  "originalTopRow": 29,
+  "parentId": "2sp46t1dvk",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 51,
+  "text": "Guardar cambios",
+  "topRow": 33,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "iwja5t52ut",
+  "widgetName": "Boton_guardarCopy"
+}

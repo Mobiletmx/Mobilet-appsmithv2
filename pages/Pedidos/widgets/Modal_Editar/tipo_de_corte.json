@@ -2,9 +2,9 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 25,
+  "bottomRow": 23,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  String(appsmith.store.cliente_edit_row?.dia_de_corte ?? \"\") ))(dia_de_corte.options, dia_de_corte.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  String(appsmith.store.cliente_edit_row?.dia_corte_pago ?? \"\") ))(tipo_de_corte.options, tipo_de_corte.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -23,7 +23,7 @@
     }
   ],
   "dynamicTriggerPathList": [],
-  "isDisabled": true,
+  "isDisabled": false,
   "isFilterable": true,
   "isLoading": false,
   "isRequired": true,
@@ -32,11 +32,12 @@
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "BOLD",
-  "labelText": "Día de corte pago",
+  "labelText": "Tipo de corte de pago",
   "labelTextColor": "#231f20",
   "labelTextSize": "1rem",
+  "labelTooltip": "Fin de Mes: Hace un corte el día 1ro de cada mes sobre los días por cobrar del mes anterior.\nDía fijo: se hace el corte el día elegido de cada mes.\nManual: No se genera cobro automáticamente, se debe de crear manualmente",
   "labelWidth": 5,
-  "leftColumn": 51,
+  "leftColumn": 33,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -46,7 +47,7 @@
   "mobileTopRow": 37,
   "needsErrorInfo": false,
   "optionLabel": "name",
-  "optionValue": "code",
+  "optionValue": "value",
   "originalBottomRow": 31,
   "originalTopRow": 24,
   "parentColumnSpace": 12.6875,
@@ -55,12 +56,12 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 45,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"10\",\n    \"code\": \"10\"\n  },\n  {\n    \"name\": \"25\",\n    \"code\": \"25\"\n  }\n]",
-  "topRow": 18,
+  "sourceData": "[\n  { \"name\": \"Fin de mes\", \"value\": \"finmes\" },\n\t{ \"name\": \"Día fijo\", \"value\": \"mescolocacion\" },\n  { \"name\": \"Cobro manual\", \"value\": \"manual\" }\n]",
+  "topRow": 16,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "orhirg02rl",
-  "widgetName": "dia_de_corte"
+  "widgetId": "jm8ypu23f5",
+  "widgetName": "tipo_de_corte"
 }
