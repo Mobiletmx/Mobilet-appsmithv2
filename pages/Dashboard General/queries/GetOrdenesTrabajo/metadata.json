@@ -59,7 +59,7 @@
     ],
     "name": "GetOrdenesTrabajo",
     "pageId": "Dashboard General",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": true
   }
 }

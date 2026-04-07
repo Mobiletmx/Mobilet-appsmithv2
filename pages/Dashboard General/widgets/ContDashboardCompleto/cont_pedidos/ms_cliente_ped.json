@@ -44,7 +44,7 @@
   "mobileRightColumn": 41,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "optionLabel": "name",
+  "optionLabel": "label",
   "optionValue": "value",
   "parentColumnSpace": 17.38232421875,
   "parentId": "f6foc2rwth",

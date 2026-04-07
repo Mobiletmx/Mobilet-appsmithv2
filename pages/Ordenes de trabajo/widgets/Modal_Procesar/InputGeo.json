@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 23,
+  "bottomRow": 32,
   "boxShadow": "none",
   "defaultText": "{{ appsmith.store.otIsEditMode ? (appsmith.store.otSel?._raw?.geolocalizacion_ubicacion || appsmith.store.otSel?.geolocalizacion_ubicacion || \"\") : (appsmith.store.otForm?.geolocalizacion_ubicacion || \"\") }}",
   "dynamicBindingPathList": [
@@ -53,7 +53,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 63,
   "showStepArrows": false,
-  "topRow": 16,
+  "topRow": 25,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "ia78mjvvsa",

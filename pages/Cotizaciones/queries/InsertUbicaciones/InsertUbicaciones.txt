@@ -6,7 +6,7 @@
   "_nombre_contacto_ubicacion": null, 
   "_celular_contacto_ubicacion": null, 
   "_email_contacto_ubicacion": null, 
-  "_id_ruta": null, 
+  "_id_ruta": {{ id_ruta.selectedOptionValue || null }},
   "_comentario_ubicacion": {{ comentario_ubicacion.text || null }}, 
   "_comodinubi_a": null,
   "_comodinubi_b": null,

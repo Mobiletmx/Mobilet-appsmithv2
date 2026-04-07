@@ -7,7 +7,7 @@
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "4m1w4ekrss": {
-      "data": "{{\n  (() => {\n    const est = JSPedidos.kpiPedidosPorEstatus();\n    const total = (est.nuevos || 0) + (est.activos || 0) + (est.cerrados || 0);\n\n    // Si no hay datos, devolvemos un array vacío para evitar errores\n    if (!total) {\n      return [];\n    }\n\n    return [\n      { x: \"Nuevo\",   y: est.nuevos  || 0 },\n      { x: \"Activo\",  y: est.activos || 0 },\n      { x: \"Cerrado\", y: est.cerrados|| 0 }\n    ];\n  })()\n}}",
+      "data": "{{ JSPedidos.piePedidos() }}",
       "seriesName": "Pedidos"
     }
   },
@@ -88,7 +88,7 @@
   "isVisible": true,
   "key": "rvgeh3hypf",
   "labelOrientation": "auto",
-  "leftColumn": 22,
+  "leftColumn": 21,
   "minWidth": 450,
   "mobileBottomRow": 56,
   "mobileLeftColumn": 21,
@@ -100,7 +100,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 42,
+  "rightColumn": 43,
   "setAdaptiveYMin": false,
   "showDataPointLabel": true,
   "topRow": 29,
@@ -108,6 +108,6 @@
   "version": 1,
   "widgetId": "g1smqnrhc1",
   "widgetName": "Chart1",
-  "xAxisName": "Product Line",
-  "yAxisName": "Revenue($)"
+  "xAxisName": "",
+  "yAxisName": ""
 }

@@ -4,13 +4,13 @@
   "borderColor": "#f4f4f5",
   "borderRadius": "15px",
   "borderWidth": "1",
-  "bottomRow": 183,
+  "bottomRow": 195,
   "bottomRowBeforeCollapse": 49,
   "boxShadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
   "children": [
     {
       "borderRadius": "0px",
-      "bottomRow": 870,
+      "bottomRow": 990,
       "boxShadow": "none",
       "canExtend": false,
       "containerStyle": "none",

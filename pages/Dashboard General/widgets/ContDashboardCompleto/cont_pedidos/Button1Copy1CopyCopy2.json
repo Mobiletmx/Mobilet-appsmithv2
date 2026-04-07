@@ -46,7 +46,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 41,
-  "text": "{{ JSPedidos.kpiPedidosTotales() }}",
+  "text": "{{ JSPedidos.kpiPedidos().total }}",
   "topRow": 24,
   "type": "BUTTON_WIDGET",
   "version": 1,

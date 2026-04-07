@@ -7,8 +7,8 @@
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "4m1w4ekrss": {
-      "data": "{{ JSPedidos.piePagadoVsNoPagado() }}",
-      "seriesName": "Pagos"
+      "data": "{{ JSPedidos.pieUbicaciones() }}",
+      "seriesName": "Ubicaciones"
     }
   },
   "chartName": "",
@@ -108,6 +108,6 @@
   "version": 1,
   "widgetId": "0lokbqkt1a",
   "widgetName": "Chart1Copy",
-  "xAxisName": "Product Line",
-  "yAxisName": "Revenue($)"
+  "xAxisName": "",
+  "yAxisName": ""
 }

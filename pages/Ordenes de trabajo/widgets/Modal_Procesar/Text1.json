@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 31,
+  "bottomRow": 30,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -41,8 +41,8 @@
   "mobileRightColumn": 15,
   "mobileTopRow": 23,
   "needsErrorInfo": false,
-  "originalBottomRow": 31,
-  "originalTopRow": 24,
+  "originalBottomRow": 30,
+  "originalTopRow": 23,
   "overflow": "NONE",
   "parentColumnSpace": 18.575,
   "parentId": "tszk7sied9",
@@ -54,7 +54,7 @@
   "text": "Orden de trabajo editada\n\n{{ appsmith.store.otIsEditMode ? (appsmith.store.otSel?._raw?.id_orden_de_trabajo || appsmith.store.otSel?.id_orden_de_trabajo || \"\") : (appsmith.store.otForm?.id_orden_de_trabajo || \"\") }}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 24,
+  "topRow": 23,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

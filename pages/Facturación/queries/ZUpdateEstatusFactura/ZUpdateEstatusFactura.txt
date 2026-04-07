@@ -1,0 +1,3 @@
+{
+  "_id_item_factura": {{ id_item_factura.text }}
+}

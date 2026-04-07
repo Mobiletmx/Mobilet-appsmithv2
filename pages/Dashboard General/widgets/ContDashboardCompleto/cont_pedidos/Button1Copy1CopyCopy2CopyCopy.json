@@ -46,7 +46,7 @@
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
   "rightColumn": 63,
-  "text": "{{\n  \"$\" + JSPedidos.kpiPagadoValor().toLocaleString(\"es-MX\", {\n    minimumFractionDigits: 2,\n    maximumFractionDigits: 2\n  })\n}}",
+  "text": "{{ JSPedidos.kpiUbicaciones().total }}",
   "topRow": 24,
   "type": "BUTTON_WIDGET",
   "version": 1,

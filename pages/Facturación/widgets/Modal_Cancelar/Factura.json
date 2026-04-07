@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 13,
   "boxShadow": "none",
   "defaultOptionValue": "GREEN",
   "dynamicBindingPathList": [
@@ -57,7 +57,7 @@
   "rightColumn": 63,
   "serverSideFiltering": false,
   "sourceData": "{{ \n  GetFacturacion.data.map(factura => ({\n    label: `${factura.id_facturapi} - ${factura.nombre_cliente} - ${factura.id_bano_string} - ${factura.nombre_ubicacion}`,\n    value: factura.id_item_factura\n  })) \n}}",
-  "topRow": 7,
+  "topRow": 6,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "d7w0jbol32",

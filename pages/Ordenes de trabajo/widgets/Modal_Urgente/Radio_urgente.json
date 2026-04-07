@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignment": "left",
   "animateLoading": true,
-  "bottomRow": 18,
+  "bottomRow": 17,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -57,7 +57,7 @@
   "needsErrorInfo": false,
   "onSelectionChange": "{{\n  (() => {\n    const val = RadioActividad.selectedOptionValue; // <-- uso seleccionado (solo el value)\n    if (appsmith.store.otIsEditMode) {\n      storeValue(\"otSel\", {...(appsmith.store.otSel || {}), actividad_programada: val}, true);\n    } else {\n      storeValue(\"otForm\", {...(appsmith.store.otForm || {}), actividad_programada: val}, true);\n    }\n    return;\n  })()\n}}",
   "options": "{{[\n  { label: \"Entrega con cliente\", value: \"Entrega con cliente\" },\n  { label: \"Recolección con cliente\", value: \"Recoleccion con cliente\" }\n]\n}}",
-  "originalBottomRow": 18,
+  "originalBottomRow": 17,
   "originalTopRow": 8,
   "parentColumnSpace": 12.6875,
   "parentId": "9lewrds7ch",

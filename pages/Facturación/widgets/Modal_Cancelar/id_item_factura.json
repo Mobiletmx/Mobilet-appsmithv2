@@ -3,9 +3,9 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 23,
+  "bottomRow": 21,
   "boxShadow": "none",
-  "defaultText": "{{ Factura.selectedOptionValue }}",
+  "defaultText": "{{ \n  GetFacturacion.data.find(f => String(f.id_item_factura) === String(Factura.selectedOptionValue))?.id_item_factura || \"\" \n}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -17,7 +17,7 @@
       "key": "defaultText"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "TEXT",
@@ -26,7 +26,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "ptljkeidzb",
-  "label": "Cliente",
+  "label": "Factura",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "",
@@ -42,7 +42,7 @@
   "mobileTopRow": 8,
   "needsErrorInfo": false,
   "originalBottomRow": 21,
-  "originalTopRow": 16,
+  "originalTopRow": 14,
   "parentColumnSpace": 17.40625,
   "parentId": "2sp46t1dvk",
   "parentRowSpace": 10,
@@ -50,10 +50,11 @@
   "resetOnSubmit": true,
   "responsiveBehavior": "fill",
   "rightColumn": 8,
+  "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 16,
+  "topRow": 14,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
-  "widgetId": "cqjsldlv3d",
+  "widgetId": "x3he0850x7",
   "widgetName": "id_item_factura"
 }

@@ -1,6 +1,7 @@
 {
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 41,
+  "counterClockwise": true,
   "counterClosewise": false,
   "dynamicBindingPathList": [
     {
@@ -19,7 +20,7 @@
     }
   ],
   "dynamicTriggerPathList": [],
-  "fillColor": "{{\n  (() => {\n    const total = OperacionDia.datosFiltrados().filter(\n      ot => ot.actividad_programada === \"Recoleccion con cliente\"\n    ).length || 1;\n\n    const completadas = OperacionDia.datosFiltrados().filter(\n      ot => ot.actividad_programada === \"Recoleccion con cliente\" &&\n            ot.estatus_ot === \"Completada\"\n    ).length;\n\n    const pct = (completadas / total) * 100;\n\n    if (pct < 50) return \"#dc2626\"; // rojo\n    if (pct >= 50 && pct < 75) return \"#fb923c\"; // naranja\n    if (pct >= 75 && pct < 95) return \"#eab308\"; // amarillo\n    return \"#16a34a\"; // verde\n  })()\n}}",
+  "fillColor": "{{\n  (() => {\n    const total = OperacionDia.datosFiltrados().filter(\n      ot => ot.actividad_programada === \"Recoleccion con cliente\"\n    ).length || 1;\n\n    const completadas = OperacionDia.datosFiltrados().filter(\n      ot => ot.actividad_programada === \"Recoleccion con cliente\" &&\n            ot.estatus_ot === \"Completada\"\n    ).length;\n\n    const pct = (completadas / total) * 100;\n\n    if (pct < 5) return \"#16a34a\"; // verde\n    if (pct >= 5 && pct < 25) return \"#eab308\"; // amarillo\n    if (pct >= 25 && pct < 50) return \"#fb923c\"; // naranja\n    return \"#dc2626\"; // rojo\n  })()\n}}",
   "isCanvas": false,
   "isIndeterminate": false,
   "isLoading": false,

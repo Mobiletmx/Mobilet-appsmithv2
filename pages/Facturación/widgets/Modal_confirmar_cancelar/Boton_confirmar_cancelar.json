@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 29,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !Chk_entiendo_cancel.isChecked }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ffwdv9n8py",
+  "leftColumn": 27,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{\n  (async () => {\n    try {\n      // Validar checkbox de confirmación\n      if (!Chk_entiendo_cancel.isChecked) {\n        showAlert(\"Debes confirmar que entiendes la cancelación.\", \"warning\");\n        return;\n      }\n\n      // 1. Actualizar cobros\n      const respCobros = await ZDescancelarFactura.run();\n\n      if (!respCobros?.success) {\n        showAlert(\"No fue posible actualizar los cobros.\", \"error\");\n        return;\n      }\n\n      // Espera breve para evitar errores de sincronización\n      await new Promise(resolve => setTimeout(resolve, 800));\n\n      // 2. Actualizar factura\n      const respFactura = await ZUpdateEstatusFactura.run();\n\n      if (!respFactura?.success) {\n        showAlert(\"Los cobros se actualizaron, pero no fue posible actualizar la factura.\", \"error\");\n        return;\n      }\n\n      // Limpiar checkbox\n      resetWidget(\"Chk_entiendo_cancel\", true);\n\n      // Cerrar modales\n      closeModal(\"Modal_confirmar_cancelar\");\n      closeModal(\"Modal_Cancelar\");\n\n      showAlert(\"La factura fue descancelada correctamente.\", \"success\");\n\n      // Si quieres, aquí luego agregamos refresh de queries\n      // await GetFacturas.run();\n      // await GetCobros.run();\n\n    } catch (e) {\n      showAlert(`Error al descancelar la factura: ${e?.message || e}`, \"error\");\n    }\n  })()\n}}",
+  "originalBottomRow": 29,
+  "originalTopRow": 25,
+  "parentId": "4j2x9jccmb",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 43,
+  "text": "Confirmar",
+  "topRow": 25,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "50xej8vb6h",
+  "widgetName": "Boton_confirmar_cancelar"
+}

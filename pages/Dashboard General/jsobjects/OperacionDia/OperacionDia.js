@@ -1,22 +1,17 @@
 export default {
-  // === Opciones de rutas (dependen del día seleccionado) ===
-  // Nota: id_ruta ya es el nombre de la ruta, así que label/value son iguales.
+  // Tipos de actividad válidos
+  ACTIVIDADES_VALIDAS: new Set([
+    "Entrega con cliente",
+    "Recoleccion con cliente",
+    "Limpieza con cliente"
+  ]),
+
+  // === Opciones de rutas (vienen directamente del query del día) ===
   rutasDisponibles: () => {
-    const data = GetOrdenesTrabajo.data || [];
-
-    // Si NO hay día seleccionado, no mostramos rutas
-    if (!dp_dia_operacion.selectedDate) {
-      return [{ label: "Selecciona un día", value: "" }];
-    }
-
-    const diaSel = moment(dp_dia_operacion.selectedDate).format("YYYY-MM-DD");
-
-    const delDia = data.filter(ot =>
-      moment(ot.fecha_programada).format("YYYY-MM-DD") === diaSel
-    );
+    const data = GetOrdenesTrabajoPorDia.data || [];
 
     const set = new Set();
-    for (const ot of delDia) {
+    for (const ot of data) {
       const ruta = String(ot?.id_ruta ?? "").trim();
       if (ruta) set.add(ruta);
     }
@@ -28,48 +23,43 @@ export default {
     return [{ label: "Todas", value: "" }, ...opciones];
   },
 
-  // Dataset filtrado por día y ruta, excluyendo Lista negra
+  // Dataset filtrado por ruta y tipo de actividad, excluyendo Lista negra
   datosFiltrados: () => {
-    const data = GetOrdenesTrabajo.data || [];
-
-    // Si NO hay día seleccionado, no mostramos información
-    if (!dp_dia_operacion.selectedDate) return [];
-
-    const diaSel = moment(dp_dia_operacion.selectedDate).format("YYYY-MM-DD");
-
-    // Ruta seleccionada (null o vacío = todas)
+    const data = GetOrdenesTrabajoPorDia.data || [];
     const rutaSel = sel_ruta_operacion.selectedOptionValue;
+    const actividadesValidas = new Set([
+      "Entrega con cliente",
+      "Recoleccion con cliente",
+      "Limpieza con cliente"
+    ]);
 
     return data.filter(ot => {
-      const fechaProg = moment(ot.fecha_programada).format("YYYY-MM-DD");
-      const coincideDia = fechaProg === diaSel;
       const coincideRuta = !rutaSel || String(ot.id_ruta) === String(rutaSel);
       const noListaNegra = ot.estatus_ot !== "Lista negra";
-      return coincideDia && coincideRuta && noListaNegra;
+      const actividadValida = actividadesValidas.has(ot.actividad_programada);
+      return coincideRuta && noListaNegra && actividadValida;
     });
   },
 
-  // Dataset SIN excluir Lista negra (para el indicador de Lista negra)
+  // Dataset para Lista negra (incluye todo el día, solo actividades válidas)
   datosFiltradosConListaNegra: () => {
-    const data = GetOrdenesTrabajo.data || [];
-
-    // Si NO hay día seleccionado, no mostramos información
-    if (!dp_dia_operacion.selectedDate) return [];
-
-    const diaSel = moment(dp_dia_operacion.selectedDate).format("YYYY-MM-DD");
-
+    const data = GetOrdenesTrabajoPorDia.data || [];
     const rutaSel = sel_ruta_operacion.selectedOptionValue;
+    const actividadesValidas = new Set([
+      "Entrega con cliente",
+      "Recoleccion con cliente",
+      "Limpieza con cliente"
+    ]);
 
     return data.filter(ot => {
-      const fechaProg = moment(ot.fecha_programada).format("YYYY-MM-DD");
-      const coincideDia = fechaProg === diaSel;
       const coincideRuta = !rutaSel || String(ot.id_ruta) === String(rutaSel);
-      return coincideDia && coincideRuta;
+      const actividadValida = actividadesValidas.has(ot.actividad_programada);
+      return coincideRuta && actividadValida;
     });
   },
 
-  // Total sin Lista negra
+  // Total para los relojes
   totalSinListaNegra: () => {
-    return OperacionDia.datosFiltrados().length;
+    return this.datosFiltrados().length;
   }
 };

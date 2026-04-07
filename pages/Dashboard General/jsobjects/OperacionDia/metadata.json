@@ -6,6 +6,11 @@
     "pageId": "Dashboard General",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": []
+    "variables": [
+      {
+        "name": "ACTIVIDADES_VALIDAS",
+        "value": "new Set([\"Entrega con cliente\", \"Recoleccion con cliente\", \"Limpieza con cliente\"])"
+      }
+    ]
   }
 }

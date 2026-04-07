@@ -23,9 +23,16 @@
   "dynamicPropertyPathList": [
     {
       "key": "defaultDate"
+    },
+    {
+      "key": "onDateSelected"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDateSelected"
+    }
+  ],
   "firstDayOfWeek": 0,
   "isDisabled": false,
   "isLoading": false,
@@ -49,6 +56,7 @@
   "mobileRightColumn": 50,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "onDateSelected": "{{\n  // 1. Ejecutamos el nuevo query filtrado\n  GetOrdenesTrabajoPorDia.run().then(() => {\n    // 2. Opcional: Reseteamos el select de la ruta para que vuelva a \"Todas\"\n    resetWidget(\"sel_ruta_operacion\", true);\n    \n    // 3. Notificación de éxito (opcional)\n    showAlert(\"Datos actualizados para el día seleccionado\", \"success\");\n  });\n}}\t",
   "parentColumnSpace": 17.38232421875,
   "parentId": "sxp58e0rzd",
   "parentRowSpace": 10,
